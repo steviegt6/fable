@@ -21,6 +21,7 @@ package org.quiltmc.loader.impl.gui;
 import java.awt.GraphicsEnvironment;
 import java.nio.file.Path;
 
+import dev.tomat.fable.impl.FableLoader;
 import org.quiltmc.loader.api.QuiltLoader;
 import org.quiltmc.loader.api.gui.LoaderGuiClosed;
 import org.quiltmc.loader.api.gui.QuiltLoaderText;
@@ -84,7 +85,7 @@ public final class QuiltGuiEntry {
 				crashReportText = e.fullReportText;
 			}
 
-			String title = "Quilt Loader " + QuiltLoaderImpl.VERSION;
+			String title = "Quilt Loader " + QuiltLoaderImpl.VERSION + "/Fable " + FableLoader.VERSION;
 			QuiltJsonGui tree = new QuiltJsonGui(title, mainText);
 
 			QuiltJsonGuiMessage error = new QuiltJsonGuiMessage(tree, "quilt_loader", QuiltLoaderText.translate("error.unhandled"));

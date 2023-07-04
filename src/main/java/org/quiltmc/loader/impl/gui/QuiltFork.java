@@ -35,6 +35,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.imageio.ImageIO;
 
+import dev.tomat.fable.impl.FableLoader;
 import org.quiltmc.json5.JsonWriter;
 import org.quiltmc.loader.api.LoaderValue;
 import org.quiltmc.loader.api.LoaderValue.LObject;
@@ -88,7 +89,7 @@ public class QuiltFork {
 	}
 
 	public static void openErrorGui(List<QuiltDisplayedError> errors) throws LoaderGuiException, LoaderGuiClosed {
-		QuiltJsonGui tree = new QuiltJsonGui("Quilt Loader " + QuiltLoaderImpl.VERSION, "");
+		QuiltJsonGui tree = new QuiltJsonGui("Quilt Loader " + QuiltLoaderImpl.VERSION + "/Fable " + FableLoader.VERSION, "");
 		tree.buttons.add(QuiltJsonButton.createUserSupportButton(tree));
 		QuiltJsonButton continueButton = tree.addButton(QuiltLoaderText.of("button.ignore").toString(), QuiltBasicButtonAction.CONTINUE);
 		continueButton.icon(QuiltLoaderGui.iconContinueIgnoring());

@@ -53,6 +53,7 @@ import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+import dev.tomat.fable.impl.FableLoader;
 import org.objectweb.asm.Opcodes;
 import org.quiltmc.loader.api.FasterFiles;
 import org.quiltmc.loader.api.LanguageAdapter;
@@ -582,7 +583,7 @@ public final class QuiltLoaderImpl {
 				msg = QuiltLoaderText.translate("msg.load_state").toString();
 			}
 
-			QuiltJsonGui tree = new QuiltJsonGui("Quilt Loader " + VERSION, msg);
+			QuiltJsonGui tree = new QuiltJsonGui("Quilt Loader " + VERSION + "/Fable " + FableLoader.VERSION, msg);
 			QuiltJsonGuiTreeTab tab = tree.addTab("Files");
 			plugins.guiFileRoot.text(QuiltLoaderText.translate("tab.file_list"));
 			plugins.guiFileRoot.toNode(tab.node, false);
@@ -624,7 +625,7 @@ public final class QuiltLoaderImpl {
 		}
 
 		String msg = "crash.during_setup." + provider.getGameId();
-		QuiltJsonGui tree = new QuiltJsonGui("Quilt Loader " + QuiltLoaderImpl.VERSION, QuiltLoaderText.translate(msg).toString());
+		QuiltJsonGui tree = new QuiltJsonGui("Quilt Loader " + QuiltLoaderImpl.VERSION + "/Fable " + FableLoader.VERSION, QuiltLoaderText.translate(msg).toString());
 		tree.messagesTabName = QuiltLoaderText.translate("tab.messages").toString();
 
 		if (fullCrashText != null) {
