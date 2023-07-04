@@ -33,6 +33,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
+import dev.tomat.fable.impl.FableLoader;
 import org.quiltmc.loader.api.ModDependency;
 import org.quiltmc.loader.api.ModDependencyIdentifier;
 import org.quiltmc.loader.api.Version;
@@ -324,7 +325,7 @@ public class MinecraftGameProvider implements GameProvider {
 				versionType = argMap.get("versionType") + "/";
 			}
 
-			argMap.put("versionType", versionType + "Quilt Loader " + QuiltLoaderImpl.VERSION);
+			argMap.put("versionType", versionType + "Quilt Loader " + QuiltLoaderImpl.VERSION + "/Fable " + FableLoader.VERSION);
 
 			if (!argMap.containsKey("gameDir")) {
 				argMap.put("gameDir", getLaunchDirectory(argMap).toAbsolutePath().normalize().toString());
