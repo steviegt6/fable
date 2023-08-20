@@ -1,9 +1,6 @@
 # Ignore everything
-/*
+/run
 
 !/src
 !/build.gradle
 !/.gitignore
-
-!/minecraft-test
-!/fable-fabric-tweaks

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "dev.tomat.fable",
+    "id": "fable_fabric_tweaks",
+    "version": "1.0.0",
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "entrypoints": {
+      "tweak": [
+        "dev.tomat.fable.tweaks.fabric.FableFabricTweakInitializer"
+      ]
+    }
+  }
+}
