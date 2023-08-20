@@ -61,6 +61,7 @@ public class ClasspathModCandidateFinder {
 			try {
 				Enumeration<URL> fabricMods = QuiltLauncherBase.getLauncher().getTargetClassLoader().getResources("fabric.mod.json");
 				Enumeration<URL> quiltMods = QuiltLauncherBase.getLauncher().getTargetClassLoader().getResources("quilt.mod.json");
+				Enumeration<URL> fableMods = QuiltLauncherBase.getLauncher().getTargetClassLoader().getResources("fable.mod.json");
 				while (quiltMods.hasMoreElements()) {
 					URL url = quiltMods.nextElement();
 
@@ -91,6 +92,22 @@ public class ClasspathModCandidateFinder {
 						}
 					} catch (UrlConversionException e) {
 						Log.debug(LogCategory.DISCOVERY, "Error determining location for fabric.mod.json from %s", url, e);
+					}
+				}
+				while (fableMods.hasMoreElements()) {
+					URL url = fableMods.nextElement();
+
+					try {
+						Path path = LoaderUtil.normalizeExistingPath(UrlUtil.getCodeSource(url, "fable.mod.json"));
+						List<Path> paths = pathGroups.get(path);
+
+						if (paths == null) {
+							out.addMod(Collections.singletonList(path));
+						} else {
+							out.addMod(paths);
+						}
+					} catch (UrlConversionException e) {
+						Log.debug(LogCategory.DISCOVERY, "Error determining location for fable.mod.json from %s", url, e);
 					}
 				}
 			} catch (IOException e) {

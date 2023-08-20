@@ -142,6 +142,7 @@ public final class EntrypointStorage {
 	public void addDeprecated(ModContainerExt modContainer, String adapter, String value) throws ClassNotFoundException, LanguageAdapterException {
 		Log.debug(LogCategory.ENTRYPOINT, "Registering 0.3.x old-style initializer %s for mod %s", value, modContainer.metadata().id());
 		OldEntry oe = new OldEntry(modContainer, adapter, value);
+		getOrCreateEntries("tweak").add(oe);
 		getOrCreateEntries("main").add(oe);
 		getOrCreateEntries("client").add(oe);
 		getOrCreateEntries("server").add(oe);

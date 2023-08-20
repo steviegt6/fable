@@ -18,6 +18,7 @@
 
 package org.quiltmc.loader.impl.entrypoint;
 
+import dev.tomat.fable.impl.plugin.fable.ClassTweak;
 import org.quiltmc.loader.impl.util.ExceptionUtil;
 import org.quiltmc.loader.impl.util.LoaderUtil;
 import org.quiltmc.loader.impl.util.QuiltLoaderInternal;
@@ -35,6 +36,7 @@ import java.io.InputStream;
 import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -47,12 +49,13 @@ import java.util.zip.ZipFile;
 @QuiltLoaderInternal(QuiltLoaderInternalType.LEGACY_EXPOSED)
 
 public class GameTransformer {
-	private final List<GamePatch> patches;
+	private final List<GamePatch> entrypointPatches;
+	private final List<ClassTweak> patches = new ArrayList<>();
 	private Map<String, byte[]> patchedClasses;
 	private boolean entrypointsLocated = false;
 
-	public GameTransformer(GamePatch... patches) {
-		this.patches = Arrays.asList(patches);
+	public GameTransformer(GamePatch... entrypointPatches) {
+		this.entrypointPatches = Arrays.asList(entrypointPatches);
 	}
 
 	private void addPatchedClass(ClassNode node) {
@@ -96,7 +99,7 @@ public class GameTransformer {
 				}
 			};
 
-			for (GamePatch patch : patches) {
+			for (GamePatch patch : entrypointPatches) {
 				patch.process(launcher, classSource, this::addPatchedClass);
 			}
 		} catch (IOException e) {
@@ -107,6 +110,31 @@ public class GameTransformer {
 		entrypointsLocated = true;
 	}
 
+	public byte[] patchClass(String className, byte[] classBytes) {
+		if (classBytes == null) {
+			return null;
+		}
+
+		for (ClassTweak patch : patches) {
+			Function<String, ClassReader> classSource = name -> {
+				byte[] data = patchedClasses.get(name);
+
+				if (data != null) {
+					return new ClassReader(data);
+				}
+
+				return new ClassReader(classBytes);
+			};
+
+			ClassNode classNode = patch.process(className, classSource.apply(className));
+			if (classNode != null) {
+				addPatchedClass(classNode);
+			}
+		}
+
+		return patchedClasses.getOrDefault(className, classBytes);
+	}
+
 	/**
 	 * This must run first, contractually!
 	 * @param className The class name,
@@ -114,5 +142,10 @@ public class GameTransformer {
 	 */
 	public byte[] transform(String className) {
 		return patchedClasses.get(className);
+	}
+
+	public void addPatch(ClassTweak patch) {
+		Log.info(LogCategory.GAME_PATCH, "Adding patch %s", patch);
+		patches.add(patch);
 	}
 }

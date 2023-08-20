@@ -53,6 +53,7 @@ import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+import dev.tomat.fable.api.entrypoint.TweakInitializer;
 import dev.tomat.fable.impl.FableLoader;
 import org.objectweb.asm.Opcodes;
 import org.quiltmc.loader.api.FasterFiles;
@@ -77,6 +78,7 @@ import org.quiltmc.loader.impl.discovery.ModResolutionException;
 import org.quiltmc.loader.impl.discovery.ModSolvingError;
 import org.quiltmc.loader.impl.entrypoint.EntrypointStorage;
 import org.quiltmc.loader.impl.entrypoint.EntrypointUtils;
+import org.quiltmc.loader.impl.entrypoint.GameTransformer;
 import org.quiltmc.loader.impl.filesystem.QuiltJoinedFileSystem;
 import org.quiltmc.loader.impl.filesystem.QuiltJoinedPath;
 import org.quiltmc.loader.impl.filesystem.QuiltZipFileSystem;
@@ -1119,6 +1121,10 @@ public final class QuiltLoaderImpl {
 				throw new RuntimeException(String.format("Failed to setup mod %s (%s)", mod.metadata().name(), mod.rootPath()), e);
 			}
 		}
+
+		// GameTransformer transformer = new GameTransformer();
+		// EntrypointUtils.invoke("tweak", TweakInitializer.class, it -> it.onInitialize(transformer));
+		EntrypointUtils.invoke("tweak", TweakInitializer.class, it -> it.onInitialize(QuiltLoaderImpl.INSTANCE.getGameProvider().getEntrypointTransformer()));
 	}
 
 	public void loadAccessWideners() {

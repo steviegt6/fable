@@ -84,6 +84,8 @@ public interface ModContainer {
 	ClassLoader getClassLoader();
 
 	public enum BasicSourceType {
+		/** A Fable tweak mod, likely loaded from a mod jar file, but could be from the classpath instead. */
+		NORMAL_FABLE,
 		/** A regular quilt mod, likely loaded from a mod jar file, but could be from the classpath instead. */
 		NORMAL_QUILT,
 		/** A regular fabric mod, likely loaded from a mod jar file, but could be from the classpath instead. */

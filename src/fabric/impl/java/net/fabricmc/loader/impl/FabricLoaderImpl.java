@@ -31,6 +31,7 @@ import org.jetbrains.annotations.Nullable;
 import org.quiltmc.loader.api.QuiltLoader;
 import org.quiltmc.loader.api.entrypoint.EntrypointException;
 import org.quiltmc.loader.api.minecraft.MinecraftQuiltLoader;
+import org.quiltmc.loader.impl.QuiltLoaderImpl;
 
 import java.io.File;
 import java.nio.file.Path;
@@ -141,6 +142,10 @@ public class FabricLoaderImpl extends FabricLoader {
 	@Override
 	public String[] getLaunchArguments(boolean sanitize) {
 		return QuiltLoader.getLaunchArguments(sanitize);
+	}
+
+	public void prepareModInit(Path newRunDir, Object gameInstance) {
+		QuiltLoaderImpl.INSTANCE.prepareModInit(newRunDir, gameInstance);
 	}
 
 	/**

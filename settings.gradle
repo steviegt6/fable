@@ -22,4 +22,5 @@ rootProject.name = "quilt-loader"
 
 include "minecraft"
 include "minecraft:minecraft-test"
+include "minecraft:fable-fabric-tweaks"
 include 'junit'

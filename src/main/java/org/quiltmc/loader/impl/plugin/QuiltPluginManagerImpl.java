@@ -54,6 +54,7 @@ import java.util.stream.Collectors;
 import java.util.zip.ZipException;
 import java.util.zip.ZipInputStream;
 
+import dev.tomat.fable.impl.plugin.fable.StandardFablePlugin;
 import org.jetbrains.annotations.Nullable;
 import org.quiltmc.loader.api.FasterFiles;
 import org.quiltmc.loader.api.LoaderValue;
@@ -133,6 +134,7 @@ import net.fabricmc.api.EnvType;
 public class QuiltPluginManagerImpl implements QuiltPluginManager {
 
 	private static final String QUILT_ID = "quilt_loader";
+	private static final String FABLE_ID = "fable_loader";
 
 	public final boolean simulationOnly;
 	public final QuiltLoaderConfig config;
@@ -155,9 +157,11 @@ public class QuiltPluginManagerImpl implements QuiltPluginManager {
 
 	public final StandardQuiltPlugin theQuiltPlugin;
 	private final StandardFabricPlugin theFabricPlugin;
+	private final StandardFablePlugin theFablePlugin;
 
 	BuiltinPluginContext theQuiltPluginContext;
 	BuiltinPluginContext theFabricPluginContext;
+	BuiltinPluginContext theFablePluginContext;
 
 	final Map<QuiltLoaderPlugin, BasePluginContext> plugins = new LinkedHashMap<>();
 	final Map<String, QuiltPluginContextImpl> pluginsById = new HashMap<>();
@@ -218,6 +222,7 @@ public class QuiltPluginManagerImpl implements QuiltPluginManager {
 
 		theQuiltPlugin = new StandardQuiltPlugin();
 		theFabricPlugin = new StandardFabricPlugin();
+		theFablePlugin = new StandardFablePlugin();
 	}
 
 	private BuiltinPluginContext addBuiltinPlugin(BuiltinQuiltPlugin plugin, String id) {
@@ -1175,6 +1180,7 @@ public class QuiltPluginManagerImpl implements QuiltPluginManager {
 
 		theQuiltPluginContext = addBuiltinPlugin(theQuiltPlugin, QUILT_ID);
 		theFabricPluginContext = addBuiltinPlugin(theFabricPlugin, "quilted_fabric_loader");
+		theFablePluginContext = addBuiltinPlugin(theFablePlugin, FABLE_ID);
 
 		if (game != null) {
 			theQuiltPlugin.addBuiltinMods(game);

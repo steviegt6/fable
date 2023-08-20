@@ -502,7 +502,7 @@ class KnotClassDelegate {
 
 		if (input == null) {
 			try {
-				input = getRawClassByteArray(classFileURL, name);
+				input = provider.getEntrypointTransformer().patchClass(name, getRawClassByteArray(classFileURL, name));
 			} catch (IOException e) {
 				throw new RuntimeException("Failed to load class file for '" + name + "'!", e);
 			}
