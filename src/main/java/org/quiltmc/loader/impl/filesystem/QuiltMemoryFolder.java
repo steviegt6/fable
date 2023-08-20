@@ -29,6 +29,7 @@ import org.quiltmc.loader.impl.util.QuiltLoaderInternal;
 import org.quiltmc.loader.impl.util.QuiltLoaderInternalType;
 
 @QuiltLoaderInternal(QuiltLoaderInternalType.LEGACY_EXPOSED)
+@Deprecated
 abstract class QuiltMemoryFolder extends QuiltMemoryEntry {
 
 	private QuiltMemoryFolder(QuiltMemoryPath path) {
@@ -42,6 +43,7 @@ abstract class QuiltMemoryFolder extends QuiltMemoryEntry {
 
 	protected abstract Collection<? extends Path> getChildren();
 
+	@Deprecated
 	public static final class ReadOnly extends QuiltMemoryFolder {
 		final QuiltMemoryPath[] children;
 
@@ -56,6 +58,7 @@ abstract class QuiltMemoryFolder extends QuiltMemoryEntry {
 		}
 	}
 
+	@Deprecated
 	public static final class ReadWrite extends QuiltMemoryFolder {
 		final Set<QuiltMemoryPath> children = Collections.newSetFromMap(new ConcurrentHashMap<>());
 

@@ -536,6 +536,8 @@ public class Sat4jWrapper implements RuleContext {
 
 	private void addRuleDefinition(Rule rule, RuleDefinition def) {
 
+		def.validateOptions(optionToWeight.keySet());
+
 		IConstr[] added;
 		try {
 			added = def.put(this, solver);
