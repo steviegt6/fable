@@ -19,9 +19,12 @@ package dev.tomat.fable.impl.plugin.fable;
 import org.quiltmc.loader.api.plugin.ModMetadataExt;
 import org.quiltmc.loader.api.plugin.QuiltPluginContext;
 import org.quiltmc.loader.impl.plugin.base.InternalModContainerBase;
+import org.quiltmc.loader.impl.util.QuiltLoaderInternal;
+import org.quiltmc.loader.impl.util.QuiltLoaderInternalType;
 
 import java.nio.file.Path;
 
+@QuiltLoaderInternal(QuiltLoaderInternalType.NEW_INTERNAL)
 public class FableModContainer extends InternalModContainerBase {
 	public FableModContainer(QuiltPluginContext pluginContext, ModMetadataExt metadata, Path from, Path resourceRoot) {
 		super(pluginContext, metadata, from, resourceRoot);

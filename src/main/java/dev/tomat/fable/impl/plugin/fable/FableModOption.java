@@ -22,10 +22,12 @@ import org.quiltmc.loader.api.plugin.ModMetadataExt;
 import org.quiltmc.loader.api.plugin.QuiltPluginContext;
 import org.quiltmc.loader.impl.gui.GuiManagerImpl;
 import org.quiltmc.loader.impl.plugin.base.InternalModOptionBase;
-import org.quiltmc.loader.impl.plugin.fabric.FabricModContainer;
+import org.quiltmc.loader.impl.util.QuiltLoaderInternal;
+import org.quiltmc.loader.impl.util.QuiltLoaderInternalType;
 
 import java.nio.file.Path;
 
+@QuiltLoaderInternal(QuiltLoaderInternalType.NEW_INTERNAL)
 public class FableModOption extends InternalModOptionBase {
 	public FableModOption(QuiltPluginContext pluginContext, ModMetadataExt meta, Path from, QuiltLoaderIcon fileIcon, Path resourceRoot, boolean mandatory, boolean requiresRemap) {
 		super(pluginContext, meta, from, fileIcon, resourceRoot, mandatory, requiresRemap);
