@@ -144,6 +144,10 @@ public class FabricLoaderImpl extends FabricLoader {
 		return QuiltLoader.getLaunchArguments(sanitize);
 	}
 
+	/**
+	 * Included by Fable for backwards compatibility.
+	 */
+	@Deprecated
 	public void prepareModInit(Path newRunDir, Object gameInstance) {
 		QuiltLoaderImpl.INSTANCE.prepareModInit(newRunDir, gameInstance);
 	}

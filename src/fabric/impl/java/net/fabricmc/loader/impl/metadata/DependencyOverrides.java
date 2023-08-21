@@ -26,10 +26,13 @@ import java.util.Collection;
  */
 @Deprecated
 public final class DependencyOverrides {
+	@Deprecated
 	public DependencyOverrides(Path ignoredConfigDir) { }
 
+	@Deprecated
 	public void apply(LoaderModMetadata metadata) { }
 
+	@Deprecated
 	public Collection<String> getAffectedModIds() {
 		return new java.util.ArrayList<>();
 	}

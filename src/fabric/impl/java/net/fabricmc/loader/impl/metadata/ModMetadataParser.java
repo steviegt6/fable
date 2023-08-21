@@ -28,10 +28,13 @@ import java.util.Set;
  */
 @Deprecated
 public final class ModMetadataParser {
+	@Deprecated
 	public static final int LATEST_VERSION = org.quiltmc.loader.impl.fabric.metadata.FabricModMetadataReader.LATEST_VERSION;
 
+	@Deprecated
 	public static final Set<String> IGNORED_KEYS = org.quiltmc.loader.impl.fabric.metadata.FabricModMetadataReader.IGNORED_KEYS;
 
+	@Deprecated
 	public static FabricLoaderModMetadata parseMetadata(InputStream is, String ignoredModPath, List<String> ignoredModParentPaths, VersionOverrides ignoredVersionOverrides, DependencyOverrides ignoredDepOverrides, boolean ignoredIsDevelopment) throws ParseMetadataException {
 		return org.quiltmc.loader.impl.fabric.metadata.FabricModMetadataReader.parseMetadata(is);
 	}

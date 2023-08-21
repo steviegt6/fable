@@ -25,10 +25,13 @@ import java.util.Collection;
  */
 @Deprecated
 public final class VersionOverrides {
+	@Deprecated
 	public VersionOverrides() { }
 
+	@Deprecated
 	public void apply(LoaderModMetadata ignoredMetadata) { }
 
+	@Deprecated
 	public Collection<String> getAffectedModIds() {
 		return new java.util.ArrayList<>();
 	}
