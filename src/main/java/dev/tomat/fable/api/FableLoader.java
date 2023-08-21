@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package dev.tomat.fable.impl;
+package dev.tomat.fable.api;
 
 /**
  * Public-facing Fable information.

@@ -33,7 +33,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
-import dev.tomat.fable.impl.FableLoader;
+import dev.tomat.fable.api.FableLoader;
 import org.quiltmc.loader.api.ModDependency;
 import org.quiltmc.loader.api.ModDependencyIdentifier;
 import org.quiltmc.loader.api.Version;

@@ -18,25 +18,18 @@
 package org.quiltmc.loader.impl.gui;
 
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.imageio.ImageIO;
 
-import dev.tomat.fable.impl.FableLoader;
-import org.quiltmc.json5.JsonWriter;
+import dev.tomat.fable.api.FableLoader;
 import org.quiltmc.loader.api.LoaderValue;
 import org.quiltmc.loader.api.LoaderValue.LObject;
 import org.quiltmc.loader.api.LoaderValue.LType;
@@ -44,13 +37,11 @@ import org.quiltmc.loader.api.gui.LoaderGuiClosed;
 import org.quiltmc.loader.api.gui.LoaderGuiException;
 import org.quiltmc.loader.api.gui.QuiltDisplayedError;
 import org.quiltmc.loader.api.gui.QuiltLoaderGui;
-import org.quiltmc.loader.api.gui.QuiltLoaderIcon;
 import org.quiltmc.loader.api.gui.QuiltLoaderText;
 import org.quiltmc.loader.api.plugin.LoaderValueFactory;
 import org.quiltmc.loader.impl.QuiltLoaderImpl;
 import org.quiltmc.loader.impl.game.GameProvider;
 import org.quiltmc.loader.impl.gui.QuiltJsonGui.QuiltBasicButtonAction;
-import org.quiltmc.loader.impl.gui.QuiltJsonGuiMessage.QuiltMessageListener;
 import org.quiltmc.loader.impl.util.LoaderValueHelper;
 import org.quiltmc.loader.impl.util.QuiltLoaderInternal;
 import org.quiltmc.loader.impl.util.QuiltLoaderInternalType;
