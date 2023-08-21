@@ -1,6 +1,8 @@
 # fable
 
-A Quilt-Fabric compatibility fork aiming at player convenience. Mods should not directly develop targeting this fork, save for very rare circumstances.
+A fork of Fabric Loader based on QuiltMC's Quilt Loader fork.
+
+Fable is a compatibility-focused fork working to ensure all Fabric mods function on Quilt as expected. In order to achieve this, Fable provides a convenient API for tweaking classes as they're loaded based on Knot.
 
 ## License
 
