@@ -2,7 +2,7 @@
 
 A fork of Fabric Loader based on QuiltMC's Quilt Loader fork.
 
-Fable is a compatibility-focused fork working to ensure all Fabric mods function on Quilt as expected. In order to achieve this, Fable provides a convenient API for tweaking classes as they're loaded based on Knot.
+Fable is a compatibility-focused fork working to ensure all Fabric mods function on Quilt as expected. In order to achieve this, Fable provides Fabric Launcher polyfills and a convenient API for tweaking classes as they're loaded based on Knot.
 
 ## License
 
