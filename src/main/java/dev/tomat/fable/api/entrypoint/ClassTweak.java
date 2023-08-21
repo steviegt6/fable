@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package dev.tomat.fable.impl.plugin.fable;
+package dev.tomat.fable.api.entrypoint;
 
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.tree.ClassNode;

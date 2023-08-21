@@ -18,7 +18,7 @@
 
 package org.quiltmc.loader.impl.entrypoint;
 
-import dev.tomat.fable.impl.plugin.fable.ClassTweak;
+import dev.tomat.fable.api.entrypoint.ClassTweak;
 import org.quiltmc.loader.impl.util.ExceptionUtil;
 import org.quiltmc.loader.impl.util.LoaderUtil;
 import org.quiltmc.loader.impl.util.QuiltLoaderInternal;
@@ -33,8 +33,6 @@ import org.quiltmc.loader.impl.util.log.LogCategory;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.UncheckedIOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,9 +40,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
-import java.util.zip.ZipEntry;
 import java.util.zip.ZipError;
-import java.util.zip.ZipFile;
 
 @QuiltLoaderInternal(QuiltLoaderInternalType.LEGACY_EXPOSED)
 

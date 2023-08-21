@@ -1,6 +1,6 @@
 package dev.tomat.fable.tweaks.fabric.patches.mods.armoredelytra;
 
-import dev.tomat.fable.impl.plugin.fable.ClassTweak;
+import dev.tomat.fable.api.entrypoint.ClassTweak;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.tree.AnnotationNode;
 import org.objectweb.asm.tree.ClassNode;
