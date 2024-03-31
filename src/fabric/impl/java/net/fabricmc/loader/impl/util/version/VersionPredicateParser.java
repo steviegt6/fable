@@ -1,6 +1,8 @@
 /*
- * Copyright 2016 FabricMC
- * Copyright 2023 QuiltMC
+ * Fable - quilt-/fabric-loader fork; <https://github.com/steviegt6/fable>
+ * Copyright (C) 2016  FabricMC
+ * Copyright (C) 2024  QuiltMC
+ * Copyright (C) 2024  Tomat et al.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
