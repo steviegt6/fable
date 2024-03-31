@@ -1,5 +1,4 @@
 Fable - quilt-/fabric-loader fork; <https://github.com/steviegt6/fable>
-Copyright (C) 2016  FabricMC
 Copyright (C) ${YEAR}  QuiltMC
 Copyright (C) ${YEAR}  Tomat et al.
 
@@ -15,6 +14,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-;;match_from: \/\*\r?\n \* Copyright 2016 FabricMC
-;;match_from: \/\/\/ F[Aa][Bb][Rr][Ii][Cc]
-;;year_display: lenient_range
+;;match_from: \/\*\r?\n \* Copyright (.*?) QuiltMC
+;;match_from: \/\/\/ Q[Uu][Ii][Ll][Tt][Mm][Cc]
+;;year_display: list
+;;year_selection: project
