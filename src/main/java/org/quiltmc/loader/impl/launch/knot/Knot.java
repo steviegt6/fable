@@ -18,6 +18,8 @@
 
 package org.quiltmc.loader.impl.launch.knot;
 
+import dev.tomat.fable.impl.FableImpl;
+
 import net.fabricmc.api.EnvType;
 
 import org.quiltmc.loader.api.ModContainer;
@@ -132,7 +134,7 @@ public final class Knot extends QuiltLauncherBase {
 		}
 
 		provider = createGameProvider(args);
-		Log.info(LogCategory.GAME_PROVIDER, "Loading %s %s with Quilt Loader %s", provider.getGameName(), provider.getRawGameVersion(), QuiltLoaderImpl.VERSION);
+		Log.info(LogCategory.GAME_PROVIDER, "Loading %s %s with Quilt Loader %s and Fable %s", provider.getGameName(), provider.getRawGameVersion(), QuiltLoaderImpl.VERSION, FableImpl.VERSION);
 
 		isDevelopment = Boolean.parseBoolean(System.getProperty(SystemProperties.DEVELOPMENT, "false"));
 

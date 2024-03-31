@@ -30,6 +30,7 @@ import java.util.Map;
 
 import javax.imageio.ImageIO;
 
+import dev.tomat.fable.impl.FableImpl;
 import org.quiltmc.loader.api.LoaderValue;
 import org.quiltmc.loader.api.LoaderValue.LObject;
 import org.quiltmc.loader.api.LoaderValue.LType;
@@ -91,7 +92,7 @@ public class QuiltFork {
 
 	public static void openErrorGui(List<QuiltDisplayedError> errors) throws LoaderGuiException, LoaderGuiClosed {
 		QuiltBasicWindow<Boolean> window = QuiltLoaderGui.createBasicWindow(false);
-		window.title(QuiltLoaderText.of("Quilt Loader " + QuiltLoaderImpl.VERSION));
+		window.title(QuiltLoaderText.of("Quilt Loader " + QuiltLoaderImpl.VERSION + "/Fable " + FableImpl.VERSION));
 		window.addOpenQuiltSupportButton();
 		QuiltErrorButton continueButton = window.addContinueButton();
 		continueButton.text(QuiltLoaderText.translate("button.ignore"));
