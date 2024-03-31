@@ -129,7 +129,7 @@ public final class QuiltJsonButton extends QuiltGuiSyncBase implements QuiltErro
 	public static QuiltJsonButton createUserSupportButton(QuiltGuiSyncBase parent) {
 		QuiltLoaderText text = QuiltLoaderText.translate("button.quilt_forum.user_support");
 		QuiltJsonButton button = new QuiltJsonButton(parent, text.toString(), null, QuiltJsonButton.QuiltBasicButtonAction.OPEN_WEB_URL);
-		button.arg("url", "https://forum.quiltmc.org/c/support/9");
+		button.arg("url", "https://github.com/steviegt6/fable/issues/");
 		return button;
 	}
 

@@ -34,7 +34,7 @@ public final class Hooks {
 
 	public static String appletMainClass;
 
-	public static final String QUILT = "quilt";
+	public static final String QUILT = "quilt,fable";
 	public static final String VANILLA = "vanilla";
 
 	public static String insertBranding(final String brand) {

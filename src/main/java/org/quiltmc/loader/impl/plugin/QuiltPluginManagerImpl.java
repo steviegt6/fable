@@ -55,6 +55,7 @@ import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import java.util.zip.ZipException;
 
+import dev.tomat.fable.impl.FableImpl;
 import org.jetbrains.annotations.Nullable;
 import org.quiltmc.loader.api.FasterFiles;
 import org.quiltmc.loader.api.LoaderValue;
@@ -796,6 +797,7 @@ public class QuiltPluginManagerImpl implements QuiltPluginManager {
 		// It's arguably the most important version - if anything goes wrong while writing this report
 		// at least we know what code was used to generate it.
 		report.overview("Quilt Loader Version: " + QuiltLoaderImpl.VERSION);
+		report.overview("Fable Version: " + FableImpl.VERSION);
 
 		if (!errors.isEmpty()) {
 			int number = 1;

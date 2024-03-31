@@ -55,6 +55,7 @@ import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+import dev.tomat.fable.impl.FableImpl;
 import org.objectweb.asm.Opcodes;
 import org.quiltmc.loader.api.FasterFiles;
 import org.quiltmc.loader.api.LanguageAdapter;
@@ -645,7 +646,7 @@ public final class QuiltLoaderImpl {
 			}
 
 			QuiltBasicWindow<Void> window = QuiltLoaderGui.createBasicWindow();
-			window.title(QuiltLoaderText.of("Quilt Loader " + VERSION));
+			window.title(QuiltLoaderText.of("Quilt Loader " + VERSION + "/Fable " + FableImpl.VERSION));
 			window.mainText(msg);
 			window.addTreeTab(QuiltLoaderText.translate("tab.file_list"), plugins.guiFileRoot);
 			window.addTreeTab(QuiltLoaderText.translate("tab.mod_list"), plugins.guiModsRoot);
@@ -682,7 +683,7 @@ public final class QuiltLoaderImpl {
 
 		String msg = "crash.during_setup." + provider.getGameId();
 		QuiltBasicWindow<Void> window = QuiltLoaderGui.createBasicWindow();
-		window.title(QuiltLoaderText.of("Quilt Loader " + QuiltLoaderImpl.VERSION));
+		window.title(QuiltLoaderText.of("Quilt Loader " + QuiltLoaderImpl.VERSION + "/Fable " + FableImpl.VERSION));
 		window.mainText(QuiltLoaderText.translate(msg));
 
 		QuiltGuiMessagesTab messagesTab = window.addMessagesTab(QuiltLoaderText.translate("tab.messages"));
@@ -736,7 +737,7 @@ public final class QuiltLoaderImpl {
 
 		{
 			QuiltBasicWindow<Void> window = QuiltLoaderGui.createBasicWindow();
-			window.title(QuiltLoaderText.of("Quilt Loader " + QuiltLoaderImpl.VERSION));
+			window.title(QuiltLoaderText.of("Quilt Loader " + QuiltLoaderImpl.VERSION + "/Fable " + FableImpl.VERSION));
 			window.addFolderViewButton(QuiltLoaderText.translate("button.open_mods_folder"), getModsDir());
 			window.addOpenQuiltSupportButton();
 			QuiltErrorButton continueButton = window.addContinueButton();

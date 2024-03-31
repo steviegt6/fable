@@ -36,6 +36,7 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import dev.tomat.fable.impl.FableImpl;
 import org.quiltmc.loader.api.ModDependency;
 import org.quiltmc.loader.api.ModDependencyIdentifier;
 import org.quiltmc.loader.api.Version;
@@ -330,7 +331,7 @@ public class MinecraftGameProvider implements GameProvider {
 				versionType = argMap.get("versionType") + "/";
 			}
 
-			argMap.put("versionType", versionType + "Quilt Loader " + QuiltLoaderImpl.VERSION);
+			argMap.put("versionType", versionType + "Quilt Loader " + QuiltLoaderImpl.VERSION + "/Fable " + FableImpl.VERSION);
 
 			if (!argMap.containsKey("gameDir")) {
 				argMap.put("gameDir", getLaunchDirectory(argMap).toAbsolutePath().normalize().toString());
