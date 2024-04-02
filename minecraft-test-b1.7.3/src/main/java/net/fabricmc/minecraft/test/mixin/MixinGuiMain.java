@@ -30,7 +30,7 @@ import net.minecraft.client.gui.screen.TitleScreen;
 public abstract class MixinGuiMain extends Screen {
 	@Inject(method = "render", at = @At("RETURN"))
 	public void render(int mouseX, int mouseY, float delta, CallbackInfo info) {
-		this.drawCenteredTextWithShadow(textRenderer, "Quilt Test Mod", 2, this.height - 30, -1);
+		this.drawStringWithShadow(textRenderer, "Quilt Test Mod", 2, this.height - 30, -1);
 		TestMixinGuiHelper.help();
 	}
 }
