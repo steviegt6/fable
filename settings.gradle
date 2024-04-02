@@ -21,4 +21,6 @@ pluginManagement {
 rootProject.name = "fable"
 
 include "loader"
-// include "minecraft", "minecraft:minecraft-test", "minecraft:minecraft-test-b1.7.3"
+include "minecraft"
+include "minecraft:minecraft-test"
+include "minecraft:minecraft-test-b1.7.3"
