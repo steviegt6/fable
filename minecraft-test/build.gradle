@@ -4,6 +4,26 @@ plugins {
 
 sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
 
+repositories {
+	maven {
+		name = 'Quilt Releases'
+		url = 'https://maven.quiltmc.org/repository/release/'
+	}
+	maven {
+		name = 'Quilt'
+		url = 'https://maven.quiltmc.org/repository/snapshot'
+	}
+	maven {
+		name = "Fabric"
+		url = "https://maven.fabricmc.net"
+	}
+	maven {
+		name = 'Unascribed'
+		url = 'https://repo.sleeping.town/'
+	}
+	mavenCentral()
+}
+
 loom {
 	runConfigs.configureEach {
 		ideConfigGenerated = true
