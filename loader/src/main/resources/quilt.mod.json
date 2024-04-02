@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "dev.tomat",
+    "id": "fable",
+    "version": "${version}",
+    "metadata": {
+      "name": "Fable",
+      "description": "The mod-loader that cares.",
+      "contributors": {
+        "tomat": "Owner"
+      },
+      "contact": {
+        "homepage": "https://tomat.dev",
+        "issues": "https://github.com/steviegt6/fable/issues",
+        "sources": "https://github.com/steviegt6/fable"
+      },
+      "license": "Apache-2.0",
+      "icon": "assets/quilt_loader/icon.png"
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "provides": [
+      {
+        "id": "fabricloader",
+        "version": "0.15.7"
+      },
+      {
+        "id": "quilt_loader",
+        "version": "0.25.0"
+      }
+    ],
+    "depends": [
+      "mixinextras"
+    ]
+  }
+}

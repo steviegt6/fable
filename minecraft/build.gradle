@@ -1,5 +1,55 @@
+plugins {
+	id 'java'
+	id 'java-library'
+	id 'eclipse'
+	id 'maven-publish'
+	id 'org.quiltmc.gradle.licenser' version '2.0.1'
+	id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
+
+allprojects {
+	apply plugin: 'java-library'
+	apply plugin: 'eclipse'
+
+	/*if (ENV.SNAPSHOTS_URL) {
+		version = version + "-SNAPSHOT"
+	}
+	if (!ENV.GITHUB_ACTIONS) {
+		version = version + "+local"
+	}*/
+
+	repositories {
+		maven {
+			name = 'Fabric'
+			url = 'https://maven.fabricmc.net/'
+		}
+		maven {
+			name = 'Quilt'
+			url = 'https://maven.quiltmc.org/repository/release'
+		}
+		maven {
+			name = 'Quilt'
+			url = 'https://maven.quiltmc.org/repository/snapshot'
+		}
+		maven {
+			name = 'Unascribed'
+			url = 'https://repo.sleeping.town/'
+		}
+		mavenCentral() {
+			content {
+				excludeGroupByRegex "org.ow2.asm"
+			}
+		}
+	}
+	java {
+		toolchain {
+			languageVersion = JavaLanguageVersion.of(17)
+		}
+	}
+}
 
 compileJava {
 	options.release.set(8)

@@ -9,13 +9,16 @@ pluginManagement {
 			name = "Fabric"
 			url = "https://maven.fabricmc.net"
 		}
+		maven {
+			name = 'Babric'
+			url = 'https://maven.glass-launcher.net/babric'
+		}
 		mavenCentral()
 	}
 }
 
 
-rootProject.name = "quilt-loader"
+rootProject.name = "fable"
 
-include "minecraft"
-include "minecraft:minecraft-test"
-include 'junit'
+include "loader"
+// include "minecraft", "minecraft:minecraft-test", "minecraft:minecraft-test-b1.7.3"
