@@ -15,6 +15,14 @@ loom {
 
 repositories {
 	maven {
+		name = 'Quilt Releases'
+		url = 'https://maven.quiltmc.org/repository/release/'
+	}
+	maven {
+		name = "Fabric"
+		url = "https://maven.fabricmc.net"
+	}
+	maven {
 		name = 'Babric'
 		url = 'https://maven.glass-launcher.net/babric'
 	}
@@ -55,7 +63,7 @@ tasks.withType(JavaCompile).configureEach {
 	it.options.release.set(17)
 }
 
-runClient {
+/*runClient {
     classpath += project(':loader').sourceSets.main.output
     classpath += project(':minecraft').sourceSets.main.output
-}
+}*/
