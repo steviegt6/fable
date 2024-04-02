@@ -32,6 +32,7 @@ public final class SystemProperties {
 	// ###########
 
 	public static final String DEVELOPMENT = "loader.development";
+	public static final String FABRIC_DEVELOPMENT = "fabric.development";
 	public static final String SIDE = "loader.side";
 	public static final String GAME_JAR_PATH = "loader.gameJarPath";
 	public static final String GAME_JAR_PATH_CLIENT = "loader.gameJarPath.client";
@@ -39,6 +40,7 @@ public final class SystemProperties {
 
 	public static final String GAME_VERSION = "loader.gameVersion";
 	public static final String REMAP_CLASSPATH_FILE = "loader.remapClasspathFile";
+	public static final String FABRIC_REMAP_CLASSPATH_FILE = "fabric.remapClasspathFile";
 	public static final String UNIT_TEST = "loader.unitTest";
 	public static final String DEBUG_MOD_SOLVING = "loader.debug.mod_solving";
 	public static final String PRINT_MOD_SOLVING_RESULTS = "loader.mod_solving.print_results";

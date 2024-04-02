@@ -135,6 +135,7 @@ public final class Knot extends QuiltLauncherBase {
 		Log.info(LogCategory.GAME_PROVIDER, "Loading %s %s with Quilt Loader %s and Fable %s", provider.getGameName(), provider.getRawGameVersion(), QuiltLoaderImpl.VERSION, FableLoaderImpl.VERSION);
 
 		isDevelopment = Boolean.parseBoolean(System.getProperty(SystemProperties.DEVELOPMENT, "false"));
+		isDevelopment |= Boolean.parseBoolean(System.getProperty(SystemProperties.FABRIC_DEVELOPMENT, "false"));
 
 		// Setup classloader
 		// TODO: Provide KnotCompatibilityClassLoader in non-exclusive-Fabric pre-1.13 environments?

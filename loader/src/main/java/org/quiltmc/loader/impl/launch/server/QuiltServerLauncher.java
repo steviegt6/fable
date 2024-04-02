@@ -54,6 +54,7 @@ public class QuiltServerLauncher {
 		}
 
 		boolean dev = Boolean.parseBoolean(System.getProperty(SystemProperties.DEVELOPMENT, "false"));
+		dev |= Boolean.parseBoolean(System.getProperty(SystemProperties.FABRIC_DEVELOPMENT, "false"));
 
 		if (!dev) {
 			try {

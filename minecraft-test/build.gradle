@@ -68,7 +68,7 @@ tasks.withType(JavaCompile).configureEach {
 	it.options.release.set(17)
 }
 
-runClient {
+/*runClient {
     classpath += project(':loader').sourceSets.main.output
     classpath += project(':minecraft').sourceSets.main.output
-}
+}*/
