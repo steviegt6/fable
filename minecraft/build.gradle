@@ -7,19 +7,21 @@ plugins {
 	id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+
+version = project.fable
+def ENV = System.getenv()
 
 allprojects {
 	apply plugin: 'java-library'
 	apply plugin: 'eclipse'
 
-	/*if (ENV.SNAPSHOTS_URL) {
+	if (ENV.SNAPSHOTS_URL) {
 		version = version + "-SNAPSHOT"
 	}
 	if (!ENV.GITHUB_ACTIONS) {
 		version = version + "+local"
-	}*/
+	}
 
 	repositories {
 		maven {
@@ -63,8 +65,8 @@ repositories {
 }
 
 dependencies {
-	api project(":")
-	implementation project(":").sourceSets.main.output
+	api project(":loader")
+	implementation project(":loader").sourceSets.main.output
 	// log4j wrapper
 	compileOnly 'org.apache.logging.log4j:log4j-api:2.8.1'
 	// slf4j wrapper
