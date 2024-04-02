@@ -278,8 +278,10 @@ public final class GameProviderHelper {
 	}
 
 	private static void deobfuscate0(List<Path> inputFiles, List<Path> outputFiles, List<Path> tmpFiles, TinyTree mappings, String targetNamespace, QuiltLauncher launcher) throws IOException {
+		String side = launcher.getEnvironmentType().name().toLowerCase();
+		String ns = mappings.getMetadata().getNamespaces().contains(side) ? side : "official";
 		TinyRemapper remapper = TinyRemapper.newRemapper()
-				.withMappings(TinyRemapperMappingsHelper.create(mappings, "official", targetNamespace))
+				.withMappings(TinyRemapperMappingsHelper.create(mappings, ns, targetNamespace))
 				.rebuildSourceFilenames(true)
 				.build();
 

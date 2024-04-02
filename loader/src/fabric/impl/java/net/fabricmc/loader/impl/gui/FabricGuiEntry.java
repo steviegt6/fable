@@ -22,7 +22,7 @@ package net.fabricmc.loader.impl.gui;
 import java.awt.GraphicsEnvironment;
 import java.util.function.Consumer;
 
-import dev.tomat.fable.impl.FableImpl;
+import dev.tomat.fable.impl.FableLoaderImpl;
 import org.quiltmc.loader.api.gui.LoaderGuiException;
 import org.quiltmc.loader.api.gui.QuiltLoaderGui;
 import org.quiltmc.loader.api.gui.QuiltLoaderText;
@@ -60,7 +60,7 @@ public class FabricGuiEntry {
 		GameProvider provider = QuiltLoaderImpl.INSTANCE.tryGetGameProvider();
 
 		if ((provider == null || provider.canOpenGui()) && !GraphicsEnvironment.isHeadless()) {
-			FabricStatusTree tree = new FabricStatusTree("Quilt Loader " + QuiltLoaderImpl.VERSION + "/Fable " + FableImpl.VERSION, mainText);
+			FabricStatusTree tree = new FabricStatusTree("Quilt Loader " + QuiltLoaderImpl.VERSION + "/Fable " + FableLoaderImpl.VERSION, mainText);
 			FabricStatusTab crashTab = tree.addTab(QuiltLoaderText.translate("tab.messages").toString());
 
 			if (exception == null) {

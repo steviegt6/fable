@@ -21,6 +21,6 @@ import org.quiltmc.loader.impl.util.QuiltLoaderInternal;
 import org.quiltmc.loader.impl.util.QuiltLoaderInternalType;
 
 @QuiltLoaderInternal(QuiltLoaderInternalType.NEW_INTERNAL)
-public final class FableImpl {
-	public static final String VERSION = "0.1.0";
+public final class FableLoaderImpl {
+	public static final String VERSION = "0.1.0-beta.1";
 }

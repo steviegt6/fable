@@ -22,7 +22,7 @@ package org.quiltmc.loader.impl.gui;
 import java.awt.GraphicsEnvironment;
 import java.nio.file.Path;
 
-import dev.tomat.fable.impl.FableImpl;
+import dev.tomat.fable.impl.FableLoaderImpl;
 import org.quiltmc.loader.api.QuiltLoader;
 import org.quiltmc.loader.api.gui.LoaderGuiException;
 import org.quiltmc.loader.api.gui.QuiltBasicWindow;
@@ -58,7 +58,7 @@ public final class QuiltGuiEntry {
 			// It's arguably the most important version - if anything goes wrong while writing this report
 			// at least we know what code was used to generate it.
 			report.overview("Quilt Loader Version: " + QuiltLoaderImpl.VERSION);
-			report.overview("Fable Version: " + FableImpl.VERSION);
+			report.overview("Fable Version: " + FableLoaderImpl.VERSION);
 			report.addStacktraceSection("Crash", 0, exception);
 			try {
 				QuiltLoaderImpl.INSTANCE.appendModTable(report.addStringSection("Mods", 0)::lines);
@@ -74,7 +74,7 @@ public final class QuiltGuiEntry {
 				crashReportText = e.fullReportText;
 			}
 
-			String title = "Quilt Loader " + QuiltLoaderImpl.VERSION + "/Fable " + FableImpl.VERSION;
+			String title = "Quilt Loader " + QuiltLoaderImpl.VERSION + "/Fable " + FableLoaderImpl.VERSION;
 			QuiltBasicWindow<Void> window = QuiltLoaderGui.createBasicWindow();
 			window.title(QuiltLoaderText.of(title));
 			window.mainText(QuiltLoaderText.of(mainText));
