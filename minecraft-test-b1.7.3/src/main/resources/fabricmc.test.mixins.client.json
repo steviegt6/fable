@@ -3,8 +3,7 @@
     "package": "net.fabricmc.minecraft.test.mixin",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
-        "MixinGuiMain",
-        "MixinGrassBlock"
+        "MixinGuiMain"
     ],
     "injectors": {
         "defaultRequire": 1
