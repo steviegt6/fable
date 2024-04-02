@@ -1,7 +1,8 @@
-apply plugin: "org.quiltmc.loom"
+plugins {
+	id 'org.quiltmc.loom' version '1.3.3'
+}
 
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
 
 loom {
 	runConfigs.configureEach {
@@ -14,15 +15,13 @@ repositories {
 }
 
 dependencies {
-	testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
 	minecraft "com.mojang:minecraft:1.20.2"
 	mappings "org.quiltmc:quilt-mappings:1.20.2+build.1:intermediary-v2"
 
-
 	implementation project(":minecraft")
 	implementation project(":minecraft").sourceSets.main.output
-	implementation project(":")
-	implementation project(":").sourceSets.main.output
+	implementation project(":loader")
+	implementation project(":loader").sourceSets.main.output
 	// so that it works on runtime
 	implementation "org.quiltmc.chasm:chassembly:${project.quilt_chasm}"
 	implementation "org.quiltmc.chasm:chasm:${project.quilt_chasm}"
@@ -42,12 +41,6 @@ dependencies {
 		exclude module: 'launchwrapper'
 		exclude module: 'guava'
 	}
-
-	testImplementation project(":junit")
-}
-
-test {
-	useJUnitPlatform()
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -56,6 +49,6 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 runClient {
-    classpath += project(':').sourceSets.main.output
+    classpath += project(':loader').sourceSets.main.output
     classpath += project(':minecraft').sourceSets.main.output
 }
