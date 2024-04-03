@@ -3,17 +3,14 @@ plugins {
 	id 'java'
 }
 
-group = "dev.tomat"
-archivesBaseName = "bta"
-version = "1.0.0"
-
 loom {
-	gluedMinecraftJar()
+	//gluedMinecraftJar()
+	clientOnlyMinecraftJar() // TODO: how to merge THIS IS SO SAD WHY DOES GLUING BREAK IT
 	noIntermediateMappings()
 	customMinecraftManifest.set("https://github.com/Turnip-Labs/bta-manifest-repo/releases/download/v${project.bta_version}/${project.bta_version}.json")
-	/*runConfigs.configureEach {
+	runConfigs.configureEach {
 		ideConfigGenerated = true
-	}*/
+	}
 }
 
 repositories {
@@ -97,9 +94,11 @@ dependencies {
 
 	// modImplementation "com.github.Turnip-Labs:bta-halplibe:3.4.16"
 	modImplementation "ModMenu:ModMenu:2.0.4"
+	implementation 'com.google.guava:guava:33.0.0-jre'
+	implementation group: 'com.google.code.gson', name: 'gson', version: '2.10.1'
 
-	implementation project(":minecraft")
-	implementation project(":minecraft").sourceSets.main.output
+	implementation project(":providers:bta")
+	implementation project(":providers:bta").sourceSets.main.output
 	implementation project(":loader")
 	implementation project(":loader").sourceSets.main.output
 	// so that it works on runtime

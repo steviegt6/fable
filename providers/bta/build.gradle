@@ -87,7 +87,9 @@ configurations {
 
 dependencies {
 	api project(":loader")
+	api project(":providers:minecraft")
 	implementation project(":loader").sourceSets.main.output
+	implementation project(":providers:minecraft") // bta still relies on mc game impl for classes like Log4jLogHandler
 	// log4j wrapper
 	compileOnly 'org.apache.logging.log4j:log4j-api:2.8.1'
 	// slf4j wrapper
@@ -159,7 +161,10 @@ task getSat4jAbout(type: Copy) {
 
 task fatJar(type: ShadowJar, dependsOn: getSat4jAbout) {
 	from sourceSets.main.output
-	from project(":minecraft").sourceSets.main.output
+	try {
+		from project(":providers:minecraft").sourceSets.main.output // bta still relies on mc game impl for classes like Log4jLogHandler
+	} catch(ignored) { }
+	from project(":providers:bta").sourceSets.main.output
 	from getSat4jAbout.destinationDir
 	from("LICENSE") {
 		rename { "${it}_${project.archivesBaseName}"}

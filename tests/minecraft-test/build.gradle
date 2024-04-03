@@ -1,17 +1,8 @@
 plugins {
-	id 'babric-loom' version '1.5-SNAPSHOT'
+	id 'org.quiltmc.loom' version '1.3.3'
 }
 
-sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
-
-loom {
-	gluedMinecraftJar()
-	customMinecraftManifest.set("https://babric.github.io/manifest-polyfill/b1.7.3.json")
-	intermediaryUrl.set("https://maven.glass-launcher.net/babric/babric/intermediary/%1\$s/intermediary-%1\$s-v2.jar")
-	runConfigs.configureEach {
-		ideConfigGenerated = true
-	}
-}
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
 
 repositories {
 	maven {
@@ -27,22 +18,28 @@ repositories {
 		url = "https://maven.fabricmc.net"
 	}
 	maven {
-		name = 'Babric'
-		url = 'https://maven.glass-launcher.net/babric'
-	}
-	maven {
 		name = 'Unascribed'
 		url = 'https://repo.sleeping.town/'
 	}
 	mavenCentral()
 }
 
-dependencies {
-	minecraft "com.mojang:minecraft:b1.7.3"
-	mappings "babric:barn:b1.7.3+build.8:v2"
+loom {
+	runConfigs.configureEach {
+		ideConfigGenerated = true
+	}
+}
 
-	implementation project(":minecraft")
-	implementation project(":minecraft").sourceSets.main.output
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:1.20.2"
+	mappings "org.quiltmc:quilt-mappings:1.20.2+build.1:intermediary-v2"
+
+	implementation project(":providers:minecraft")
+	implementation project(":providers:minecraft").sourceSets.main.output
 	implementation project(":loader")
 	implementation project(":loader").sourceSets.main.output
 	// so that it works on runtime
@@ -68,7 +65,7 @@ dependencies {
 
 tasks.withType(JavaCompile).configureEach {
 	it.options.encoding = "UTF-8"
-	it.options.release.set(8)
+	it.options.release.set(17)
 }
 
 /*runClient {

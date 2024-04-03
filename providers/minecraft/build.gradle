@@ -1,0 +1,193 @@
+import net.fabricmc.loom.build.nesting.JarNester
+
+plugins {
+	id 'java'
+	id 'java-library'
+	id 'eclipse'
+	id 'maven-publish'
+	id 'org.quiltmc.gradle.licenser' version '2.0.1'
+	id 'org.quiltmc.loom' version '1.3.3' apply false
+	id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+
+version = project.fable
+def ENV = System.getenv()
+
+allprojects {
+	apply plugin: 'java-library'
+	apply plugin: 'eclipse'
+
+	if (ENV.SNAPSHOTS_URL) {
+		version = version + "-SNAPSHOT"
+	}
+	if (!ENV.GITHUB_ACTIONS) {
+		version = version + "+local"
+	}
+
+	repositories {
+		maven {
+			name = 'Fabric'
+			url = 'https://maven.fabricmc.net/'
+		}
+		maven {
+			name = 'Quilt'
+			url = 'https://maven.quiltmc.org/repository/release'
+		}
+		maven {
+			name = 'Quilt'
+			url = 'https://maven.quiltmc.org/repository/snapshot'
+		}
+		maven {
+			name = 'Unascribed'
+			url = 'https://repo.sleeping.town/'
+		}
+		mavenCentral() {
+			content {
+				excludeGroupByRegex "org.ow2.asm"
+			}
+		}
+	}
+	java {
+		toolchain {
+			languageVersion = JavaLanguageVersion.of(17)
+		}
+	}
+}
+
+compileJava {
+	options.release.set(8)
+}
+
+repositories {
+	maven {
+		name = 'Mojang'
+		url = 'https://libraries.minecraft.net/'
+	}
+}
+
+configurations {
+	include {
+		transitive = false
+	}
+
+	implementation {
+		extendsFrom include
+	}
+
+	development {
+		transitive = false
+	}
+
+	api {
+		extendsFrom development
+	}
+}
+
+dependencies {
+	api project(":loader")
+	implementation project(":loader").sourceSets.main.output
+	// log4j wrapper
+	compileOnly 'org.apache.logging.log4j:log4j-api:2.8.1'
+	// slf4j wrapper
+	compileOnly 'org.slf4j:slf4j-api:1.8.0-beta4'
+	// HACK: work around proguard only seeing dependencies on the minecraft compile classpath
+	compileOnly "org.quiltmc.chasm:chassembly:${project.quilt_chasm}"
+	compileOnly "org.quiltmc.chasm:chasm:${project.quilt_chasm}"
+//	compileOnly 'org.quiltmc:quilt-json5:1.0.1'
+//	testCompileOnly 'org.quiltmc:quilt-json5:1.0.1'
+	// launchwrapper + dependencies
+	compileOnly ('net.minecraft:launchwrapper:1.12') {
+		transitive = false
+	}
+	//implementation 'net.sf.jopt-simple:jopt-simple:5.0.3'
+	shadow "com.electronwill.night-config:core:${project.night_config}"
+	shadow "com.electronwill.night-config:toml:${project.night_config}"
+	shadow "org.quiltmc.quilt-config.serializers:toml:${project.quilt_config}"
+	shadow "org.quiltmc.quilt-config.serializers:json5:${project.quilt_config}"
+	shadow "org.quiltmc.parsers:json:${project.quilt_parsers}"
+	shadow "com.unascribed:flexver-java:${project.flexver}"
+}
+
+sourceSets {
+	main {
+		java.srcDirs = ['src/main/java', 'src/main/legacyJava']
+	}
+}
+
+compileJava {
+	options.release.set(8)
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.encoding = "UTF-8"
+
+	if (JavaVersion.current().isJava9Compatible()) {
+		it.options.release = 8
+	}
+}
+
+jar {
+	enabled = false
+}
+
+shadowJar {
+	// Has stupid defaults, make our own
+	enabled = false
+}
+
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
+// Renaming in the shadow jar task doesnt seem to work, so do it here
+task getSat4jAbout(type: Copy) {
+	dependsOn project.configurations.include
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+	from {
+		configurations.include.collect {
+			zipTree(it).matching {
+				include 'about.html'
+			}
+		}
+	}
+
+	rename 'about.html', 'org/quiltmc/loader/impl/lib/sat4j/about-sat4j.html'
+
+	into layout.buildDirectory.dir("sat4j")
+}
+
+task fatJar(type: ShadowJar, dependsOn: getSat4jAbout) {
+	from sourceSets.main.output
+	from project(":providers:minecraft").sourceSets.main.output
+	from getSat4jAbout.destinationDir
+	from("LICENSE") {
+		rename { "${it}_${project.archivesBaseName}"}
+	}
+
+	manifest {
+		attributes (
+			"Main-Class": "net.fabricmc.loader.launch.server.FabricServerLauncher",
+			"Fabric-Loom-Remap": "false",
+			"Automatic-Module-Name": "org.quiltmc.loader"
+		)
+	}
+
+	archiveClassifier = "fat"
+	configurations = [project.configurations.include]
+
+	relocate 'org.quiltmc.loader.util.sat4j', 'org.quiltmc.loader.impl.lib.sat4j'
+	relocate 'org.quiltmc.parsers', 'org.quiltmc.loader.impl.lib.parsers'
+	relocate 'com.electronwill', 'org.quiltmc.loader.impl.lib.electronwill'
+	relocate 'com.unascribed.flexver', 'org.quiltmc.loader.impl.lib.flexver'
+	//relocate 'org.quiltmc.json5', 'org.quiltmc.loader.impl.lib.json5'
+	exclude 'about.html'
+	exclude 'sat4j.version'
+	exclude 'META-INF/maven/org.ow2.sat4j/*/**'
+
+	doLast {
+		JarNester.nestJars(project.configurations.development.files, archiveFile.get().asFile, LoggerFactory.getLogger("JiJ"))
+	}
+
+	outputs.upToDateWhen { false }
+}
