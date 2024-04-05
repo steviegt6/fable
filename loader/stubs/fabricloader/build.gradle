@@ -1,5 +1,15 @@
 plugins {
 	id 'java-library'
+	id 'org.quiltmc.gradle.licenser' version '2.0.1'
+}
+
+license {
+	rule project.rootProject.file("codeformat/FABRIC_MODIFIED_HEADER")
+	rule project.rootProject.file("codeformat/QUILT_MODIFIED_HEADER")
+	rule project.rootProject.file("codeformat/HEADER")
+
+	include '**/*.java'
+	exclude '**/lib/gson/*.java'
 }
 
 sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8

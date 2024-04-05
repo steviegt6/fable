@@ -105,9 +105,8 @@ allprojects {
 		rule project.rootProject.file("codeformat/FABRIC_MODIFIED_HEADER")
 		rule project.rootProject.file("codeformat/QUILT_MODIFIED_HEADER")
 		rule project.rootProject.file("codeformat/HEADER")
-		include '**/*.java'
 
-		// Exclude gson since it is google's code, we just modify and bundle it
+		include '**/*.java'
 		exclude '**/lib/gson/*.java'
 	}
 }
