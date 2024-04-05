@@ -1,26 +1,42 @@
 pluginManagement {
 	repositories {
-		gradlePluginPortal()
-		maven {
-			name = 'Quilt Releases'
-			url = 'https://maven.quiltmc.org/repository/release/'
-		}
 		maven {
 			name = "Fabric"
 			url = "https://maven.fabricmc.net"
 		}
 		maven {
+			name = 'Quilt Releases'
+			url = 'https://maven.quiltmc.org/repository/release/'
+		}
+		maven {
+			name = 'Quilt Snapshots'
+			url = 'https://maven.quiltmc.org/repository/snapshot'
+		}
+		maven {
 			name = 'Babric'
 			url = 'https://maven.glass-launcher.net/babric'
 		}
-		mavenCentral()
+		maven {
+			name = 'Unascribed'
+			url = 'https://repo.sleeping.town/'
+		}
+		maven {
+			name = 'Mojang'
+			url = 'https://libraries.minecraft.net/'
+		}
+		gradlePluginPortal()
+		mavenCentral() {
+			content {
+				excludeGroupByRegex "org.ow2.asm"
+			}
+		}
 	}
 }
 
 
 rootProject.name = "fable"
 
-include "loader"
+include ":loader"
 include ":providers:minecraft"
 include ":providers:bta"
 include ":tests:minecraft-test"

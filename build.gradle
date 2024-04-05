@@ -1,8 +1,55 @@
 plugins {
+	// id 'com.github.johnrengelman.shadow' version '8.1.1'
 	id 'org.quiltmc.gradle.licenser' version '2.0.1'
 }
 
 allprojects {
+	repositories {
+		maven {
+			name = "Fabric"
+			url = "https://maven.fabricmc.net"
+		}
+		maven {
+			name = 'Quilt Releases'
+			url = 'https://maven.quiltmc.org/repository/release/'
+		}
+		maven {
+			name = 'Quilt Snapshots'
+			url = 'https://maven.quiltmc.org/repository/snapshot'
+		}
+		maven {
+			name = 'Babric'
+			url = 'https://maven.glass-launcher.net/babric'
+		}
+		maven {
+			name = 'Unascribed'
+			url = 'https://repo.sleeping.town/'
+		}
+		maven {
+			name = 'Mojang'
+			url = 'https://libraries.minecraft.net/'
+		}
+		gradlePluginPortal()
+		mavenCentral() {
+			content {
+				excludeGroupByRegex "org.ow2.asm"
+			}
+		}
+	}
+
+	apply plugin: 'java'
+	apply plugin: 'java-library'
+	apply plugin: 'eclipse'
+	apply plugin: 'maven-publish'
+
+	def ENV = System.getenv()
+	if (ENV.SNAPSHOTS_URL) {
+		version = version + "-SNAPSHOT"
+	}
+	if (!ENV.GITHUB_ACTIONS) {
+		version = version + "+local"
+	}
+
 	license {
 		rule project.rootProject.file("codeformat/FABRIC_MODIFIED_HEADER")
 		rule project.rootProject.file("codeformat/QUILT_MODIFIED_HEADER")

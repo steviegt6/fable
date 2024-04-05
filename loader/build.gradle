@@ -1,63 +1,7 @@
-buildscript {
-	dependencies {
-		classpath "org.kohsuke:github-api:${project.github_api}"
-		classpath "com.guardsquare:proguard-gradle:${project.proguard_gradle}"
-	}
-}
-
-plugins {
-	id 'java'
-	id 'java-library'
-	id 'eclipse'
-	id 'org.quiltmc.gradle.licenser' version '2.0.1'
-}
-
 sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
 
-archivesBaseName = "fable"
+archivesBaseName = project.name
 version = project.fable
-def ENV = System.getenv()
-
-allprojects {
-	apply plugin: 'java-library'
-	apply plugin: 'eclipse'
-
-	if (ENV.SNAPSHOTS_URL) {
-		version = version + "-SNAPSHOT"
-	}
-	if (!ENV.GITHUB_ACTIONS) {
-		version = version + "+local"
-	}
-
-	repositories {
-		maven {
-			name = 'Fabric'
-			url = 'https://maven.fabricmc.net/'
-		}
-		maven {
-			name = 'Quilt'
-			url = 'https://maven.quiltmc.org/repository/release'
-		}
-		maven {
-			name = 'Quilt'
-			url = 'https://maven.quiltmc.org/repository/snapshot'
-		}
-		maven {
-		  name = 'Unascribed'
-		  url = 'https://repo.sleeping.town/'
-		}
-		mavenCentral() {
-			content {
-				excludeGroupByRegex "org.ow2.asm"
-			}
-		}
-	}
-	java {
-		toolchain {
-			languageVersion = JavaLanguageVersion.of(17)
-		}
-	}
-}
 
 sourceSets {
 	main {
@@ -65,6 +9,7 @@ sourceSets {
 	}
 }
 
+// Reproduce Loom configurations because we don't apply the plugin.
 configurations {
 	include {
 	   transitive = false
@@ -95,11 +40,14 @@ dependencies {
 		exclude module: 'launchwrapper'
 		exclude module: 'guava'
 	}
+
 	api "net.fabricmc:tiny-mappings-parser:${project.tiny_mappings_parser}"
 	api "net.fabricmc:tiny-remapper:${project.tiny_remapper}"
+
 	api "net.fabricmc:access-widener:${project.access_widener}"
 
-	/*include*/ api "org.quiltmc:quilt-json5:${project.quilt_json5}"
+	api "org.quiltmc:quilt-json5:${project.quilt_json5}"
+
 	include "org.quiltmc:quilt-loader-sat4j:${project.quilt_loader_sat4j}"
 
 	include "org.quiltmc.quilt-config.serializers:toml:${project.quilt_config}"
@@ -108,21 +56,15 @@ dependencies {
 
 	include "com.electronwill.night-config:core:${project.night_config}"
 	include "com.electronwill.night-config:toml:${project.night_config}"
-	// shadow "com.electronwill.night-config:core:${project.night_config}"
-	// shadow "com.electronwill.night-config:toml:${project.night_config}"
 
 	development "io.github.llamalad7:mixinextras-fabric:$mixin_extras"
 
-	// also must update in minecraft AND minecraft test
 	compileOnly "org.quiltmc.chasm:chasm:${project.quilt_chasm}"
 	compileOnly "org.quiltmc.chasm:chassembly:${project.quilt_chasm}"
 
-	// shadow "org.quiltmc.quilt-config.serializers:toml:${project.quilt_config}"
-	// shadow "org.quiltmc.quilt-config.serializers:json5:${project.quilt_config}"
-	// shadow "org.quiltmc.parsers:json:${project.quilt_parsers}"
 	include "org.quiltmc.parsers:json:${project.quilt_parsers}"
+
 	include "com.unascribed:flexver-java:${project.flexver}"
-	// shadow "com.unascribed:flexver-java:${project.flexver}"
 
 	testCompileOnly "org.jetbrains:annotations:${project.annotations}"
 }
@@ -161,71 +103,5 @@ processResources {
 			"quilt_config": project.quilt_config,
 			"mixin_extras": project.mixin_extras,
 		)
-	}
-}
-
-java {
-	sourceCompatibility = 8
-	targetCompatibility = 8
-	withSourcesJar()
-}
-
-compileJava {
-	options.release.set(8)
-}
-
-jar {
-	enabled = false
-	// Set the classifier to fix gradle task validation confusion.
-	archiveClassifier = "disabled"
-}
-
-// Renaming in the shadow jar task doesnt seem to work, so do it here
-task getSat4jAbout(type: Copy) {
-	dependsOn project.configurations.include
-	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-
-	from {
-		configurations.include.collect {
-			zipTree(it).matching {
-				include 'about.html'
-			}
-		}
-	}
-
-	rename 'about.html', 'org/quiltmc/loader/impl/lib/sat4j/about-sat4j.html'
-
-	into layout.buildDirectory.dir("sat4j")
-}
-
-tasks.withType(AbstractArchiveTask) {
-	preserveFileTimestamps = false
-	reproducibleFileOrder = true
-}
-
-task copyJson() {
-	def inJson = file('build/resources/main/quilt_installer.json')
-	//def inLwJson = file('src/main/resources/fabric-installer.launchwrapper.json')
-
-	def outJson = file("build/libs/${archivesBaseName}-${version}.json")
-	//def outLwJson = file("build/libs/${archivesBaseName}-${version}.launchwrapper.json")
-
-	inputs.files (inJson, /*inLwJson*/)
-	outputs.files(outJson, /*outLwJson*/)
-
-	doLast {
-		outJson.text = inJson.text
-		//outLwJson.text = inLwJson.text
-	}
-}
-tasks.copyJson.dependsOn "processResources"
-tasks.build.dependsOn "copyJson"
-
-tasks.withType(JavaCompile).configureEach {
-	it.options.encoding = "UTF-8"
-
-	// Target JDK 8
-	if (JavaVersion.current().isJava9Compatible()) {
-		it.options.release.set(8)
 	}
 }
