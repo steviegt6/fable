@@ -1,0 +1,31 @@
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+
+version = project.fable
+
+// Reproduce Loom configurations because we don't apply the plugin.
+configurations {
+	include {
+		transitive = false
+	}
+
+	implementation {
+		extendsFrom include
+	}
+
+	development {
+		transitive = false
+	}
+
+	api {
+		extendsFrom development
+	}
+}
+
+dependencies {
+	api project(":loader")
+
+	runtimeOnly project(":loader:stubs:fabricloader")
+	include project(":loader:stubs:fabricloader")
+	runtimeOnly project(":loader:stubs:quilt_loader")
+	include project(":loader:stubs:quilt_loader")
+}
