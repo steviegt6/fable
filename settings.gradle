@@ -88,6 +88,8 @@ pluginManagement {
 rootProject.name = "fable"
 
 include ":loader"
+include ":loader:stubs:fabricloader"
+include ":loader:stubs:quilt_loader"
 include ":providers:minecraft"
 include ":providers:bta"
 include ":tests:minecraft-test"

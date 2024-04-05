@@ -67,6 +67,12 @@ dependencies {
 	include "com.unascribed:flexver-java:${project.flexver}"
 
 	testCompileOnly "org.jetbrains:annotations:${project.annotations}"
+
+	// Stubs.
+	runtimeOnly project(":loader:stubs:fabricloader")
+	include project(":loader:stubs:fabricloader")
+	runtimeOnly project(":loader:stubs:quilt_loader")
+	include project(":loader:stubs:quilt_loader")
 }
 
 processResources {

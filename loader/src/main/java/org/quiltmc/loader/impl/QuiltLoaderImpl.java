@@ -698,7 +698,7 @@ public final class QuiltLoaderImpl {
 		List<QuiltJsonGuiMessage> pluginErrors = plugins.getErrors();
 		for (QuiltJsonGuiMessage error : pluginErrors) {
 			if (number > 200) {
-				error = new QuiltJsonGuiMessage(null, MOD_ID, QuiltLoaderText.translate("error.too_many_errors"));
+				error = new QuiltJsonGuiMessage(null, FableLoaderImpl.MOD_ID, QuiltLoaderText.translate("error.too_many_errors"));
 				error.appendDescription(QuiltLoaderText.translate("error.too_many_errors.desc", pluginErrors.size() - 200));
 				messagesTab.addMessage(error);
 				break;
@@ -840,6 +840,14 @@ public final class QuiltLoaderImpl {
 			row.put(name, "Quilt Loader");
 			row.put(id, MOD_ID);
 			row.put(version, VERSION);
+			row.put(type, "!missing!");
+		}
+
+		if (!bestModSource.containsKey(FableLoaderImpl.MOD_ID)) {
+			AsciiTableRow row = table.addRow();
+			row.put(name, "Fable");
+			row.put(id, FableLoaderImpl.MOD_ID);
+			row.put(version, FableLoaderImpl.VERSION);
 			row.put(type, "!missing!");
 		}
 
@@ -1002,7 +1010,7 @@ public final class QuiltLoaderImpl {
 		// add mods to classpath
 		// TODO: This can probably be made safer, but that's a long-term goal
 		for (ModContainerExt mod : mods) {
-			if (mod.metadata().id().equals(MOD_ID)) {
+			if (mod.metadata().id().equals(FableLoaderImpl.MOD_ID)) {
 				continue;
 			}
 			if (mod.shouldAddToQuiltClasspath()) {

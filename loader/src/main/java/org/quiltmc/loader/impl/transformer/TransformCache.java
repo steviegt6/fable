@@ -37,6 +37,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import dev.tomat.fable.impl.FableLoaderImpl;
 import org.jetbrains.annotations.Nullable;
 import org.quiltmc.loader.api.ExtendedFiles;
 import org.quiltmc.loader.api.FasterFiles;
@@ -67,7 +68,7 @@ class TransformCache {
 	public TransformCache(Path root, List<ModLoadOption> orderedMods) {
 		this.root = root;
 		this.allMods = orderedMods;
-		this.modsInCache = orderedMods.stream().filter(mod -> mod.needsTransforming() && !QuiltLoaderImpl.MOD_ID.equals(mod.id())).collect(Collectors.toList());
+		this.modsInCache = orderedMods.stream().filter(mod -> mod.needsTransforming() && !FableLoaderImpl.MOD_ID.equals(mod.id())).collect(Collectors.toList());
 
 		for (ModLoadOption mod : this.modsInCache) {
 			Path modSrc = mod.createTransformRoot();

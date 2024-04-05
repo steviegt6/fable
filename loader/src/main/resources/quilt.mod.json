@@ -6,7 +6,7 @@
     "version": "${version}",
     "metadata": {
       "name": "Fable",
-      "description": "The mod-loader that cares.",
+      "description": "The mod-loader that thinks.",
       "contributors": {
         "tomat": "Owner"
       },
@@ -15,20 +15,10 @@
         "issues": "https://github.com/steviegt6/fable/issues",
         "sources": "https://github.com/steviegt6/fable"
       },
-      "license": "Apache-2.0",
+      "licenses": ["AGPL-3.0-or-later", "Apache-2.0"],
       "icon": "assets/quilt_loader/icon.png"
     },
     "intermediate_mappings": "net.fabricmc:intermediary",
-    "provides": [
-      {
-        "id": "fabricloader",
-        "version": "0.15.7"
-      },
-      {
-        "id": "quilt_loader",
-        "version": "0.25.0"
-      }
-    ],
     "depends": [
       "mixinextras"
     ]

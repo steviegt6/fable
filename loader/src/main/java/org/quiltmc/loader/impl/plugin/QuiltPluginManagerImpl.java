@@ -56,6 +56,7 @@ import java.util.stream.Collectors;
 import java.util.zip.ZipException;
 
 import dev.tomat.fable.impl.FableLoaderImpl;
+import dev.tomat.fable.impl.plugin.fable.StandardFablePlugin;
 import org.jetbrains.annotations.Nullable;
 import org.quiltmc.loader.api.FasterFiles;
 import org.quiltmc.loader.api.LoaderValue;
@@ -163,9 +164,11 @@ public class QuiltPluginManagerImpl implements QuiltPluginManager {
 
 	final Map<TentativeLoadOption, BasePluginContext> tentativeLoadOptions = new LinkedHashMap<>();
 
+	private final StandardFablePlugin theFablePlugin;
 	public final StandardQuiltPlugin theQuiltPlugin;
 	private final StandardFabricPlugin theFabricPlugin;
 
+	BuiltinPluginContext theFablePluginContext;
 	BuiltinPluginContext theQuiltPluginContext;
 	BuiltinPluginContext theFabricPluginContext;
 
@@ -227,6 +230,7 @@ public class QuiltPluginManagerImpl implements QuiltPluginManager {
 		customPathNames.put(gameDir, "<game>");
 		customPathNames.put(modsDir, "<mods>");
 
+		theFablePlugin = new StandardFablePlugin();
 		theQuiltPlugin = new StandardQuiltPlugin();
 		theFabricPlugin = new StandardFabricPlugin();
 	}
@@ -940,6 +944,14 @@ public class QuiltPluginManagerImpl implements QuiltPluginManager {
 			row.put(plugin, "!missing!");
 		}
 
+		if (!modIds.containsKey(FableLoaderImpl.MOD_ID)) {
+			AsciiTableRow row = table.addRow();
+			row.put(modColumn, "Fable");
+			row.put(id, FableLoaderImpl.MOD_ID);
+			row.put(version, FableLoaderImpl.VERSION);
+			row.put(plugin, "!missing!");
+		}
+
 		for (PotentialModSet set : this.modIds.values()) {
 			mods.addAll(set.all);
 		}
@@ -1231,7 +1243,7 @@ public class QuiltPluginManagerImpl implements QuiltPluginManager {
 	}
 
 	private ModSolveResultImpl runInternal(boolean scanClasspath) throws ModResolutionException, TimeoutException {
-
+		theFablePluginContext = addBuiltinPlugin(theFablePlugin, FABLE);
 		theQuiltPluginContext = addBuiltinPlugin(theQuiltPlugin, QUILT_LOADER);
 		theFabricPluginContext = addBuiltinPlugin(theFabricPlugin, QUILTED_FABRIC_LOADER);
 
@@ -1492,6 +1504,9 @@ public class QuiltPluginManagerImpl implements QuiltPluginManager {
 			}
 			case QUILTED_FABRIC_LOADER: {
 				return theFabricPluginContext;
+			}
+			case FABLE: {
+				return theFablePluginContext;
 			}
 			default: {
 				return pluginsById.get(id);

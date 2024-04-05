@@ -45,10 +45,12 @@ import net.fabricmc.api.EnvType;
 public interface QuiltPluginManager {
 
 	/** The {@link QuiltPluginContext#pluginId()} for Quilt Loader itself. */
-	public static final String QUILT_LOADER = "quilt_loader";
+	String QUILT_LOADER = "quilt_loader";
 
 	/** The {@link QuiltPluginContext#pluginId()} for the fabric plugin loader. */
-	public static final String QUILTED_FABRIC_LOADER = "quilted_fabric_loader";
+	String QUILTED_FABRIC_LOADER = "quilted_fabric_loader";
+
+	String FABLE = "fable";
 
 	// #######
 	// Loading

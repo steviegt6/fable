@@ -35,6 +35,7 @@ import java.util.Map.Entry;
 import java.util.Objects;
 import java.util.regex.Pattern;
 
+import dev.tomat.fable.impl.FableLoaderImpl;
 import org.quiltmc.json5.exception.ParseException;
 import org.quiltmc.loader.api.FasterFiles;
 import org.quiltmc.loader.api.LoaderValue;
@@ -309,7 +310,7 @@ public class StandardQuiltPlugin extends BuiltinQuiltPlugin {
 
 				PluginGuiTreeNode jarNode = guiNode.addChild(QuiltLoaderText.of(jar), SortOrder.ALPHABETICAL_ORDER);
 				if (DISBALE_BUILTIN_MIXIN_EXTRAS) {
-					if (QuiltLoaderImpl.MOD_ID.equals(meta.id())) {
+					if (FableLoaderImpl.MOD_ID.equals(meta.id())) {
 						if (inner.toString().startsWith("/META-INF/jars/mixinextras-")) {
 							Log.info(LogCategory.GENERAL, "Disabling loader's builtin mixin extras library due to command line flag");
 							jarNode.addChild(QuiltLoaderText.translate("mixin_extras.disabled"));
@@ -424,7 +425,7 @@ public class StandardQuiltPlugin extends BuiltinQuiltPlugin {
 					replace(override.fuzzy, override.overrides.breakOverrides, breaks);
 				}
 
-				if (QuiltLoaderImpl.MOD_ID.equals(metadata.id())) {
+				if (FableLoaderImpl.MOD_ID.equals(metadata.id())) {
 					if (DISBALE_BUILTIN_MIXIN_EXTRAS) {
 						depends.removeIf(dep -> dep instanceof ModDependency.Only && ((ModDependency.Only) dep).id().id().equals("mixinextras"));
 					}
