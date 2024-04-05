@@ -19,17 +19,12 @@
 package org.quiltmc.loader.impl.plugin;
 
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Set;
 
 import org.jetbrains.annotations.Nullable;
 import org.quiltmc.loader.api.plugin.QuiltLoaderPlugin;
+import org.quiltmc.loader.api.plugin.QuiltPluginManager;
 import org.quiltmc.loader.api.plugin.solver.ModLoadOption;
 import org.quiltmc.loader.impl.plugin.UnsupportedModChecker.UnsupportedModDetails;
 import org.quiltmc.loader.impl.util.QuiltLoaderInternal;
@@ -82,7 +77,8 @@ abstract class PathLoadState {
 
 		for (Entry<String, List<ModLoadOption>> entry : loadedByPlugin.entrySet()) {
 			String other = entry.getKey();
-			if (other.equals(pluginId)) {
+			boolean specialExceptionForBuiltInsFromGameProvider = other.equals(pluginId) && Objects.equals(pluginId, QuiltPluginManager.QUILT_LOADER);
+			if (!specialExceptionForBuiltInsFromGameProvider && other.equals(pluginId)) {
 				continue;
 			}
 			List<ModLoadOption> otherMods = entry.getValue();
@@ -100,11 +96,20 @@ abstract class PathLoadState {
 			List<ModLoadOption> thisOptions = Collections.unmodifiableList(list);
 			List<ModLoadOption> otherOptions = Collections.unmodifiableList(otherMods);
 			Boolean thisValue = plugin.plugin().isHigherPriorityThan(path, thisOptions, other, otherOptions);
+
+			if (specialExceptionForBuiltInsFromGameProvider) {
+				thisValue = true;
+			}
+
 			pluginPriorities.put(thisToOther, thisValue);
 			Boolean otherValue = pluginPriorities.computeIfAbsent(
 				reverse, r -> manager.getPlugin(other).plugin()//
 					.isHigherPriorityThan(path, otherOptions, pluginId, thisOptions)
 			);
+
+			if (specialExceptionForBuiltInsFromGameProvider) {
+				otherValue = false;
+			}
 
 			final boolean isThisHigher;
 

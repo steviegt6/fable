@@ -93,46 +93,91 @@ public final class BtaGameProvider implements GameProvider {
 
 	@Override
 	public Collection<BuiltinMod> getBuiltinMods() {
-		V1ModMetadataBuilder metadata = new V1ModMetadataBuilder();
-		metadata.id = getGameId();
-		metadata.group = "builtin";
-		metadata.version = Version.of(getNormalizedGameVersion());
-		metadata.name = getGameName();
-
 		Version minJava = Version.of("8");
 		VersionRange range = VersionRange.ofInterval(minJava, true, null, false);
-		metadata.depends.add(new ModDependency.Only() {
-			@Override
-			public ModDependencyIdentifier id() {
-				return ModDependencyIdentifier.of("", "java");
-			}
 
-			@Override
-			public VersionRange versionRange() {
-				return range;
-			}
+		V1ModMetadataBuilder bta = new V1ModMetadataBuilder();
+		{
+			bta.id = getGameId();
+			bta.group = "builtin";
+			bta.version = Version.of(getNormalizedGameVersion());
+			bta.name = getGameName();
 
-			@Override
-			public String reason() {
-				return "";
-			}
+			bta.depends.add(new ModDependency.Only() {
+				@Override
+				public ModDependencyIdentifier id() {
+					return ModDependencyIdentifier.of("", "java");
+				}
 
-			@Override
-			public @Nullable ModDependency unless() {
-				return null;
-			}
+				@Override
+				public VersionRange versionRange() {
+					return range;
+				}
 
-			@Override
-			public boolean optional() {
-				return false;
-			}
+				@Override
+				public String reason() {
+					return "";
+				}
 
-			@Override
-			public boolean shouldIgnore() {
-				return false;
-			}
-		});
-		return Collections.singletonList(new BuiltinMod(gameJars, metadata.build()));
+				@Override
+				public @Nullable ModDependency unless() {
+					return null;
+				}
+
+				@Override
+				public boolean optional() {
+					return false;
+				}
+
+				@Override
+				public boolean shouldIgnore() {
+					return false;
+				}
+			});
+		}
+
+		V1ModMetadataBuilder minecraft = new V1ModMetadataBuilder();
+		{
+			minecraft.id = "minecraft";
+			minecraft.group = "builtin";
+			minecraft.version = Version.of(getNormalizedGameVersion());
+			minecraft.name = "Minecraft";
+			minecraft.description = "The base game; Fable-provided compatibility stub.";
+
+			minecraft.depends.add(new ModDependency.Only() {
+				@Override
+				public ModDependencyIdentifier id() {
+					return ModDependencyIdentifier.of("", "java");
+				}
+
+				@Override
+				public VersionRange versionRange() {
+					return range;
+				}
+
+				@Override
+				public String reason() {
+					return "";
+				}
+
+				@Override
+				public @Nullable ModDependency unless() {
+					return null;
+				}
+
+				@Override
+				public boolean optional() {
+					return false;
+				}
+
+				@Override
+				public boolean shouldIgnore() {
+					return false;
+				}
+			});
+		}
+
+		return Arrays.asList(new BuiltinMod(gameJars, bta.build()), new BuiltinMod(gameJars, minecraft.build()));
 	}
 
 	@Override
