@@ -20,6 +20,7 @@ package org.quiltmc.loader.impl.transformer;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Objects;
 
 import net.fabricmc.accesswidener.AccessWidener;
 import net.fabricmc.api.EnvType;
@@ -39,7 +40,7 @@ import net.fabricmc.accesswidener.AccessWidenerClassVisitor;
 @QuiltLoaderInternal(QuiltLoaderInternalType.NEW_INTERNAL)
 final class QuiltTransformer {
 	public static byte @Nullable [] transform(boolean isDevelopment, EnvType envType, TransformCache cache, AccessWidener accessWidener, String name, ModLoadOption mod, byte[] bytes) {
-		boolean isMinecraftClass = mod.id().equals("minecraft");
+		boolean isMinecraftClass = mod.id().equals("minecraft") || Objects.equals(name, "net.minecraft.client.Minecraft");
 		boolean transformAccess = isMinecraftClass && QuiltLauncherBase.getLauncher().getMappingConfiguration().requiresPackageAccessHack();
 		boolean strip = !isMinecraftClass || isDevelopment;
 		boolean applyAccessWidener = isMinecraftClass && accessWidener.getTargets().contains(name);
