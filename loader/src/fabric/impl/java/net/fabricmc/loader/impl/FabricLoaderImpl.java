@@ -39,6 +39,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
@@ -48,6 +49,8 @@ public class FabricLoaderImpl extends FabricLoader {
 	private FabricLoaderImpl() {}
 
 	public static final FabricLoaderImpl INSTANCE = new FabricLoaderImpl();
+
+	private final HashMap<org.quiltmc.loader.api.ModContainer, ModContainerImpl> modContainers = new HashMap<>();
 
 	@Override
 	public <T> List<T> getEntrypoints(String key, Class<T> type) {
@@ -85,19 +88,19 @@ public class FabricLoaderImpl extends FabricLoader {
 
 	@Override
 	public Optional<ModContainer> getModContainer(String id) {
-		return QuiltLoader.getModContainer(id).map(ModContainerImpl::new);
+		return getCachedModContainer(QuiltLoader.getModContainer(id));
 	}
 
 	@Override
 	public Optional<ModContainer> quilt_getModContainer(Class<?> clazz) {
-		return QuiltLoader.getModContainer(clazz).map(ModContainerImpl::new);
+		return getCachedModContainer(QuiltLoader.getModContainer(clazz));
 	}
 
 	@Override
 	public Collection<ModContainer> getAllMods() {
 		Collection<ModContainer> out = new ArrayList<>();
 		for (org.quiltmc.loader.api.ModContainer mc : QuiltLoader.getAllMods()) {
-			out.add(new ModContainerImpl(mc));
+			out.add(getCachedModContainer(mc));
 		}
 		return Collections.unmodifiableCollection(out);
 	}
@@ -149,6 +152,18 @@ public class FabricLoaderImpl extends FabricLoader {
 	@Override
 	public String[] getLaunchArguments(boolean sanitize) {
 		return QuiltLoader.getLaunchArguments(sanitize);
+	}
+
+	private ModContainer getCachedModContainer(org.quiltmc.loader.api.ModContainer mc) {
+		if (mc == null) {
+			return null;
+		}
+
+		return modContainers.computeIfAbsent(mc, ModContainerImpl::new);
+	}
+
+	private Optional<ModContainer> getCachedModContainer(Optional<org.quiltmc.loader.api.ModContainer> mc) {
+		return mc.map(this::getCachedModContainer);
 	}
 
 	/**
