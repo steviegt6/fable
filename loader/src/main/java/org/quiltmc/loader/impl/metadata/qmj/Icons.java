@@ -28,7 +28,7 @@ import org.quiltmc.loader.impl.util.QuiltLoaderInternalType;
  * Implementation of an icon lookup.
  */
 @QuiltLoaderInternal(QuiltLoaderInternalType.LEGACY_EXPOSED)
-interface Icons {
+public interface Icons {
 	/**
 	 * @see org.quiltmc.loader.api.ModMetadata#icon(int)
 	 */
@@ -38,11 +38,12 @@ interface Icons {
 	/**
 	 * Implementation for a mod.
 	 */
-	final class Single implements Icons {
+	@QuiltLoaderInternal(QuiltLoaderInternalType.LEGACY_EXPOSED)
+	public final class Single implements Icons {
 		@Nullable
 		private final String icon;
 
-		Single(@Nullable String icon) {
+		public Single(@Nullable String icon) {
 			this.icon = icon;
 		}
 
@@ -56,10 +57,11 @@ interface Icons {
 	/**
 	 * Implementation for a mod which has multiple icons of different sizes.
 	 */
-	final class Multiple implements Icons {
+	@QuiltLoaderInternal(QuiltLoaderInternalType.LEGACY_EXPOSED)
+	public final class Multiple implements Icons {
 		private final SortedMap<Integer, String> icons;
 
-		Multiple(SortedMap<Integer, String> icons) {
+		public Multiple(SortedMap<Integer, String> icons) {
 			this.icons = icons;
 		}
 
