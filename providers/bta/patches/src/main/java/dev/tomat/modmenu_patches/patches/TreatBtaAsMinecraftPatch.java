@@ -19,6 +19,7 @@ public final class TreatBtaAsMinecraftPatch extends Patch {
 			"io.github.prospector.modmenu.util.BadgeRenderer::draw",
 			"io.github.prospector.modmenu.ModMenu::onInitialize",
 			"io.github.prospector.modmenu.gui.ModListEntry::createIcon",
+			"io.github.prospector.modmenu.util.HardcodedUtil::initializeHardcodings",
 	};
 
 	@Override
