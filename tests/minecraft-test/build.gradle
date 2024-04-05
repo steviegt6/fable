@@ -35,8 +35,8 @@ repositories {
 }
 
 dependencies {
-	minecraft "com.mojang:minecraft:1.20.2"
-	mappings "org.quiltmc:quilt-mappings:1.20.2+build.1:intermediary-v2"
+	minecraft "com.mojang:minecraft:1.20.4"
+	mappings "org.quiltmc:quilt-mappings:1.20.4+build.1:intermediary-v2"
 
 	implementation project(":providers:minecraft")
 	implementation project(":providers:minecraft").sourceSets.main.output

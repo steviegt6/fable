@@ -21,6 +21,7 @@ package org.quiltmc.loader.impl.transformer;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
+import org.quiltmc.loader.impl.QuiltLoaderImpl;
 import org.quiltmc.loader.impl.launch.knot.IllegalQuiltInternalAccessError;
 import org.quiltmc.loader.impl.util.QuiltLoaderInternal;
 import org.quiltmc.loader.impl.util.QuiltLoaderInternalType;
@@ -33,6 +34,12 @@ public class QuiltInternalExceptionUtil {
 	private static final ConcurrentMap<String, Boolean> WARNED_ENTRIES = new ConcurrentHashMap<>();
 
 	public static void throwInternalAccess(String msg) {
+		// TODO-FABLE: Remove this/figure out the issue.
+		if (QuiltLoaderImpl.INSTANCE.isDevelopmentEnvironment()) {
+			warnInternalAccess(msg);
+			return;
+		}
+
 		throw new IllegalQuiltInternalAccessError(msg);
 	}
 
