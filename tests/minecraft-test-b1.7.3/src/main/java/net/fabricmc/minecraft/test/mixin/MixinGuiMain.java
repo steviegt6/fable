@@ -21,8 +21,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import net.fabricmc.minecraft.test.server_only.TestMixinGuiHelper;
-
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.TitleScreen;
 
@@ -30,7 +28,6 @@ import net.minecraft.client.gui.screen.TitleScreen;
 public abstract class MixinGuiMain extends Screen {
 	@Inject(method = "render", at = @At("RETURN"))
 	public void render(int mouseX, int mouseY, float delta, CallbackInfo info) {
-		this.drawStringWithShadow(textRenderer, "Quilt Test Mod", 2, this.height - 30, -1);
-		TestMixinGuiHelper.help();
+		this.drawStringWithShadow(textRenderer, "Fable Test Mod", 2, 12, 5263440);
 	}
 }
