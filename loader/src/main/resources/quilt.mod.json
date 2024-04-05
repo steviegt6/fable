@@ -15,7 +15,7 @@
         "issues": "https://github.com/steviegt6/fable/issues",
         "sources": "https://github.com/steviegt6/fable"
       },
-      "licenses": ["AGPL-3.0-or-later", "Apache-2.0"],
+      "license": ["AGPL-3.0-or-later", "Apache-2.0"],
       "icon": "assets/quilt_loader/icon.png"
     },
     "intermediate_mappings": "net.fabricmc:intermediary",

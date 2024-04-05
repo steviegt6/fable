@@ -54,7 +54,9 @@ import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+import dev.tomat.fable.api.patching.PatchHandler;
 import dev.tomat.fable.impl.FableLoaderImpl;
+import dev.tomat.fable.impl.patching.PatchHandlerImpl;
 import org.objectweb.asm.Opcodes;
 import org.quiltmc.loader.api.FasterFiles;
 import org.quiltmc.loader.api.LanguageAdapter;
@@ -158,6 +160,8 @@ public final class QuiltLoaderImpl {
 	private final EntrypointStorage entrypointStorage = new EntrypointStorage();
 
 	private final ObjectShare objectShare = new ObjectShareImpl();
+
+	private final PatchHandler patchHandler = new PatchHandlerImpl();
 
 	private boolean frozen = false;
 
@@ -1114,6 +1118,10 @@ public final class QuiltLoaderImpl {
 	// TODO: add to QuiltLoader api
 	public ObjectShare getObjectShare() {
 		return objectShare;
+	}
+
+	public PatchHandler getPatchHandler() {
+		return patchHandler;
 	}
 
 	public Collection<org.quiltmc.loader.api.ModContainer> getAllMods() {

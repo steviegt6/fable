@@ -24,6 +24,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
+import dev.tomat.fable.api.patching.PatchHandler;
+
 import net.fabricmc.loader.api.ObjectShare;
 
 import org.jetbrains.annotations.ApiStatus;
@@ -276,6 +278,10 @@ public final class QuiltLoader {
 	 */
 	public static ObjectShare getObjectShare() {
 		return impl().getObjectShare();
+	}
+
+	public static PatchHandler getPatchHandler() {
+		return impl().getPatchHandler();
 	}
 
 	/**

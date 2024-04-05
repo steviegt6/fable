@@ -10,7 +10,7 @@
       "contributors": {
         "QuiltMC: Loader Team": "Owner"
       },
-      "licenses": ["Apache-2.0"],
+      "license": ["Apache-2.0"],
       "icon": "assets/quilt_loader/icon.png"
     },
     "intermediate_mappings": "net.fabricmc:intermediary"

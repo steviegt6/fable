@@ -18,8 +18,14 @@
 
 package org.quiltmc.loader.impl.launch.knot;
 
+import dev.tomat.fable.api.patching.PatchContext;
+import dev.tomat.fable.api.patching.PatchHandler;
+
 import net.fabricmc.api.EnvType;
 
+import org.jetbrains.annotations.NotNull;
+import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.tree.ClassNode;
 import org.quiltmc.loader.impl.transformer.PackageStrippingData;
 import org.quiltmc.loader.impl.util.LoaderUtil;
 import org.objectweb.asm.ClassReader;
@@ -520,10 +526,61 @@ class KnotClassDelegate {
 		}
 
 		try {
-			return getRawClassByteArray(classFileURL, name);
+			byte[] bytes = getRawClassByteArray(classFileURL, name);
+
+			if (bytes == null) {
+				return null;
+			}
+
+			PatchContext context = getPatchContext(name, bytes);
+			QuiltLoader.getPatchHandler().getPatches().forEach(patch -> patch.process(context));
+
+			if (context.getPatched()) {
+				ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+				context.getClassNode().accept(writer);
+				return writer.toByteArray();
+			}
+
+			return bytes;
 		} catch (IOException e) {
 			throw new RuntimeException("Failed to load class file for '" + name + "'!", e);
 		}
+	}
+
+	@NotNull
+	private static PatchContext getPatchContext(String name, byte[] bytes) {
+		ClassReader reader = new ClassReader(bytes);
+		ClassNode node = new ClassNode();
+		reader.accept(node, 0);
+
+		return new PatchContext() {
+			private boolean patched;
+
+			@Override
+			public String getClassName() {
+				return name;
+			}
+
+			@Override
+			public ClassReader getClassReader() {
+				return reader;
+			}
+
+			@Override
+			public ClassNode getClassNode() {
+				return node;
+			}
+
+			@Override
+			public boolean getPatched() {
+				return patched;
+			}
+
+			@Override
+			public void setPatched(boolean patched) {
+				this.patched = patched;
+			}
+		};
 	}
 
 	private static boolean canTransformClass(String name) {

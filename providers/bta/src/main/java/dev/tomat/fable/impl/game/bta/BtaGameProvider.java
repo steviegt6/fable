@@ -2,6 +2,8 @@ package dev.tomat.fable.impl.game.bta;
 
 import dev.tomat.fable.impl.FableLoaderImpl;
 
+import dev.tomat.fable.impl.game.bta.patches.EntrypointPatch;
+
 import net.fabricmc.api.EnvType;
 
 import net.fabricmc.loader.api.ObjectShare;
