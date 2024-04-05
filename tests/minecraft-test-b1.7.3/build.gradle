@@ -21,21 +21,18 @@ dependencies {
 	implementation project(":providers:minecraft").sourceSets.main.output
 	implementation project(":loader")
 	implementation project(":loader").sourceSets.main.output
-	// so that it works on runtime
+
+	// Provided for runtime.
 	implementation "org.quiltmc.chasm:chassembly:${project.quilt_chasm}"
 	implementation "org.quiltmc.chasm:chasm:${project.quilt_chasm}"
 
-	// Required for mixin annotation processor
+	// Required for Mixins annotation processor.
 	annotationProcessor "org.ow2.asm:asm:${project.asm}"
 	annotationProcessor "org.ow2.asm:asm-analysis:${project.asm}"
 	annotationProcessor "org.ow2.asm:asm-commons:${project.asm}"
 	annotationProcessor "org.ow2.asm:asm-tree:${project.asm}"
 	annotationProcessor "org.ow2.asm:asm-util:${project.asm}"
 
-	/**
-	 * Ensure we are using the mixin version loader is built against to test the AP.
-	 * Otherwise Loom will default to an older version (due to no mod loader on the mod* configs)
-	 */
 	annotationProcessor ("net.fabricmc:sponge-mixin:${project.sponge_mixin}") {
 		exclude module: 'launchwrapper'
 		exclude module: 'guava'
@@ -46,8 +43,3 @@ tasks.withType(JavaCompile).configureEach {
 	it.options.encoding = "UTF-8"
 	it.options.release.set(8)
 }
-
-/*runClient {
-    classpath += project(':loader').sourceSets.main.output
-    classpath += project(':minecraft').sourceSets.main.output
-}*/

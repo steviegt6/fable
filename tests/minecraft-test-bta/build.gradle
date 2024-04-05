@@ -1,11 +1,13 @@
 plugins {
 	id 'babric-loom' version '1.5-SNAPSHOT'
-	id 'java'
 }
 
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+
 loom {
+	// FIXME: We have to use clientOnlyMinecraftJar instead of the Babric-provided gluedMinecraftJar; why? It's broken.
 	//gluedMinecraftJar()
-	clientOnlyMinecraftJar() // TODO: how to merge THIS IS SO SAD WHY DOES GLUING BREAK IT
+	clientOnlyMinecraftJar()
 	noIntermediateMappings()
 	customMinecraftManifest.set("https://github.com/Turnip-Labs/bta-manifest-repo/releases/download/v${project.bta_version}/${project.bta_version}.json")
 	runConfigs.configureEach {
@@ -16,28 +18,28 @@ loom {
 dependencies {
 	minecraft "bta-download-repo:bta:${project.bta_version}"
 	mappings loom.layered() {}
-
 	modRuntimeOnly "objects:client:43db9b498cb67058d2e12d394e6507722e71bb45" // https://piston-data.mojang.com/v1/objects/43db9b498cb67058d2e12d394e6507722e71bb45/client.jar
-
-	// modImplementation "com.github.Turnip-Labs:bta-halplibe:3.4.16"
-	modImplementation "ModMenu:ModMenu:2.0.4"
-	implementation 'com.google.guava:guava:33.0.0-jre'
-	implementation group: 'com.google.code.gson', name: 'gson', version: '2.10.1'
 
 	implementation project(":providers:bta")
 	implementation project(":providers:bta").sourceSets.main.output
 	implementation project(":loader")
 	implementation project(":loader").sourceSets.main.output
-	// so that it works on runtime
+
+	// Provided for runtime.
 	implementation "org.quiltmc.chasm:chassembly:${project.quilt_chasm}"
 	implementation "org.quiltmc.chasm:chasm:${project.quilt_chasm}"
 
-	// Required for mixin annotation processor
+	// Required for Mixins annotation processor.
 	annotationProcessor "org.ow2.asm:asm:${project.asm}"
 	annotationProcessor "org.ow2.asm:asm-analysis:${project.asm}"
 	annotationProcessor "org.ow2.asm:asm-commons:${project.asm}"
 	annotationProcessor "org.ow2.asm:asm-tree:${project.asm}"
 	annotationProcessor "org.ow2.asm:asm-util:${project.asm}"
+
+	annotationProcessor ("net.fabricmc:sponge-mixin:${project.sponge_mixin}") {
+		exclude module: 'launchwrapper'
+		exclude module: 'guava'
+	}
 
 	implementation "org.slf4j:slf4j-api:1.8.0-beta4"
 	implementation "org.apache.logging.log4j:log4j-slf4j18-impl:2.16.0"
@@ -49,29 +51,12 @@ dependencies {
 
 	include(implementation("org.apache.commons:commons-lang3:3.12.0"))
 
-	/**
-	 * Ensure we are using the mixin version loader is built against to test the AP.
-	 * Otherwise Loom will default to an older version (due to no mod loader on the mod* configs)
-	 */
-	annotationProcessor ("net.fabricmc:sponge-mixin:${project.sponge_mixin}") {
-		exclude module: 'launchwrapper'
-		exclude module: 'guava'
-	}
-}
-
-
-java {
-	sourceCompatibility = JavaVersion.VERSION_1_8
-	targetCompatibility = JavaVersion.VERSION_1_8
-	withSourcesJar()
+	modImplementation "ModMenu:ModMenu:2.0.4"
+	implementation 'com.google.guava:guava:33.0.0-jre'
+	implementation group: 'com.google.code.gson', name: 'gson', version: '2.10.1'
 }
 
 tasks.withType(JavaCompile).configureEach {
 	it.options.encoding = "UTF-8"
 	it.options.release.set(8)
 }
-
-/*runClient {
-    classpath += project(':loader').sourceSets.main.output
-    classpath += project(':minecraft').sourceSets.main.output
-}*/
