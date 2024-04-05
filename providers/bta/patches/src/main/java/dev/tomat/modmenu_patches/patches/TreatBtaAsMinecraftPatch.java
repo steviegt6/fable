@@ -7,7 +7,14 @@ import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.LdcInsnNode;
 import org.objectweb.asm.tree.MethodNode;
 
-public final class ModMenuPatch extends Patch {
+/**
+ * Patches ModMenu to compare mods to the `bta` name instead of `minecraft`, rendering the Quilt-provided BTA entry as
+ * if it were Minecraft.
+ * <p/>
+ * This is necessary because our BTA provider registers the game as `bta` like Turnip Labs' BTA provider, instead of as
+ * Minecraft like a regular Babric instance.
+ */
+public final class TreatBtaAsMinecraftPatch extends Patch {
 	private static final String[] CANDIDATES = {
 			"io.github.prospector.modmenu.util.BadgeRenderer::draw",
 			"io.github.prospector.modmenu.ModMenu::onInitialize",

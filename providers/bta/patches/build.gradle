@@ -24,8 +24,5 @@ configurations {
 dependencies {
 	api project(":loader")
 
-	runtimeOnly project(":loader:stubs:fabricloader")
-	include project(":loader:stubs:fabricloader")
-	runtimeOnly project(":loader:stubs:quilt_loader")
-	include project(":loader:stubs:quilt_loader")
+	implementation 'com.google.guava:guava:33.0.0-jre'
 }
