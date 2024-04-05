@@ -100,13 +100,17 @@ dependencies {
 	testCompileOnly "org.jetbrains:annotations:${project.annotations}"
 
 	shadow "com.electronwill.night-config:core:${project.night_config}"
+	include "com.electronwill.night-config:core:${project.night_config}"
 	shadow "com.electronwill.night-config:toml:${project.night_config}"
+	include "com.electronwill.night-config:toml:${project.night_config}"
 	shadow "org.quiltmc.quilt-config.serializers:toml:${project.quilt_config}"
+	include "org.quiltmc.quilt-config.serializers:toml:${project.quilt_config}"
 	shadow "org.quiltmc.quilt-config.serializers:json5:${project.quilt_config}"
+	include "org.quiltmc.quilt-config.serializers:json5:${project.quilt_config}"
 	shadow "org.quiltmc.parsers:json:${project.quilt_parsers}"
+	include "org.quiltmc.parsers:json:${project.quilt_parsers}"
 	shadow "com.unascribed:flexver-java:${project.flexver}"
 	include "com.unascribed:flexver-java:${project.flexver}"
-	include "org.quiltmc.parsers:json:${project.quilt_parsers}"
 
 	compileOnly "org.quiltmc.chasm:chassembly:${project.quilt_chasm}"
 	compileOnly "org.quiltmc.chasm:chasm:${project.quilt_chasm}"
