@@ -54,8 +54,9 @@ final class TransformCacheGenerator {
 		cache.forEachClassFile((mod, name, file) -> {
 
 			byte[] classBytes = QuiltLauncherBase.getLauncher().getEntrypointTransformer().transform(name);
+			boolean patched = classBytes != null;
 
-			if (classBytes == null) {
+			if (!patched) {
 				classBytes = Files.readAllBytes(file);
 			}
 
@@ -66,7 +67,8 @@ final class TransformCacheGenerator {
 					accessWidener,
 					name,
 					mod,
-					classBytes
+					classBytes,
+					patched
 			);
 		});
 
