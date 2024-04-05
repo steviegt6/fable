@@ -18,6 +18,9 @@ public final class FixParentEntriesNotBeingExpandablePatch extends Patch {
 		ClassNode entryListWidget = context.getClassNode();
 		MethodNode mouseClicked = findMethod(entryListWidget, method -> method.name.equals("mouseClicked"));
 
+		if (mouseClicked == null) {
+			return;
+		}
 
 		// TODO: I don't feel like it.
 	}

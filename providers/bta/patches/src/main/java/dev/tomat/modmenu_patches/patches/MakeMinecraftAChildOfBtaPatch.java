@@ -30,6 +30,11 @@ public final class MakeMinecraftAChildOfBtaPatch extends Patch {
 
 		ClassNode hardcodedUtil = context.getClassNode();
 		MethodNode hardcodeModuleMetadata = findMethod(hardcodedUtil, method -> method.name.equals("hardcodeModuleMetadata"));
+
+		if (hardcodeModuleMetadata == null) {
+			return;
+		}
+
 		ListIterator<AbstractInsnNode> instructions = hardcodeModuleMetadata.instructions.iterator();
 		instructions.add(new FieldInsnNode(Opcodes.GETSTATIC, "io/github/prospector/modmenu/ModMenu", "PARENT_MAP", "Lcom/google/common/collect/LinkedListMultimap;"));
 		instructions.add(new FieldInsnNode(Opcodes.GETSTATIC, "io/github/prospector/modmenu/ModMenu", "LIBRARY_MODS", "Ljava/util/List;"));
