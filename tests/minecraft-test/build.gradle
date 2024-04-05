@@ -24,9 +24,11 @@ dependencies {
 	minecraft "com.mojang:minecraft:1.20.4"
 	mappings "org.quiltmc:quilt-mappings:1.20.4+build.1:intermediary-v2"
 
-	implementation project(":providers:minecraft")
-	implementation project(":providers:minecraft").sourceSets.main.output
+	implementation project(":packages:minecraft-vanilla")
 	implementation project(":loader")
+	//noinspection DependencyNotationArgument
+	implementation project(":packages:minecraft-vanilla").sourceSets.main.output
+	//noinspection DependencyNotationArgument
 	implementation project(":loader").sourceSets.main.output
 
 	// Provided for runtime.

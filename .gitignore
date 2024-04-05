@@ -29,3 +29,7 @@ bin/
 run/
 logs/
 quiltloader.log
+
+# Other fragments
+.cache/
+config/

@@ -1,0 +1,194 @@
+buildscript {
+	dependencies {
+		classpath "com.guardsquare:proguard-gradle:${project.proguard_gradle}"
+	}
+}
+
+plugins {
+	id 'com.github.johnrengelman.shadow' version '8.1.1'
+	id 'org.quiltmc.loom' version '1.3.3' apply false
+	id 'org.quiltmc.gradle.licenser' version '2.0.1'
+}
+
+license {
+	rule project.rootProject.file("codeformat/FABRIC_MODIFIED_HEADER")
+	rule project.rootProject.file("codeformat/QUILT_MODIFIED_HEADER")
+	rule project.rootProject.file("codeformat/HEADER")
+
+	include '**/*.java'
+	exclude '**/lib/gson/*.java'
+}
+
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+
+version = project.fable
+def ENV = System.getenv()
+
+compileJava {
+	options.release.set(8)
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.encoding = "UTF-8"
+
+	if (JavaVersion.current().isJava9Compatible()) {
+		it.options.release = 8
+	}
+}
+
+jar {
+	enabled = false
+}
+
+shadowJar {
+	enabled = false
+}
+
+// Reproduce Loom configurations because we don't apply the plugin.
+configurations {
+	include {
+		transitive = false
+	}
+
+	implementation {
+		extendsFrom include
+	}
+
+	development {
+		transitive = false
+	}
+
+	api {
+		extendsFrom development
+	}
+}
+
+dependencies {
+	//noinspection DependencyNotationArgument
+	implementation project(":loader").sourceSets.main.output
+	api project(":providers:minecraft")
+	//noinspection DependencyNotationArgument
+	implementation project(":providers:minecraft").sourceSets.main.output
+
+	// Non-"include"d dependencies must be added to the LoaderLibrary class as well.
+	api "org.ow2.asm:asm:${project.asm}"
+	api "org.ow2.asm:asm-analysis:${project.asm}"
+	api "org.ow2.asm:asm-commons:${project.asm}"
+	api "org.ow2.asm:asm-tree:${project.asm}"
+	api "org.ow2.asm:asm-util:${project.asm}"
+
+	api("net.fabricmc:sponge-mixin:${project.sponge_mixin}") {
+		exclude module: 'launchwrapper'
+		exclude module: 'guava'
+	}
+
+	api "net.fabricmc:tiny-mappings-parser:${project.tiny_mappings_parser}"
+	api "net.fabricmc:tiny-remapper:${project.tiny_remapper}"
+	api "net.fabricmc:access-widener:${project.access_widener}"
+	api "org.quiltmc:quilt-json5:${project.quilt_json5}"
+	include "org.quiltmc:quilt-loader-sat4j:${project.quilt_loader_sat4j}"
+	api "org.quiltmc:quilt-config:${project.quilt_config}"
+	development "io.github.llamalad7:mixinextras-fabric:$mixin_extras"
+	compileOnly "org.quiltmc.chasm:chasm:${project.quilt_chasm}"
+	compileOnly "org.quiltmc.chasm:chassembly:${project.quilt_chasm}"
+	testCompileOnly "org.jetbrains:annotations:${project.annotations}"
+
+	shadow "com.electronwill.night-config:core:${project.night_config}"
+	shadow "com.electronwill.night-config:toml:${project.night_config}"
+	shadow "org.quiltmc.quilt-config.serializers:toml:${project.quilt_config}"
+	shadow "org.quiltmc.quilt-config.serializers:json5:${project.quilt_config}"
+	shadow "org.quiltmc.parsers:json:${project.quilt_parsers}"
+	shadow "com.unascribed:flexver-java:${project.flexver}"
+	include "com.unascribed:flexver-java:${project.flexver}"
+	include "org.quiltmc.parsers:json:${project.quilt_parsers}"
+
+	compileOnly "org.quiltmc.chasm:chassembly:${project.quilt_chasm}"
+	compileOnly "org.quiltmc.chasm:chasm:${project.quilt_chasm}"
+
+	development project(":loader:stubs:fabricloader")
+	development project(":loader:stubs:quilt_loader")
+}
+
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
+// Renaming in the shadow jar task doesnt seem to work, so do it here
+task getSat4jAbout(type: Copy) {
+	dependsOn project.configurations.include
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+	from {
+		configurations.include.collect {
+			zipTree(it).matching {
+				include 'about.html'
+			}
+		}
+	}
+
+	rename 'about.html', 'org/quiltmc/loader/impl/lib/sat4j/about-sat4j.html'
+
+	into layout.buildDirectory.dir("sat4j")
+}
+
+import net.fabricmc.loom.build.nesting.JarNester
+import org.slf4j.LoggerFactory
+task fatJar(type: ShadowJar, dependsOn: getSat4jAbout) {
+	from sourceSets.main.output
+	from project(":loader").sourceSets.main.output
+	// from project(":loader:stubs:fabricloader").sourceSets.main.output
+	// from project(":loader:stubs:quilt_loader").sourceSets.main.output
+	from project(":providers:minecraft").sourceSets.main.output
+	from getSat4jAbout.destinationDir
+	from("LICENSE") {
+		rename { "${it}_${project.archivesBaseName}"}
+	}
+
+	manifest {
+		attributes (
+			"Main-Class": "net.fabricmc.loader.launch.server.FabricServerLauncher",
+			"Fabric-Loom-Remap": "false",
+			"Automatic-Module-Name": "org.quiltmc.loader"
+		)
+	}
+
+	archiveClassifier = "fat"
+	configurations = [project.configurations.include]
+
+	relocate 'org.quiltmc.loader.util.sat4j', 'org.quiltmc.loader.impl.lib.sat4j'
+	relocate 'org.quiltmc.parsers', 'org.quiltmc.loader.impl.lib.parsers'
+	relocate 'com.electronwill', 'org.quiltmc.loader.impl.lib.electronwill'
+	relocate 'com.unascribed.flexver', 'org.quiltmc.loader.impl.lib.flexver'
+	//relocate 'org.quiltmc.json5', 'org.quiltmc.loader.impl.lib.json5'
+	exclude 'about.html'
+	exclude 'sat4j.version'
+	exclude 'META-INF/maven/org.ow2.sat4j/*/**'
+
+	doLast {
+		JarNester.nestJars(project.configurations.development.files, archiveFile.get().asFile, LoggerFactory.getLogger("JiJ"))
+	}
+
+	outputs.upToDateWhen { false }
+}
+
+File proguardFile = file("$buildDir/libs/${project.archivesBaseName}-proguard.jar")
+
+import proguard.gradle.ProGuardTask
+task proguardJar(type: ProGuardTask, dependsOn: fatJar) {
+	def classpath = project(":loader").configurations.compileClasspath
+	classpath += project(":providers:minecraft").configurations.compileClasspath
+
+	inputs.files(fatJar, classpath)
+	outputs.files(proguardFile)
+	outputs.upToDateWhen { false }
+
+	doFirst {
+		classpath.getFiles().forEach {
+			libraryjars it
+		}
+	}
+
+	libraryjars JavaVersion.current().java9Compatible ? "${System.getProperty('java.home')}/jmods" : "${System.getProperty('java.home')}/lib/rt.jar"
+
+	injars fatJar.archiveFile
+	outjars proguardFile
+	configuration file("$rootDir/proguard.conf")
+}
