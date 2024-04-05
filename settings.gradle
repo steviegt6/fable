@@ -24,6 +24,57 @@ pluginManagement {
 			name = 'Mojang'
 			url = 'https://libraries.minecraft.net/'
 		}
+		maven {
+			url = "https://jitpack.io"
+		}
+		ivy {
+			url = "https://github.com/Better-than-Adventure"
+			patternLayout {
+				artifact "[organisation]/releases/download/v[revision]/[module].jar"
+				m2compatible = true
+			}
+			metadataSources { artifact() }
+		}
+		ivy {
+			url = "https://github.com/Turnip-Labs"
+			patternLayout {
+				artifact "[organisation]/releases/download/v[revision]/[module]-[revision].jar"
+				m2compatible = true
+			}
+			metadataSources { artifact() }
+		}
+		ivy {
+			url = "https://github.com/Turnip-Labs"
+			patternLayout {
+				artifact "[organisation]/releases/download/[revision]/[module]-[revision].jar"
+				m2compatible = true
+			}
+			metadataSources { artifact() }
+		}
+		ivy {
+			url = "https://github.com/Turnip-Labs"
+			patternLayout {
+				artifact "[organisation]/releases/download/[revision]/[module]-bta-[revision].jar"
+				m2compatible = true
+			}
+			metadataSources { artifact() }
+		}
+		ivy {
+			url = "https://piston-data.mojang.com"
+			patternLayout {
+				artifact "v1/[organisation]/[revision]/[module].jar"
+				m2compatible = true
+			}
+			metadataSources { artifact() }
+		}
+		ivy {
+			url = "https://github.com/MartinSVK12"
+			patternLayout {
+				artifact "[organisation]/releases/download/[revision]/[module]-[revision].jar"
+				m2compatible = true
+			}
+			metadataSources { artifact() }
+		}
 		gradlePluginPortal()
 		mavenCentral() {
 			content {
