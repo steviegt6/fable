@@ -66,10 +66,14 @@ configurations {
 dependencies {
 	//noinspection DependencyNotationArgument
 	implementation project(":loader").sourceSets.main.output
+
+	// BTA before Minecraft so its game provider takes priority.
+	// TODO: HACKY ^
+	api project(":providers:bta")
 	api project(":providers:minecraft")
+
 	//noinspection DependencyNotationArgument
 	implementation project(":providers:minecraft").sourceSets.main.output
-	api project(":providers:bta")
 	//noinspection DependencyNotationArgument
 	implementation project(":providers:bta").sourceSets.main.output
 
@@ -117,6 +121,7 @@ dependencies {
 
 	development project(":loader:stubs:fabricloader")
 	development project(":loader:stubs:quilt_loader")
+	implementation project(":loader:stubs:minecraft").sourceSets.main.output
 }
 
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar

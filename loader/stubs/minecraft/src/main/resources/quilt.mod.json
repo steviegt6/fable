@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "dev.tomat",
+    "id": "minecraft",
+    "version": "1.7.7.0-Pre-2a",
+    "metadata": {
+      "name": "Minecraft",
+      "description": "The base game; Fable-provided compatibility stub."
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary"
+  },
+  "modmenu": {
+    "parent": {
+      "id": "bta"
+    }
+  },
+  "modmenu:parent": "bta"
+}

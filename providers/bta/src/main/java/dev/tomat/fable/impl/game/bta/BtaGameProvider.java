@@ -153,48 +153,7 @@ public final class BtaGameProvider implements GameProvider {
 			});
 		}
 
-		V1ModMetadataBuilder minecraft = new V1ModMetadataBuilder();
-		{
-			minecraft.id = "minecraft";
-			minecraft.group = "builtin";
-			minecraft.version = Version.of(getNormalizedGameVersion());
-			minecraft.name = "Minecraft";
-			minecraft.description = "The base game; Fable-provided compatibility stub.";
-
-			minecraft.depends.add(new ModDependency.Only() {
-				@Override
-				public ModDependencyIdentifier id() {
-					return ModDependencyIdentifier.of("", "java");
-				}
-
-				@Override
-				public VersionRange versionRange() {
-					return range;
-				}
-
-				@Override
-				public String reason() {
-					return "";
-				}
-
-				@Override
-				public @Nullable ModDependency unless() {
-					return null;
-				}
-
-				@Override
-				public boolean optional() {
-					return false;
-				}
-
-				@Override
-				public boolean shouldIgnore() {
-					return false;
-				}
-			});
-		}
-
-		return Arrays.asList(new BuiltinMod(gameJars, bta.build()), new BuiltinMod(gameJars, minecraft.build()));
+		return Arrays.asList(new BuiltinMod(gameJars, bta.build()));
 	}
 
 	@Override
