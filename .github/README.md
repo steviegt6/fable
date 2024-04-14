@@ -14,8 +14,8 @@ Fable is licensed under the GNU Affero General Public License, version 3 ("Affer
 
 quilt-loader and fabric-loader are licensed under the Apache License, version 2. 
 
-The `license.json` included in loader to generate SPDX license instances is licensed under Creative Commons Attribution
-3.0 (SPDX License ID CC-BY-3.0) from SPDX.
+The `license.json` file included in loader to generate SPDX license instances is licensed under Creative Commons
+Attribution 3.0 (SPDX License ID CC-BY-3.0) from SPDX.
 
 ## Contributing
 
@@ -39,4 +39,4 @@ All files are expected to be encoded in UTF-8.
 
 When adding compatibility polyfills or stubs, they should be annotated as `@Deprecated` to inform users that these types
 are not "officially" supported by upstream loaders, and so mods do not continue to accidentally use them (thereby making
-the problem worse).~~~~
+the problem worse).
