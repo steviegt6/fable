@@ -38,18 +38,11 @@ import net.fabricmc.accesswidener.AccessWidenerClassVisitor;
 
 @QuiltLoaderInternal(QuiltLoaderInternalType.NEW_INTERNAL)
 final class QuiltTransformer {
-	public static byte @Nullable [] transform(boolean isDevelopment, EnvType envType, TransformCache cache, AccessWidener accessWidener, String name, ModLoadOption mod, byte[] bytes, boolean patched) {
-		// FIXME: transform (as it exists in quilt) causes transformers to not properly apply themselves.
-		// - 1. strangely stringent on the mod ID being minecraft? so providers for mc mod forks (e.g. bta) don't apply
-		// - 2. does such a restriction have any place in a game-/version-agnostic loader API/impl (no, it does't)
-		// - 3. why does it designed like this in the first place?
-		// - 4. why does it being a minecraft class have any meaningful affect?
-		// - 5. I believe this is a bug that got past testing stages because quilt is only tested against minecraft and
-		//      we got lucky with the only tested mapping configs requiring package access hacks
-		boolean isMinecraftClass = mod.id().equals("minecraft");
-		boolean transformAccess = isMinecraftClass && QuiltLauncherBase.getLauncher().getMappingConfiguration().requiresPackageAccessHack();
-		boolean strip = !isMinecraftClass || isDevelopment;
-		boolean applyAccessWidener = isMinecraftClass && accessWidener.getTargets().contains(name);
+	public static byte @Nullable [] transform(boolean isDevelopment, EnvType envType, TransformCache cache, AccessWidener accessWidener, String name, ModLoadOption mod, byte[] bytes) {
+		boolean isGameClass = mod.id().equals(QuiltLoaderImpl.INSTANCE.getGameProvider().getGameId());
+		boolean transformAccess = isGameClass && QuiltLauncherBase.getLauncher().getMappingConfiguration().requiresPackageAccessHack();
+		boolean strip = !isGameClass || isDevelopment;
+		boolean applyAccessWidener = isGameClass && accessWidener.getTargets().contains(name);
 
 		if (!transformAccess && !strip && !applyAccessWidener) {
 			return bytes;
@@ -58,7 +51,7 @@ final class QuiltTransformer {
 		ClassReader classReader = new ClassReader(bytes);
 		ClassWriter classWriter = null;
 		ClassVisitor visitor = null;
-		int visitorCount = patched ? 1 : 0;
+		int visitorCount = 0;
 
 		if (strip) {
 			ClassStrippingData data = new ClassStrippingData(QuiltLoaderImpl.ASM_VERSION, envType, cache.getAllMods());

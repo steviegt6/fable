@@ -166,9 +166,7 @@ abstract class QuiltGuiSyncBase {
 		map.put("data", data);
 
 		QuiltForkComms comms = QuiltForkComms.getCurrentComms();
-		if (comms == null) {
-			throw new IllegalStateException("Forked communication failure; see logs for details!");
-		} else {
+		if (comms != null) {
 			comms.send(lvf().object(map));
 		}
 	}
@@ -188,7 +186,10 @@ abstract class QuiltGuiSyncBase {
 		map.put("__TYPE", lvf().string(ForkCommNames.ID_GUI_OBJECT_CREATE));
 		map.put("class", lvf().string(getClass().getName()));
 		map.put("data", write());
-		QuiltFork.sendRaw(lvf().object(map));
+		QuiltForkComms comms = QuiltForkComms.getCurrentComms();
+		if (comms != null) {
+			comms.send(lvf().object(map));
+		}
 	}
 
 	public final LoaderValue.LObject write() {
