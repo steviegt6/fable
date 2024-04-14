@@ -1,9 +1,9 @@
 # Fable
 
 **Fable** is a mod loader and fork of [quilt-loader](https://github.com/QuiltMC/quilt-loader) (which is a fork of
-[https://github.com/FabricMC]). Fable aims to maximize compatibility: Fable maintains API compatibility with existing
-Quilt mods, patches in compatibility for Fabric mods where necessary, and does not make any breaking changes that would
-render previously-working mods broken.
+(fabric-loader)[https://github.com/FabricMC/fabric-loader]). Fable aims to maximize compatibility: Fable maintains API
+compatibility with existing Quilt mods, patches in compatibility for Fabric mods where necessary, and does not make any
+breaking changes that would render previously-working mods broken.
 
 Additionally, Fable introduces new APIs for any mods targeting Fable. These APIs allow for advanced game patching
 scenarios, such as stubbing/mocking or reimplementing other APIs, as well as game- or version-agnostic bytecode patches.
