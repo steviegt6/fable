@@ -54,6 +54,7 @@ import org.quiltmc.loader.impl.game.minecraft.patch.BrandingPatch;
 import org.quiltmc.loader.impl.game.minecraft.patch.EntrypointPatch;
 import org.quiltmc.loader.impl.game.minecraft.patch.TinyFDPatch;
 import org.quiltmc.loader.impl.launch.common.QuiltLauncher;
+import org.quiltmc.loader.impl.launch.common.QuiltLauncherBase;
 import org.quiltmc.loader.impl.metadata.qmj.V1ModMetadataBuilder;
 import org.quiltmc.loader.impl.util.Arguments;
 import org.quiltmc.loader.impl.util.ExceptionUtil;
@@ -191,6 +192,11 @@ public class MinecraftGameProvider implements GameProvider {
 	@Override
 	public boolean isObfuscated() {
 		return true; // generally yes...
+	}
+
+	@Override
+	public String getNamespace() {
+		return QuiltLauncherBase.getLauncher().isDevelopment() ? "named" : "intermediary";
 	}
 
 	@Override
@@ -435,7 +441,7 @@ public class MinecraftGameProvider implements GameProvider {
 
 		setupLogHandler(launcher, true);
 
-		transformer.locateEntrypoints(launcher, gameJars);
+		transformer.locateEntrypoints(launcher, getNamespace(), gameJars);
 	}
 
 	private void setupLogHandler(QuiltLauncher launcher, boolean useTargetCl) {

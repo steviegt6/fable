@@ -78,7 +78,7 @@ public class EntrypointPatch extends GamePatch {
 	}
 
 	@Override
-	public void process(QuiltLauncher launcher, GamePatchContext context) {
+	public void process(QuiltLauncher launcher, String namespace, GamePatchContext context) {
 		EnvType type = launcher.getEnvironmentType();
 		String entrypoint = launcher.getEntrypoint();
 		Version gameVersion = getGameVersion();
