@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "fabricloader",
   "name": "Fabric Loader",
-  "version": "0.15.7",
+  "version": "0.15.11",
   "environment": "*",
   "description": "The base mod loader; Fable-provided compatibility stub.",
   "license": "Apache-2.0",

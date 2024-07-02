@@ -24,6 +24,7 @@ import java.net.URLStreamHandlerFactory;
 
 import org.quiltmc.loader.impl.util.QuiltLoaderInternal;
 import org.quiltmc.loader.impl.util.QuiltLoaderInternalType;
+import org.quiltmc.loader.impl.util.SystemProperties;
 
 /** Holds the {@link URLStreamHandlerFactory} for all quilt filesystems. This is set to
  * {@link URL#setURLStreamHandlerFactory(URLStreamHandlerFactory)}.
@@ -34,11 +35,15 @@ import org.quiltmc.loader.impl.util.QuiltLoaderInternalType;
 public class DelegatingUrlStreamHandlerFactory implements URLStreamHandlerFactory {
 
 	public static final DelegatingUrlStreamHandlerFactory INSTANCE = new DelegatingUrlStreamHandlerFactory();
+	private static final boolean DISABLED;
 
 	private URLStreamHandlerFactory[] factories = new URLStreamHandlerFactory[0];
 
 	static {
-		URL.setURLStreamHandlerFactory(INSTANCE);
+		DISABLED = Boolean.getBoolean(SystemProperties.DISABLE_URL_STREAM_FACTORY);
+		if (!DISABLED) {
+			URL.setURLStreamHandlerFactory(INSTANCE);
+		}
 	}
 
 	static void load() {
@@ -46,6 +51,12 @@ public class DelegatingUrlStreamHandlerFactory implements URLStreamHandlerFactor
 	}
 
 	public static synchronized void appendFactory(URLStreamHandlerFactory factory) {
+		if (DISABLED) {
+			throw new Error(
+				"The system property '" + SystemProperties.DISABLE_URL_STREAM_FACTORY
+					+ "' has been set to true, which disables custom factories - you will need to reconfigure your environment!"
+			);
+		}
 		URLStreamHandlerFactory[] copy = new URLStreamHandlerFactory[INSTANCE.factories.length + 1];
 		System.arraycopy(INSTANCE.factories, 0, copy, 0, INSTANCE.factories.length);
 		copy[INSTANCE.factories.length] = factory;
