@@ -18,7 +18,6 @@
 
 package org.quiltmc.loader.impl.plugin;
 
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -36,8 +35,6 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
-import javax.imageio.ImageIO;
-
 import org.quiltmc.loader.api.ModDependencyIdentifier;
 import org.quiltmc.loader.api.ModMetadata.ProvidedMod;
 import org.quiltmc.loader.api.VersionRange;
@@ -48,7 +45,6 @@ import org.quiltmc.loader.api.plugin.solver.AliasedLoadOption;
 import org.quiltmc.loader.api.plugin.solver.LoadOption;
 import org.quiltmc.loader.api.plugin.solver.ModLoadOption;
 import org.quiltmc.loader.api.plugin.solver.Rule;
-import org.quiltmc.loader.api.plugin.solver.RuleContext;
 import org.quiltmc.loader.impl.plugin.quilt.DisabledModIdDefinition;
 import org.quiltmc.loader.impl.plugin.quilt.MandatoryModIdDefinition;
 import org.quiltmc.loader.impl.plugin.quilt.OptionalModIdDefintion;
