@@ -1,0 +1,1747 @@
+--- api-differ/fabric-loader-0.15.9.jar
++++ api-differ/quilt-loader-0.26.1-beta.1.jar
++org/quiltmc/loader/impl/filesystem/QuiltUnifiedEntry$QuiltUnifiedMountedFile
++org/quiltmc/loader/impl/game/minecraft/patch/TinyFDPatch
++org/quiltmc/loader/impl/filesystem/QuiltZipFileSystem$InMemorySource$1
++org/quiltmc/loader/api/plugin/LoaderValueFactory
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/pb/WatchPbLong
++org/quiltmc/loader/impl/lib/sat4j/pb/IPBSolver
++org/quiltmc/loader/impl/lib/sat4j/pb/ObjectiveFunction
++org/quiltmc/loader/impl/ObjectShareImpl
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Pair
++org/quiltmc/loader/api/entrypoint/PreLaunchEntrypoint
++org/quiltmc/loader/impl/plugin/quilt/MandatoryModIdDefinition
++org/quiltmc/loader/impl/util/SimpleClassPath$CpEntry
++org/quiltmc/loader/impl/metadata/qmj/V1ModMetadataReader$VersionJoiner$1
++org/quiltmc/loader/impl/metadata/qmj/V1ModMetadataReader$VersionJoiner$2
++org/quiltmc/loader/impl/lib/sat4j/specs/ILogAble$1
++org/quiltmc/loader/impl/plugin/quilt/QuiltRuleBreak
++org/quiltmc/loader/impl/gui/QuiltJsonGuiMessage$QuiltMessageListener
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/DataStructureFactory
++org/quiltmc/loader/api/gui/LoaderGuiException
++org/quiltmc/loader/impl/solver/RuleType
++org/quiltmc/loader/impl/lib/sat4j/minisat/constraints/cnf/OriginalWLClause
++org/quiltmc/loader/impl/filesystem/QuiltUnifiedPath
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/IPBConstructor
++org/quiltmc/loader/impl/fabric/metadata/V1ModMetadataParser
++org/quiltmc/loader/impl/plugin/SolverErrorHelper$UnhandledError
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/AbstractConfig
++org/quiltmc/loader/api/plugin/solver/AliasedLoadOption
++org/quiltmc/loader/impl/metadata/qmj/ProvidedModImpl
++org/quiltmc/loader/impl/util/ByteChannelInputStream
++org/quiltmc/loader/impl/plugin/SolverErrorHelper$BreakageError
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/AbstractPBClauseCardConstrDataStructure
++org/quiltmc/loader/impl/filesystem/ZeroByteFileException
++org/quiltmc/loader/api/VersionRange
++org/quiltmc/loader/impl/plugin/gui/I18n$1
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/file/FormatDetector
++org/quiltmc/loader/impl/fabric/metadata/V1ModMetadataFabric$EntrypointMetadataImpl
++org/quiltmc/loader/impl/solver/SolverTester
++org/quiltmc/loader/api/ModMetadata
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform
++org/quiltmc/loader/impl/metadata/qmj/ModDependencyImpl$CollectionImpl
++org/quiltmc/loader/impl/fabric/util/version/VersionPredicateParser$AnyVersionPredicate
++org/quiltmc/loader/impl/metadata/VersionIntervalImpl
++org/quiltmc/loader/impl/lib/sat4j/minisat/constraints/cnf/LearntWLClause
++org/quiltmc/loader/impl/solver/SolverPreProcessor
++org/quiltmc/loader/impl/solver/Sat4jWrapper$Sat4jSolverOptimizer
++org/quiltmc/loader/impl/launch/common/MappingConfiguration
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFileSystem$ReadOnly
++org/quiltmc/loader/impl/solver/Sat4jWrapper$SolvedStage
++org/quiltmc/loader/impl/plugin/UnsupportedModChecker$UnknownMod
++org/quiltmc/loader/impl/lib/sat4j/specs/ILogAble
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/NullObject
++org/quiltmc/loader/api/plugin/solver/ModSolveResult$SpecificLoadOptionResult
++org/quiltmc/loader/impl/filesystem/QuiltUnifiedEntry
++org/quiltmc/loader/impl/metadata/qmj/V1ModMetadataReader
++org/quiltmc/loader/impl/lib/sat4j/pb/orders/VarOrderHeapObjective
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/IOrder
++org/quiltmc/loader/impl/game/minecraft/applet/AppletLauncher
++org/quiltmc/loader/api/plugin/solver/ModLoadOption
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/utils/FakeCommentedConfig
++org/quiltmc/loader/impl/fabric/metadata/V0ModMetadataFabric$1
++org/quiltmc/loader/impl/lib/sat4j/minisat/constraints/cnf/LearntBinaryClause
++org/quiltmc/loader/impl/filesystem/QuiltJoinedFileSystemProvider
++org/quiltmc/loader/impl/util/FileUtil
++org/quiltmc/loader/api/LoaderValue
++org/quiltmc/loader/impl/util/Arguments
++org/quiltmc/loader/impl/plugin/HaltLoadingError
++org/quiltmc/loader/impl/plugin/QuiltPluginContextImpl
++org/quiltmc/loader/impl/plugin/quilt/BuiltinModContainer
++org/quiltmc/loader/impl/filesystem/QuiltUnifiedEntry$QuiltUnifiedFolderReadOnly
++org/quiltmc/loader/impl/gui/MessagesTab$MessageTabListener
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/pb/UnitClausesPB
++org/quiltmc/loader/impl/filesystem/QuiltZipFileSystem$QuiltZipFile$InflaterSeekableByteChannel
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/Config
++org/quiltmc/loader/impl/filesystem/QuiltClassPath$HashTableFileMap
++org/quiltmc/loader/impl/metadata/qmj/JsonLoaderValue$BooleanImpl
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFile$ReadWrite
++org/quiltmc/loader/impl/plugin/quilt/QuiltModOption
++org/quiltmc/loader/api/plugin/QuiltLoaderPlugin
++org/quiltmc/loader/api/gui/QuiltLoaderGui
++org/quiltmc/loader/impl/filesystem/quilt/ufs/Handler
++org/quiltmc/loader/impl/game/minecraft/BundlerProcessor
++org/quiltmc/loader/impl/filesystem/QuiltZipFileSystem
++org/quiltmc/loader/impl/transformer/UnsupportedChasmException
++org/quiltmc/loader/impl/transformer/AbstractStripData
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFolder$ReadOnly
++org/quiltmc/loader/impl/metadata/qmj/QuiltOverrides
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/pb/WatchPbLong$1
++org/quiltmc/loader/api/plugin/gui/PluginGuiTreeNode
++org/quiltmc/loader/impl/plugin/quilt/QuiltRuleDepOnly
++org/quiltmc/loader/impl/solver/RuleSet$InputRuleSet
++org/quiltmc/loader/impl/lib/sat4j/specs/ISolverService
++org/quiltmc/loader/impl/game/minecraft/applet/AppletForcedShutdownListener
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/WritingException
++org/quiltmc/loader/impl/gui/ForkCommNames
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/Utils
++org/quiltmc/loader/api/ModInternal
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/toml/TemporalParser
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/ParsingException
++org/quiltmc/loader/impl/util/LoaderValueHelper$1
++org/quiltmc/loader/api/plugin/ModMetadataExt$ModPlugin
++org/quiltmc/loader/impl/util/log/LogCategory
++org/quiltmc/loader/impl/util/Localization$1
++org/quiltmc/loader/impl/lib/sat4j/minisat/restarts/ArminRestarts
++org/quiltmc/loader/impl/lib/sat4j/specs/IVecInt
++org/quiltmc/loader/impl/lib/sat4j/tools/AbstractClauseSelectorSolver
++org/quiltmc/loader/impl/fabric/metadata/CustomValueImpl$NullImpl
++org/quiltmc/loader/impl/gui/QuiltForkComms$ForkSide
++org/quiltmc/loader/impl/entrypoint/EntrypointStorage$Entry
++org/quiltmc/loader/impl/plugin/PathLoadState
++org/quiltmc/loader/impl/gui/QuiltJsonButton$QuiltBasicButtonAction
++org/quiltmc/loader/impl/metadata/qmj/Icons$Multiple
++org/quiltmc/loader/impl/game/minecraft/McVersionLookup
++org/quiltmc/loader/impl/fabric/metadata/V0ModMetadataParser$1
++org/quiltmc/loader/impl/filesystem/QuiltClassPath$HashCollisionPath
++org/quiltmc/loader/impl/entrypoint/EntrypointContainerImpl
++org/quiltmc/loader/impl/entrypoint/GamePatchContext
++org/quiltmc/loader/impl/util/QuiltLoaderInternal
++org/quiltmc/loader/impl/launch/common/QuiltMixinBootstrap$MixinConfigDecorator
++org/quiltmc/loader/impl/transformer/ClassStrippingData
++org/quiltmc/loader/impl/filesystem/quilt/mfs/Handler
++org/quiltmc/loader/impl/gui/QuiltJsonGuiMessage
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/AbstractCommentedConfig
++org/quiltmc/loader/impl/util/FileHasherImpl$1
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/LearningStrategy
++org/quiltmc/loader/api/ModMetadata$ProvidedMod
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Solver$GlucoseLCDS
++org/quiltmc/loader/impl/lib/sat4j/pb/OptToPBSATAdapter
++org/quiltmc/loader/impl/solver/RuleSet$ProcessedRuleSet
++org/quiltmc/loader/impl/filesystem/QuiltZipFileSystem$ByteArrayChannel
++org/quiltmc/loader/impl/plugin/BuiltinPluginContext
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Undoable
++org/quiltmc/loader/api/Version
++org/quiltmc/loader/impl/fabric/metadata/CustomValueImpl$NumberImpl
++org/quiltmc/loader/impl/util/AsciiTableGenerator$AsciiTableColumn
++org/quiltmc/loader/impl/game/minecraft/McVersionLookup$FieldTypeCaptureVisitor
++org/quiltmc/loader/impl/lib/sat4j/specs/IteratorInt
++org/quiltmc/loader/impl/solver/Sat4jWrapper$DefineStage
++org/quiltmc/loader/impl/launch/knot/MixinServiceKnotBootstrap
++org/quiltmc/loader/impl/gui/QuiltJsonButton$QuiltButtonListener
++org/quiltmc/loader/impl/filesystem/QuiltClassPath$StandardFileMap
++org/quiltmc/loader/impl/game/minecraft/patch/BrandingPatch
++org/quiltmc/loader/impl/filesystem/QuiltJoinedFileSystem
++org/quiltmc/loader/impl/util/DeferredNioExecutionHandler$1
++org/quiltmc/loader/impl/transformer/ClassStrippingData$FabricEnvironmentAnnotationVisitor
++org/quiltmc/loader/impl/fabric/metadata/MapBackedContactInformation
++org/quiltmc/loader/impl/solver/ModSolveResultImpl$LoadOptionResult
++org/quiltmc/loader/impl/plugin/UnsupportedModChecker$1
++org/quiltmc/loader/impl/lib/sat4j/tools/xplain/MinimizationStrategy
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/toml/TomlWriter
++org/quiltmc/loader/impl/discovery/ModSolvingError
++org/quiltmc/loader/impl/util/log/BuiltinLogHandler$ReplayEntry
++org/quiltmc/loader/api/LoaderValue$LObject
++org/quiltmc/loader/impl/lib/parsers/json/JsonReader
++org/quiltmc/loader/impl/gui/AbstractWindow$WindowChangeListener
++org/quiltmc/loader/impl/util/FilePreloadHelper
++org/quiltmc/loader/impl/util/ManifestUtil
++org/quiltmc/loader/impl/metadata/qmj/JsonLoaderValue$NumberImpl
++org/quiltmc/loader/impl/filesystem/QuiltClassPath
++org/quiltmc/loader/impl/metadata/qmj/ModDependencyImpl$OnlyImpl
++org/quiltmc/loader/impl/lib/sat4j/pb/core/PBSolver$1
++org/quiltmc/loader/impl/transformer/TransformCacheResult
++org/quiltmc/loader/impl/transformer/ClassStrippingData$OnModsMissing
++org/quiltmc/loader/api/plugin/solver/NegatedLoadOption
++org/quiltmc/loader/impl/metadata/VersionRangeImpl
++org/quiltmc/loader/api/plugin/ModMetadataExt
++org/quiltmc/loader/api/ModDependencyIdentifier
++org/quiltmc/loader/impl/lib/sat4j/minisat/constraints/cnf/BinaryClause
++org/quiltmc/loader/impl/solver/RuleDefinition$Between
++org/quiltmc/loader/impl/util/log/ConsoleLogHandler
++org/quiltmc/loader/impl/gui/BasicWindow$BasicWindowChangeListener
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFileStore$ReadOnly
++org/quiltmc/loader/impl/plugin/SolverErrorHelper
++org/quiltmc/loader/impl/game/minecraft/McVersionLookup$InsnFwdMethodVisitor
++org/quiltmc/loader/impl/gui/QuiltUI
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFolder$ReadWrite
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/AbstractCommentedConfig$CommentedEntryWrapper
++org/quiltmc/loader/impl/metadata/qmj/V1ModMetadataReader$VersionJoiner
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/IPhaseSelectionStrategy
++org/quiltmc/loader/impl/entrypoint/GamePatch
++org/quiltmc/loader/impl/launch/common/QuiltCodeSource
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Learner
++org/quiltmc/loader/api/ModDependency
++org/quiltmc/loader/impl/launch/knot/KnotBaseClassLoader
++org/quiltmc/loader/api/plugin/ModMetadataExt$ModLoadType
++org/quiltmc/loader/impl/plugin/fabric/StandardFabricPlugin
++org/quiltmc/loader/impl/util/UrlConversionException
++org/quiltmc/loader/impl/game/minecraft/McLibrary
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/pb/InternalMapPBStructure
++org/quiltmc/loader/impl/filesystem/QuiltClassPath$FileMap
++org/quiltmc/loader/impl/filesystem/QuiltZipPath
++org/quiltmc/loader/impl/plugin/QuiltPluginTaskImpl
++org/quiltmc/loader/api/VersionFormatException
++org/quiltmc/loader/impl/plugin/PathLoadState$UnknownFile
++org/quiltmc/loader/impl/lib/sat4j/specs/Lbool
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/PBContainer
++org/quiltmc/loader/impl/discovery/ArgumentModCandidateFinder
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/utils/TransformingSet
++org/quiltmc/loader/impl/config/QuiltConfigImpl
++org/quiltmc/loader/impl/discovery/ClasspathModCandidateFinder
++org/quiltmc/loader/impl/plugin/quilt/OptionalModIdDefintion
++org/quiltmc/loader/impl/gui/BasicWindowUI$1
++org/quiltmc/loader/impl/gui/BasicWindowUI$3
++org/quiltmc/loader/impl/gui/BasicWindowUI$2
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/toml/TableWriter
++org/quiltmc/loader/impl/gui/BasicWindowUI$5
++org/quiltmc/loader/api/ModContainer
++org/quiltmc/loader/impl/gui/BasicWindowUI$4
++org/quiltmc/loader/impl/filesystem/quilt/jfs/Handler$1
++org/quiltmc/loader/impl/language/JavaLanguageAdapter
++org/quiltmc/loader/impl/metadata/qmj/Icons$Single
++org/quiltmc/loader/impl/util/ImmutableIterable
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/CharsWrapper$Builder
++org/quiltmc/loader/impl/gui/BasicWindowUI$1MessageListener
++org/quiltmc/loader/impl/filesystem/QuiltZipCustomCompressedWriter$WriterThread
++org/quiltmc/loader/impl/report/QuiltStacktraceSection
++org/quiltmc/loader/impl/metadata/qmj/JsonLoaderValue
++org/quiltmc/loader/impl/filesystem/quilt/zfs/Handler$1
++org/quiltmc/loader/impl/QuiltLoaderConfig
++org/quiltmc/loader/impl/filesystem/GlobToRegex$State
++org/quiltmc/loader/impl/plugin/PluginEvent$AddFolderEvent
++org/quiltmc/loader/impl/util/DisconnectableByteChannel
++org/quiltmc/loader/impl/metadata/qmj/FabricModMetadataWrapper$1
++org/quiltmc/loader/impl/lib/sat4j/minisat/orders/VarOrderHeap
++org/quiltmc/loader/impl/filesystem/QuiltZipFileSystem$SharedByteChannels
++org/quiltmc/loader/impl/util/log/BuiltinLogHandler
++org/quiltmc/loader/impl/game/minecraft/McVersionLookup$MethodConstantVisitor$1
++org/quiltmc/loader/impl/solver/Sat4jWrapper
++org/quiltmc/loader/impl/filesystem/QuiltZipFileSystem$QuiltZipFile
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFileSystemProvider
++org/quiltmc/loader/impl/solver/RuleDefinition$1
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$InternalSuper
++org/quiltmc/loader/impl/util/DeferredNioExecutionHandler
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFile$ReadOnly$QuiltSeekableByteChannel
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/ConfigFormat
++org/quiltmc/loader/impl/fabric/metadata/CustomValueImpl$ObjectImpl
++org/quiltmc/loader/impl/util/ExceptionUtil$WrappedException
++org/quiltmc/loader/impl/lib/sat4j/pb/core/PBSolver
++org/quiltmc/loader/impl/lib/parsers/json/JsonWriter
++org/quiltmc/loader/impl/solver/RuleDefinition$AtMost
++org/quiltmc/loader/impl/transformer/RuntimeModRemapper$1
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/CharsWrapper$1
++org/quiltmc/loader/impl/fabric/metadata/V1ModMetadataFabric$Single
++org/quiltmc/loader/impl/lib/sat4j/specs/ISolver
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFileStore
++org/quiltmc/loader/impl/gui/QuiltForkComms$1
++org/quiltmc/loader/impl/filesystem/QuiltZipCustomCompressedWriter$FileEntry
++org/quiltmc/loader/impl/transformer/PackageAccessFixer
++org/quiltmc/loader/impl/gui/TreeTab
++org/quiltmc/loader/impl/metadata/qmj/ProvidedModContainer
++org/quiltmc/loader/impl/util/DeferredInputStream
++org/quiltmc/loader/impl/launch/knot/MixinStringPropertyKey
++org/quiltmc/loader/api/LanguageAdapterException
++org/quiltmc/loader/impl/launch/knot/UnusedEmptyTargetClass
++org/quiltmc/loader/api/minecraft/MinecraftQuiltLoader
++org/quiltmc/loader/impl/entrypoint/EntrypointStorage$1
++org/quiltmc/loader/impl/metadata/qmj/V1ModMetadataReader$QLKeys
++org/quiltmc/loader/impl/gui/BasicWindowUI$IconSet
++org/quiltmc/loader/api/plugin/gui/PluginGuiTreeNode$SortOrder
++org/quiltmc/loader/impl/solver/RuleSet
++org/quiltmc/loader/impl/solver/RuleDefinition$AtLeast
++org/quiltmc/loader/api/gui/QuiltDisplayedError$QuiltErrorButton
++org/quiltmc/loader/impl/launch/knot/KnotCompatibilityClassLoader
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFileStore$ReadWrite
++org/quiltmc/loader/impl/solver/SolverTester$Rule2Constructor
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/ActivityListener
++org/quiltmc/loader/impl/metadata/qmj/AdapterLoadableClassEntry
++org/quiltmc/loader/api/minecraft/DedicatedServerOnly
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$1
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/ReaderInput
++org/quiltmc/config/api/serializers/Json5Serializer
++org/quiltmc/loader/impl/lib/sat4j/minisat/orders/PhaseInLastLearnedClauseSelectionStrategy
++org/quiltmc/loader/impl/plugin/gui/I18n
++org/quiltmc/loader/impl/transformer/EnvironmentStrippingData
++org/quiltmc/loader/impl/lib/sat4j/pb/SolverFactory
++org/quiltmc/loader/impl/metadata/GeneralExt2FabricMetadata$Quilt2FabricModDependency
++org/quiltmc/loader/impl/report/QuiltReport$CrashReportSaveFailed
++org/quiltmc/loader/api/ExtendedFiles
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$1$3
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$1$2
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$1$1
++org/quiltmc/loader/impl/lib/sat4j/core/VecInt$2
++org/quiltmc/loader/impl/lib/sat4j/core/VecInt$1
++org/quiltmc/loader/api/gui/QuiltGuiMessagesTab
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFile$ReadOnly$1
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFile$ReadOnly$2
++org/quiltmc/loader/impl/gui/AbstractTab$TabChangeListener
++org/quiltmc/loader/impl/language/LanguageAdapter$MissingSuperclassBehavior
++org/quiltmc/loader/impl/plugin/VersionRangeDescriber
++org/quiltmc/loader/api/gui/QuiltLoaderIcon
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/toml/TemporalWriter
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/AbstractPBDataStructureFactory
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/MinCardConstructor
++org/quiltmc/loader/impl/lib/sat4j/minisat/orders/RSATPhaseSelectionStrategy
++org/quiltmc/loader/impl/solver/Sat4jWrapper$CalculationStage
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/Config$Entry
++org/quiltmc/loader/impl/transformer/ClassStrippingData$QuiltRequiresAnnotationVisitor
++org/quiltmc/loader/impl/util/HashUtil
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Heap
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/CircularBuffer
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/SimpleConfig
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Counter
++org/quiltmc/loader/impl/launch/knot/KnotServer
++org/quiltmc/loader/impl/lib/sat4j/tools/xplain/Xplain
++org/quiltmc/loader/impl/metadata/qmj/QuiltOverrides$ModOverrides
++org/quiltmc/loader/impl/gui/QuiltForkServerMain
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/utils/FakeUnmodifiableCommentedConfig$1
++org/quiltmc/loader/impl/filesystem/QuiltFileAttributes
++org/quiltmc/loader/impl/launch/common/QuiltMixinBootstrap
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$3
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$2
++org/quiltmc/loader/impl/plugin/UnsupportedModChecker$UnsupportedModDetails
++org/quiltmc/loader/impl/metadata/qmj/ModLicenseImpl
++org/quiltmc/loader/impl/metadata/qmj/QuiltOverrides$SpecificOverrides
++org/quiltmc/loader/impl/metadata/qmj/ModDependencyImpl$AnyImpl
++org/quiltmc/loader/impl/fabric/metadata/ModDependencyImpl
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/RestartStrategy
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/ConflictTimerAdapter
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Constr
++org/quiltmc/loader/impl/plugin/fabric/FabricModOption
++org/quiltmc/loader/impl/filesystem/QuiltZipFileSystem$InMemorySource
++org/quiltmc/loader/impl/gui/QuiltForkComms
++org/quiltmc/loader/impl/metadata/GeneralExt2FabricMetadata
++org/quiltmc/loader/api/plugin/NonZipException
++org/quiltmc/loader/api/plugin/PluginScanResult
++org/quiltmc/loader/impl/plugin/QuiltPluginManagerImpl
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/pb/MapPb
++org/quiltmc/loader/impl/game/minecraft/McVersionLookup$FieldStringConstantVisitor$1
++org/quiltmc/loader/impl/lib/sat4j/minisat/constraints/card/AtLeast
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Solver$11
++org/quiltmc/loader/impl/entrypoint/EntrypointStorage
++org/quiltmc/loader/impl/entrypoint/GameTransformer$1
++org/quiltmc/loader/impl/filesystem/NullPath
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Solver$10
++org/quiltmc/loader/impl/filesystem/QuiltClassPath$1
++org/quiltmc/loader/api/MappingResolver
++org/quiltmc/loader/impl/gui/BasicWindowUI$CustomTreeNode
++org/quiltmc/loader/impl/filesystem/QuiltClassPath$2
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$InternalValue
++org/quiltmc/loader/impl/util/AsciiTableGenerator$AsciiTableRow
++org/quiltmc/loader/impl/lib/sat4j/minisat/constraints/cnf/UnitClause
++org/quiltmc/loader/impl/plugin/SolverErrorHelper$SolverError
++org/quiltmc/loader/impl/transformer/ClassStrippingData$FabricEnvironmentInterfaceAnnotationVisitor
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/ILits
++org/quiltmc/loader/impl/fabric/metadata/V0ModMetadataFabric$Mixins
++org/quiltmc/loader/impl/game/minecraft/MinecraftGameProvider$1
++org/quiltmc/loader/impl/game/minecraft/MinecraftGameProvider$2
++org/quiltmc/loader/impl/metadata/qmj/ConvertibleModMetadata
++org/quiltmc/loader/impl/solver/SolverPreProcessor$1
++org/quiltmc/loader/impl/lib/sat4j/tools/SolverDecorator
++org/quiltmc/loader/impl/QuiltLoaderImpl
++org/quiltmc/loader/impl/filesystem/QuiltBasePath
++org/quiltmc/loader/impl/filesystem/QuiltMapFileSystem
++org/quiltmc/loader/impl/plugin/PerCycleStep
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/toml/ValueParser
++org/quiltmc/loader/impl/gui/QuiltFork
++org/quiltmc/loader/impl/lib/sat4j/minisat/constraints/cnf/Clauses
++org/quiltmc/loader/impl/metadata/qmj/ModDependencyIdentifierImpl
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/LearnedConstraintsDeletionStrategy
++org/quiltmc/loader/impl/metadata/qmj/InternalModMetadata
++org/quiltmc/loader/impl/gui/PluginIconImpl$IconType
++org/quiltmc/loader/impl/lib/sat4j/minisat/learning/AbstractLearning
++org/quiltmc/loader/impl/filesystem/GlobToRegex$3
++org/quiltmc/loader/impl/filesystem/GlobToRegex$2
++org/quiltmc/loader/impl/lib/sat4j/specs/UnitClauseProvider$1
++org/quiltmc/loader/impl/filesystem/GlobToRegex$5
++org/quiltmc/loader/impl/filesystem/GlobToRegex$4
++org/quiltmc/loader/impl/filesystem/GlobToRegex$6
++org/quiltmc/loader/impl/gui/QuiltForkComms$ReadySender$1
++org/quiltmc/loader/impl/game/minecraft/McVersionLookup$MethodStringConstantContainsVisitor$1
++org/quiltmc/loader/impl/gui/QuiltGuiSyncBase$WriteState
++org/quiltmc/loader/impl/filesystem/GlobToRegex$1
++org/quiltmc/loader/impl/transformer/TransformCache$ClassConsumer
++org/quiltmc/loader/impl/lib/sat4j/minisat/constraints/cnf/HTClause
++org/quiltmc/loader/impl/solver/Sat4jWrapper$1
++org/quiltmc/loader/impl/solver/RuleComputeResult$SimpleResult
++org/quiltmc/loader/impl/plugin/quilt/ModIdDefinition
++org/quiltmc/loader/api/gui/QuiltLoaderWindow
++org/quiltmc/loader/impl/report/QuiltReportSection
++org/quiltmc/loader/impl/transformer/ChasmTransformException
++org/quiltmc/loader/impl/plugin/SolverErrorHelper$OptionLink
++org/quiltmc/loader/impl/game/minecraft/BundlerProcessor$1
++org/quiltmc/loader/impl/gui/QuiltJsonGuiMessage$1
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$1$3$1
++org/quiltmc/loader/impl/gui/QuiltJsonButton
++org/quiltmc/loader/impl/gui/BasicWindow
++org/quiltmc/loader/impl/metadata/qmj/QuiltModMetadataWrapperFabric
++org/quiltmc/loader/impl/filesystem/QuiltZipFileSystem$CountingInputStream
++org/quiltmc/loader/impl/lib/sat4j/core/ReadOnlyVecInt
++org/quiltmc/loader/impl/util/FileHasherImpl
++org/quiltmc/loader/impl/lib/sat4j/minisat/orders/AbstractPhaserecordingSelectionStrategy
++org/quiltmc/loader/impl/entrypoint/EntrypointUtils
++org/quiltmc/loader/impl/transformer/ClassStrippingData$1$1
++org/quiltmc/loader/impl/filesystem/QuiltUnifiedFileSystemProvider
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/pb/IDataStructurePB
++org/quiltmc/loader/impl/lib/sat4j/tools/AbstractClauseSelectorSolver$2
++org/quiltmc/loader/impl/lib/sat4j/tools/AbstractClauseSelectorSolver$1
++org/quiltmc/loader/impl/plugin/quilt/QuiltRuleBreakOnly
++org/quiltmc/loader/api/plugin/gui/PluginGuiTreeNode$WarningLevel
++org/quiltmc/loader/api/plugin/solver/Rule
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/ParsingMode
++org/quiltmc/loader/impl/metadata/qmj/ModMetadataReader
++org/quiltmc/loader/impl/filesystem/QuiltFSP
++org/quiltmc/loader/impl/QuiltMappingResolver
++org/quiltmc/loader/impl/solver/RuleSet$1
++net/fabricmc/loader/entrypoint/minecraft/hooks/EntrypointClient
++org/quiltmc/loader/impl/fabric/util/version/Quilt2FabricVersionInterval
++org/quiltmc/loader/impl/game/LibClassifier
++org/quiltmc/loader/impl/language/LanguageAdapter$Options$Builder
++org/quiltmc/loader/impl/transformer/QuiltInternalExceptionUtil
++org/quiltmc/loader/api/FasterFiles
++org/quiltmc/loader/impl/solver/RuleDefinition
++org/quiltmc/loader/impl/launch/common/QuiltLauncher
++org/quiltmc/loader/impl/util/QuiltLoaderCleanupTasks
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$LoaderInternalValue
++org/quiltmc/loader/impl/game/minecraft/patch/EntrypointPatch
++net/fabricmc/loader/impl/entrypoint/EntrypointUtils
++org/quiltmc/loader/impl/lib/flexver/FlexVerComparator$1
++org/quiltmc/loader/impl/fabric/metadata/V0ModMetadataParser
++org/quiltmc/loader/impl/metadata/qmj/V1ModMetadataImpl
++org/quiltmc/loader/impl/metadata/qmj/JsonLoaderValue$1
++org/quiltmc/loader/impl/transformer/ChasmInvoker
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/utils/FakeCommentedConfig$FakeCommentedEntry
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/pb/MaxWatchPbLong
++org/quiltmc/loader/impl/util/mappings/TinyRemapperMappingsHelper
++org/quiltmc/loader/impl/fabric/metadata/ContactInfoBackedPerson
++org/quiltmc/loader/impl/fabric/metadata/SimplePerson
++org/quiltmc/loader/impl/game/LibClassifier$LibraryType
++org/quiltmc/loader/impl/metadata/qmj/V1ModMetadataReader$1
++org/quiltmc/loader/impl/filesystem/QuiltZipCustomCompressedWriter$StopThreadsPath
++org/quiltmc/loader/impl/lib/sat4j/specs/UnitClauseProvider
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Solver$3
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Solver$2
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Solver$1
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/ParsingMode$MapPutAction
++org/quiltmc/loader/impl/filesystem/ReadOnlyFileSystem
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Solver$7
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Solver$6
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/CompetResolutionPBLongMixedWLClauseCardConstrDataStructure
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Solver$4
++org/quiltmc/loader/api/gui/QuiltTreeNode$SortOrder
++org/quiltmc/loader/impl/plugin/quilt/SystemModOption
++org/quiltmc/loader/impl/launch/knot/MixinServiceKnot
++org/quiltmc/loader/impl/transformer/ChasmInvoker$4
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Solver$9
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Solver$8
++org/quiltmc/loader/impl/transformer/ChasmInvoker$1
++org/quiltmc/loader/impl/transformer/ChasmInvoker$3
++org/quiltmc/loader/impl/solver/RuleComputeResult$Removed
++org/quiltmc/loader/impl/transformer/ChasmInvoker$2
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFileSystem$DirBuildState
++org/quiltmc/loader/impl/lib/parsers/json/MalformedSyntaxException
++org/quiltmc/loader/api/minecraft/ClientOnly
++org/quiltmc/loader/impl/filesystem/quilt/zfs/Handler
++org/quiltmc/loader/impl/fabric/metadata/V0ModMetadataFabric
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$WarnLoaderInternalValue
++org/quiltmc/loader/impl/lib/sat4j/specs/IProblem
++org/quiltmc/loader/api/ModContainer$BasicSourceType
++org/quiltmc/loader/impl/util/Localization
++org/quiltmc/loader/api/entrypoint/EntrypointContainer
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFileSystem$ReadWrite$1
++org/quiltmc/loader/impl/plugin/quilt/QuiltModContainer
++org/quiltmc/loader/impl/QuiltMappingResolver$NamespaceData
++org/quiltmc/loader/impl/game/minecraft/McVersionLookup$MethodConstantVisitor
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/ConfigParser
++org/quiltmc/loader/impl/filesystem/QuiltMapFileSystemProvider$2
++org/quiltmc/loader/impl/filesystem/QuiltMapFileSystemProvider$1
++org/quiltmc/loader/impl/filesystem/QuiltMapFileSystemProvider$4
++org/quiltmc/loader/impl/filesystem/QuiltMapFileSystemProvider$3
++org/quiltmc/loader/impl/fabric/metadata/V1ModMetadataParser$1
++org/quiltmc/loader/impl/solver/ModSolveResultImpl
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFile$1
++org/quiltmc/loader/impl/filesystem/QuiltBaseFileSystem
++org/quiltmc/loader/impl/fabric/metadata/CustomValueImpl$1
++org/quiltmc/loader/impl/transformer/TransformCache
++org/quiltmc/loader/impl/filesystem/QuiltZipCustomCompressedWriter$1
++org/quiltmc/loader/impl/util/AsciiTableGenerator
++org/quiltmc/loader/impl/metadata/GeneralExt2FabricMetadata$2
++org/quiltmc/loader/impl/metadata/GeneralExt2FabricMetadata$1
++org/quiltmc/loader/api/plugin/QuiltPluginTask
++org/quiltmc/loader/impl/lib/sat4j/minisat/constraints/cnf/OriginalHTClause
++org/quiltmc/loader/impl/metadata/qmj/Patterns
++org/quiltmc/loader/impl/plugin/PluginEvent
++org/quiltmc/loader/api/VersionInterval
++org/quiltmc/loader/api/gui/QuiltGuiTreeTab
++org/quiltmc/loader/api/ModDependency$Any
++org/quiltmc/loader/api/ExtendedFileSystem
++org/quiltmc/loader/api/plugin/QuiltPluginManager
++org/quiltmc/loader/impl/launch/knot/KnotClassDelegate
++org/quiltmc/loader/impl/transformer/ClassStrippingData$QuiltRequiresAnnotationVisitor$1
++org/quiltmc/loader/impl/transformer/ClassStrippingData$QuiltRequiresAnnotationVisitor$2
++org/quiltmc/loader/impl/lib/sat4j/minisat/constraints/cnf/Lits
++org/quiltmc/loader/impl/filesystem/GlobToRegex$InternalCharMatcher
++org/quiltmc/loader/impl/discovery/ClasspathModCandidateFinder$ModAdder
++org/quiltmc/loader/impl/lib/sat4j/specs/UnitPropagationListener
++org/quiltmc/loader/impl/game/minecraft/MinecraftGameProvider
++org/quiltmc/loader/impl/gui/QuiltGuiSyncBase$Listener
++org/quiltmc/loader/impl/game/GameProvider$BuiltinMod
++org/quiltmc/loader/impl/solver/RuleComputeResult
++org/quiltmc/loader/impl/lib/sat4j/pb/core/IPBCDCLSolver
++org/quiltmc/loader/impl/lib/sat4j/minisat/constraints/cnf/LearntHTClause
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/CommentedConfig
++org/quiltmc/loader/impl/launch/knot/QuiltGlobalPropertyService
++org/quiltmc/loader/impl/filesystem/quilt/mfs/Handler$1
++org/quiltmc/loader/impl/filesystem/quilt/jfs/Handler
++org/quiltmc/loader/impl/fabric/metadata/V1ModMetadataFabric$JarEntry
++org/quiltmc/loader/impl/transformer/ClassStrippingData$QuiltEnvironmentAnnotationVisitor
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/toml/ArrayParser
++org/quiltmc/loader/impl/fabric/metadata/V1ModMetadataFabric$MapEntry
++org/quiltmc/loader/impl/transformer/TransformCache$1
++org/quiltmc/loader/impl/game/minecraft/McVersionLookup$MethodConstantRetVisitor
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/IClauseConstructor
++org/quiltmc/loader/impl/fabric/metadata/CustomValueImpl
++org/quiltmc/loader/impl/transformer/TransformCacheGenerator
++org/quiltmc/loader/impl/plugin/UnsupportedModChecker$RisugamisModLoaderMod
++org/quiltmc/loader/impl/filesystem/quilt/ufs/Handler$1
++org/quiltmc/loader/api/plugin/solver/RuleContext
++org/quiltmc/loader/impl/lib/flexver/FlexVerComparator$NumericVersionComponent
++org/quiltmc/loader/impl/game/GameProviderHelper$FindResult
++org/quiltmc/loader/impl/metadata/qmj/JsonLoaderValue$ObjectImpl
++org/quiltmc/loader/impl/metadata/qmj/V1ModMetadataBuilder
++org/quiltmc/loader/impl/launch/knot/DummyClassLoader$1
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/VarActivityListener
++org/quiltmc/loader/impl/transformer/LambdaStripCalculator
++org/quiltmc/loader/impl/gui/BasicWindowUI
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/pb/Pseudos
++org/quiltmc/loader/impl/filesystem/QuiltJoinedFileSystemProvider$1
++org/quiltmc/loader/impl/lib/sat4j/pb/core/PBSolverStats
++org/quiltmc/loader/impl/util/UrlUtil
++org/quiltmc/loader/impl/transformer/PackageEnvironmentStrippingData
++org/quiltmc/loader/api/Version$Semantic
++org/quiltmc/loader/impl/launch/knot/Knot
++org/quiltmc/loader/impl/util/QuiltLoaderInternalType
++org/quiltmc/loader/impl/lib/flexver/FlexVerComparator
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/AbstractConfig$EntryWrapper
++org/quiltmc/loader/api/VersionConstraint$Type
++org/quiltmc/loader/impl/metadata/qmj/JsonLoaderValue$ArrayImpl
++org/quiltmc/loader/impl/language/LanguageAdapterException
++org/quiltmc/loader/impl/solver/SolverTester$Rule1Constructor
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFile$ReadOnly
++org/quiltmc/loader/api/ModContributor
++org/quiltmc/loader/api/plugin/ModMetadataExt$ModEntrypoint
++org/quiltmc/loader/impl/fabric/metadata/CustomValueImpl$BooleanImpl
++org/quiltmc/loader/impl/gui/QuiltLoaderTextImpl
++org/quiltmc/loader/impl/game/minecraft/BundlerClassPathCapture
++org/quiltmc/loader/api/gui/QuiltLoaderIcon$SubIconPosition
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/toml/TomlParser
++org/quiltmc/loader/impl/report/QuiltReportedError
++org/quiltmc/loader/impl/fabric/metadata/ParseMetadataException
++org/quiltmc/loader/impl/launch/knot/KnotClassLoader
++org/quiltmc/loader/impl/launch/knot/MixinContainerHandleMod
++org/quiltmc/loader/impl/lib/sat4j/pb/orders/IOrderObjective
++org/quiltmc/loader/impl/patch/reflections/ReflectionsClassPatcher
++org/quiltmc/loader/impl/filesystem/QuiltMapFileSystemProvider$2$1
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/AbstractPBDataStructureFactory$INormalizer
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/ActivityComparator
++org/quiltmc/loader/impl/game/minecraft/applet/AppletMain
++org/quiltmc/loader/impl/filesystem/QuiltZipFileSystem$ZipSource
++org/quiltmc/loader/impl/launch/server/InjectingURLClassLoader
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/utils/TransformingIterator
++org/quiltmc/loader/impl/launch/knot/IllegalQuiltInternalAccessError
++org/quiltmc/loader/impl/gui/QuiltForkComms$Sender
++org/quiltmc/loader/impl/transformer/TransformCacheManager$1
++org/quiltmc/loader/api/Requires
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/utils/TransformingCollection
++org/quiltmc/loader/impl/language/JavaLanguageAdapter$1
++org/quiltmc/loader/impl/plugin/quilt/QuiltRuleBreakAll
++org/quiltmc/loader/impl/gui/QuiltForkComms$WatchingInputStream
++org/quiltmc/loader/impl/launch/knot/KnotClassLoader$1
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Solver$Glucose2LCDS
++org/quiltmc/loader/impl/util/AsciiTableGenerator$AsciiTableCell
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFolder
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/utils/FakeCommentedConfig$1
++org/quiltmc/loader/impl/plugin/UnsupportedModChecker
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/WriterOutput
++org/quiltmc/loader/impl/transformer/ClassStrippingData$2
++org/quiltmc/loader/impl/filesystem/PartiallyWrittenIOException
++org/quiltmc/loader/impl/transformer/ClassStrippingData$3
++org/quiltmc/loader/impl/filesystem/QuiltUnifiedEntry$1
++org/quiltmc/loader/impl/gui/QuiltLoaderGuiImpl
++org/quiltmc/loader/impl/transformer/ClassStrippingData$1
++org/quiltmc/loader/impl/metadata/qmj/Icons
++org/quiltmc/loader/api/gui/QuiltTreeNode
++org/quiltmc/loader/impl/game/minecraft/Slf4jLogHandler$1
++org/quiltmc/loader/api/ModLicense
++org/quiltmc/loader/impl/transformer/RuntimeModRemapper
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/AbstractPBDataStructureFactory$2
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/AbstractPBDataStructureFactory$1
++org/quiltmc/loader/impl/util/log/LogHandler
++org/quiltmc/loader/impl/util/FileSystemUtil
++org/quiltmc/loader/impl/plugin/base/InternalModContainerBase
++org/quiltmc/loader/impl/plugin/quilt/StandardQuiltPlugin$SingleOverrideEntry
++org/quiltmc/loader/impl/filesystem/QuiltMapFileSystemProvider
++org/quiltmc/loader/impl/filesystem/QuiltMapFileSystem$1
++org/quiltmc/loader/impl/gui/BasicWindowUI$CustomTreeNode$1
++org/quiltmc/loader/impl/plugin/PathLoadState$Folder
++org/quiltmc/loader/impl/launch/knot/KnotClassDelegate$Metadata
++org/quiltmc/loader/impl/plugin/PathLoadState$PluginPriorityComparison
++org/quiltmc/loader/impl/plugin/UnsupportedModChecker$UnsupportedType
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFileSystem
++org/quiltmc/loader/api/ModMetadataToBeMovedToPlugins
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/utils/TransformingSpliterator
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFile$ReadWrite$1
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFile$ReadWrite$2
++org/quiltmc/loader/impl/plugin/QuiltPluginManagerImpl$SourcePathGenerator
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFile$ReadWrite$3
++org/quiltmc/loader/impl/transformer/QuiltTransformer
++org/quiltmc/loader/impl/lib/sat4j/minisat/constraints/cnf/WLClause
++org/quiltmc/loader/impl/metadata/qmj/FabricModMetadataWrapper
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/SolverStats
++org/quiltmc/loader/impl/fabric/metadata/ParseMetadataException$MissingField
++org/quiltmc/loader/impl/solver/RuleDefinition$AtLeastOneOf
++org/quiltmc/loader/impl/lib/sat4j/tools/xplain/DeletionStrategy
++org/quiltmc/loader/impl/fabric/metadata/FabricModMetadataReader
++org/quiltmc/loader/impl/filesystem/QuiltJoinedPath
++org/quiltmc/loader/impl/metadata/qmj/ModDependencyImpl
++org/quiltmc/loader/impl/metadata/qmj/VersionConstraintImpl
++org/quiltmc/loader/impl/util/ExceptionUtil
++org/quiltmc/loader/impl/plugin/fabric/FabricModContainer
++org/quiltmc/loader/impl/lib/sat4j/tools/SolutionFoundListener$1
++org/quiltmc/loader/impl/plugin/MainThreadTask$ScanFolderAsModTask
++org/quiltmc/loader/impl/transformer/PackageStrippingData$1$1
++org/quiltmc/loader/impl/metadata/qmj/JsonLoaderValue$NullImpl
++org/quiltmc/loader/impl/launch/knot/KnotClassLoaderInterface
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFileSystem$1
++org/quiltmc/loader/impl/patch/PatchLoader
++org/quiltmc/loader/impl/lib/sat4j/tools/SolutionFoundListener
++org/quiltmc/loader/impl/filesystem/QuiltZipFileSystem$CustomZipInputStream
++org/quiltmc/loader/api/plugin/solver/TentativeLoadOption
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/pb/IWatchPb
++org/quiltmc/loader/impl/launch/knot/DummyClassLoader
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/ConflictTimer
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/toml/Toml
++org/quiltmc/loader/impl/filesystem/QuiltMemoryPath
++org/quiltmc/loader/impl/game/minecraft/Slf4jLogHandler
++org/quiltmc/loader/impl/metadata/FabricLoaderModMetadata
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/InMemoryFormat
++org/quiltmc/loader/impl/plugin/base/InternalModOptionBase
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFileSystem$ReadOnly$1
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/UnmodifiableConfig
++org/quiltmc/loader/impl/patch/reflections/ReflectionsPatchUtils
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/ISimplifier
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$ScanningAnnotationVisitor
++org/quiltmc/loader/impl/fabric/metadata/BuiltinModMetadata
++org/quiltmc/loader/impl/game/minecraft/McVersion$Builder
++org/quiltmc/loader/impl/filesystem/QuiltUnifiedEntry$QuiltUnifiedFolder
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/ICardConstructor
++org/quiltmc/loader/impl/entrypoint/GameTransformer
++org/quiltmc/loader/impl/filesystem/QuiltUnifiedFileSystem$1
++org/quiltmc/loader/impl/solver/Sat4jWrapper$ErrorStage
++org/quiltmc/loader/impl/fabric/metadata/CustomValueImpl$StringImpl
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/toml/StringWriter
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/SimpleCommentedConfig
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/pb/AtLeastPB
++org/quiltmc/loader/impl/filesystem/DelegatingUrlStreamHandlerFactory
++org/quiltmc/loader/impl/metadata/qmj/VersionConstraintImpl$1
++org/quiltmc/loader/impl/launch/knot/MixinLogger
++org/quiltmc/loader/api/plugin/solver/LoadOption
++org/quiltmc/loader/api/config/v2/QuiltConfig
++org/quiltmc/loader/api/entrypoint/EntrypointUtil
++org/quiltmc/loader/impl/lib/sat4j/core/ASolverFactory
++org/quiltmc/loader/impl/lib/sat4j/minisat/restarts/Glucose21Restarts
++org/quiltmc/loader/impl/plugin/ModLocationImpl
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/CharsWrapper
++org/quiltmc/loader/impl/gui/AbstractTab
++org/quiltmc/loader/impl/launch/server/QuiltServerLauncher
++org/quiltmc/loader/impl/metadata/EntrypointMetadata
++org/quiltmc/loader/api/CachedFileSystem
++org/quiltmc/loader/impl/game/minecraft/applet/AppletFrame
++org/quiltmc/loader/impl/lib/sat4j/pb/core/PBDataStructureFactory
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$1$2$1
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFile
++org/quiltmc/loader/impl/fabric/metadata/AbstractModMetadata
++org/quiltmc/loader/api/gui/QuiltLoaderText
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/utils/ConfigWrapper
++org/quiltmc/loader/impl/language/LanguageAdapter$Options
++org/quiltmc/loader/impl/report/QuiltStringSection
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$PermittedLoaderInternalValue
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/VoidTracing
++org/quiltmc/loader/impl/lib/sat4j/minisat/constraints/cnf/UnitClauses
++org/quiltmc/loader/impl/fabric/metadata/V1ModMetadataFabric$MixinEntry
++org/quiltmc/loader/impl/lib/sat4j/pb/tools/XplainPB
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/UnmodifiableCommentedConfig$Entry
++org/quiltmc/loader/impl/lib/sat4j/pb/core/PBSolverResolution
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/CharacterOutput
++org/quiltmc/loader/impl/transformer/PackageStrippingData$1
++org/quiltmc/loader/impl/lib/sat4j/core/VecInt
++org/quiltmc/loader/impl/fabric/metadata/BuiltinModMetadata$Builder
++org/quiltmc/loader/impl/solver/RuleDefinition$Exactly
++org/quiltmc/loader/impl/fabric/util/version/Quilt2FabricSemanticVersion
++org/quiltmc/loader/impl/solver/Sat4jWrapper$Sat4jSolverSatisfiable
++org/quiltmc/loader/impl/plugin/TreeContainsModError
++org/quiltmc/loader/impl/FormattedException
++org/quiltmc/loader/impl/lib/flexver/FlexVerComparator$VersionComponent
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/UnmodifiableCommentedConfig
++org/quiltmc/loader/impl/solver/PreProcessException
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/utils/StringUtils
++org/quiltmc/loader/impl/lib/sat4j/minisat/constraints/cnf/OriginalBinaryClause
++org/quiltmc/loader/impl/lib/sat4j/specs/IOptimizationProblem
++org/quiltmc/loader/impl/gui/ButtonContainerImpl$ButtonContainerListener
++org/quiltmc/loader/impl/gui/GuiManagerImpl
++org/quiltmc/loader/impl/plugin/quilt/DisabledModIdDefinition
++org/quiltmc/loader/impl/metadata/qmj/V1ModMetadataImpl$1
++org/quiltmc/loader/impl/metadata/qmj/GenericVersionImpl
++org/quiltmc/loader/impl/entrypoint/EntrypointStorage$NewEntry
++org/quiltmc/loader/impl/lib/sat4j/pb/core/PBSolver$1$1
++org/quiltmc/loader/impl/patch/reflections/ReflectionsDir
++org/quiltmc/loader/api/config/QuiltConfig
++org/quiltmc/loader/impl/game/minecraft/McVersion
++org/quiltmc/loader/impl/solver/RuleComputeResult$Changed
++org/quiltmc/loader/impl/launch/common/QuiltMixinBootstrap$MixinConfigDecorator$LoaderMixinVersionEntry
++org/quiltmc/loader/api/LoaderValue$LType
++org/quiltmc/loader/impl/filesystem/GlobToRegex
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFolder$1
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/ConfigWriter
++org/quiltmc/loader/api/entrypoint/EntrypointException
++org/quiltmc/loader/impl/game/GameProviderHelper
++org/quiltmc/loader/impl/lib/sat4j/pb/PBSolverDecorator
++org/quiltmc/loader/impl/util/LoaderValueHelper
++org/quiltmc/loader/api/plugin/ModLocation
++org/quiltmc/loader/impl/lib/sat4j/tools/FullClauseSelectorSolver
++org/quiltmc/loader/impl/plugin/MainThreadTask
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$3$1
++org/quiltmc/loader/api/plugin/ModContainerExt
++org/quiltmc/loader/impl/filesystem/QuiltZipFileSystemProvider
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/toml/StringParser
++org/quiltmc/loader/impl/solver/RuleComputeResult$DeclaredConstants
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$ScanningAnnotationVisitor$1
++org/quiltmc/loader/api/QuiltLoader
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Solver
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/utils/FakeUnmodifiableCommentedConfig
++org/quiltmc/loader/api/gui/QuiltGuiButtonContainer
++org/quiltmc/loader/impl/filesystem/QuiltMemoryEntry
++org/quiltmc/loader/impl/filesystem/QuiltZipFileSystem$QuiltZipFile$OffsetSeekableByteChannel
++org/quiltmc/loader/impl/solver/Sat4jWrapper$RuleDefinerInternal
++org/quiltmc/loader/api/plugin/gui/PluginGuiTreeNode$1
++org/quiltmc/loader/impl/launch/common/QuiltLauncherBase
++org/quiltmc/loader/impl/util/mappings/MixinIntermediaryDevRemapper
++org/quiltmc/loader/impl/lib/sat4j/minisat/learning/MiniSATLearning
++org/quiltmc/loader/api/plugin/solver/RuleDefiner
++org/quiltmc/loader/impl/plugin/BasePluginContext
++org/quiltmc/loader/impl/QuiltMappingResolver$1
++org/quiltmc/loader/impl/plugin/MainThreadTask$ScanUnknownFileTask
++org/quiltmc/loader/impl/util/DefaultLanguageAdapter
++org/quiltmc/loader/impl/game/minecraft/Hooks
++org/quiltmc/loader/impl/QuiltLoaderImpl$InitHelper
++org/quiltmc/loader/impl/plugin/QuiltPluginClassLoader
++org/quiltmc/loader/impl/util/log/Log
++org/quiltmc/loader/impl/filesystem/QuiltZipCustomCompressedWriter$Directory
++org/quiltmc/loader/impl/gui/PluginIconImpl
++org/quiltmc/loader/impl/filesystem/QuiltMapPath
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/toml/TomlFormat
++org/quiltmc/loader/impl/gui/QuiltStatusNode
++net/fabricmc/loader/launch/common/MappingConfiguration
++org/quiltmc/loader/impl/plugin/MainThreadTask$ScanModFolderTask
++org/quiltmc/loader/impl/gui/QuiltForkComms$FailedSender
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/pb/PBConstr
++org/quiltmc/loader/impl/launch/knot/KnotClassLoader$DynamicURLClassLoader
++org/quiltmc/loader/impl/gui/QuiltGuiEntry
++org/quiltmc/loader/api/gui/LoaderGuiClosed
++org/quiltmc/loader/impl/plugin/UnsupportedModChecker$UnsupportedForgeMod
++org/quiltmc/loader/api/LoaderValue$LArray
++org/quiltmc/loader/impl/util/log/BuiltinLogHandler$ShutdownHook
++net/fabricmc/loader/entrypoint/minecraft/hooks/EntrypointServer
++org/quiltmc/loader/impl/lib/sat4j/minisat/constraints/AbstractDataStructureFactory
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/IndentStyle
++org/quiltmc/loader/impl/plugin/SolverErrorHelper$DependencyError
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/ParsingMode$PutAction
++org/quiltmc/loader/impl/lib/sat4j/tools/AbstractClauseSelectorSolver$SelectorState
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/UnitBinaryWLClauseConstructor
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/CommentedConfig$Entry
++org/quiltmc/loader/impl/gui/QuiltForkComms$ConnectingSender
++org/quiltmc/loader/impl/transformer/ClassStripper
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/ICDCL
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFileStore$1
++org/quiltmc/loader/impl/plugin/SolverErrorHelper$RuleLink
++org/quiltmc/loader/impl/plugin/BuiltinQuiltPlugin
++org/quiltmc/loader/impl/filesystem/QuiltUnifiedFileSystem
++org/quiltmc/loader/impl/metadata/qmj/JsonLoaderFactoryImpl
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/MaxLongWatchPBConstructor
++org/quiltmc/loader/impl/filesystem/QuiltZipCustomCompressedWriter
++org/quiltmc/loader/impl/plugin/PathLoadState$Zip
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/UnmodifiableConfig$Entry
++org/quiltmc/loader/impl/filesystem/QuiltUnifiedEntry$QuiltUnifiedCopyOnWriteFile
++org/quiltmc/loader/api/plugin/gui/PluginGuiManager
++org/quiltmc/loader/impl/entrypoint/QuiltEntrypointException
++org/quiltmc/loader/impl/fabric/metadata/BuiltinModMetadata$Builder$1
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$MethodKey
++org/quiltmc/loader/impl/DependencyException
++org/quiltmc/loader/impl/plugin/quilt/QuiltModDepOption
++org/quiltmc/loader/impl/lib/flexver/FlexVerComparator$SemVerPrereleaseVersionComponent
++org/quiltmc/loader/impl/solver/RuleDefinition$CountOf
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/AbstractInput
++org/quiltmc/loader/impl/lib/sat4j/core/LiteralsUtils
++org/quiltmc/loader/impl/plugin/quilt/StandardQuiltPlugin
++org/quiltmc/loader/impl/gui/BasicWindowUI$CustomTreeCellRenderer
++org/quiltmc/loader/impl/util/StringUtil
++org/quiltmc/loader/impl/lib/parsers/json/ParseException
++org/quiltmc/loader/impl/metadata/qmj/ModContributorImpl
++org/quiltmc/loader/impl/discovery/ModResolutionException
++org/quiltmc/loader/api/plugin/solver/QuiltFileHasher
++org/quiltmc/loader/impl/filesystem/QuiltJoinedFileSystemProvider$1$1
++org/quiltmc/loader/impl/plugin/QuiltPluginManagerImpl$1
++org/quiltmc/loader/impl/plugin/QuiltPluginManagerImpl$2
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$Target
++org/quiltmc/loader/api/VersionConstraint
++org/quiltmc/loader/impl/lib/sat4j/pb/IPBSolverService
++org/quiltmc/loader/impl/fabric/util/version/VersionPredicateParser$MultiVersionPredicate
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/ConflictTimerContainer
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/toml/ArrayWriter
++org/quiltmc/loader/impl/entrypoint/EntrypointStorage$OldEntry
++org/quiltmc/loader/impl/fabric/metadata/V1ModMetadataFabric
++org/quiltmc/loader/impl/util/SystemProperties
++org/quiltmc/loader/impl/gui/PluginIconImpl$1
++org/quiltmc/loader/impl/metadata/qmj/ModDependencyImpl$AllImpl
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/pb/MaxWatchPb
++org/quiltmc/loader/impl/plugin/gui/I18n$LocaleFactory
++org/quiltmc/loader/impl/fabric/metadata/CustomValueImpl$ArrayImpl
++org/quiltmc/loader/impl/lib/sat4j/core/ReadOnlyVec
++org/quiltmc/loader/impl/gui/AbstractWindow
++org/quiltmc/config/api/serializers/Json5Serializer$1
++org/quiltmc/loader/impl/fabric/metadata/V1ModMetadataFabric$IconEntry
++org/quiltmc/loader/impl/gui/QuiltForkComms$ReadySender
++org/quiltmc/loader/impl/filesystem/QuiltUnifiedEntry$QuiltUnifiedFile
++org/quiltmc/loader/impl/solver/SolverTester$ReadOption
++org/quiltmc/loader/impl/util/ImmutableIterable$1
++org/quiltmc/loader/api/LanguageAdapter
++org/quiltmc/loader/impl/filesystem/QuiltClassPath$OverlappingPath
++org/quiltmc/loader/impl/plugin/quilt/QuiltRuleDepAny
++org/quiltmc/loader/impl/game/minecraft/Log4jLogHandler
++org/quiltmc/loader/impl/plugin/quilt/ProvidedModOption
++org/quiltmc/loader/impl/game/minecraft/McVersion$1
++org/quiltmc/loader/impl/fabric/util/version/Quilt2FabricVersion
++org/quiltmc/loader/impl/plugin/UnsupportedModChecker$UnsupportedType$1
++org/quiltmc/loader/impl/filesystem/QuiltZipFileSystem$CustomPushbackInputStream
++org/quiltmc/loader/impl/metadata/NestedJarEntry
++org/quiltmc/loader/api/gui/QuiltGuiTab
++org/quiltmc/loader/impl/util/LoaderUtil
++org/quiltmc/loader/impl/gui/QuiltStatusNode$2
++org/quiltmc/loader/impl/gui/QuiltStatusNode$1
++org/quiltmc/loader/impl/game/GameProvider
++org/quiltmc/loader/api/ModDependency$Only
++org/quiltmc/loader/impl/gui/BasicWindowUI$1TabManager
++org/quiltmc/loader/impl/game/minecraft/McVersionLookup$Analyzer
++org/quiltmc/loader/impl/filesystem/QuiltUnifiedEntry$QuiltUnifiedFolderWriteable
++org/quiltmc/loader/api/Version$Raw
++org/quiltmc/loader/impl/metadata/qmj/JsonLoaderValue$StringImpl
++org/quiltmc/loader/impl/transformer/ChasmInvoker$QuiltMetadata
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFileSystem$ReadWrite
++org/quiltmc/loader/api/MountOption
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/utils/IntDeque
++org/quiltmc/loader/impl/plugin/PathLoadState$ExtraMod
++org/quiltmc/loader/impl/plugin/MainThreadTask$ScanZipTask
++org/quiltmc/config/api/serializers/TomlSerializer
++org/quiltmc/loader/impl/gui/QuiltStatusNode$TreeNodeListener
++org/quiltmc/loader/impl/report/QuiltReport
++org/quiltmc/loader/api/FasterFileSystem
++org/quiltmc/loader/impl/lib/sat4j/pb/PseudoOptDecorator
++org/quiltmc/loader/impl/gui/PluginIconImpl$BlankIcon
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/utils/FakeUnmodifiableCommentedConfig$FakeCommentedEntry
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/toml/ValueWriter
++org/quiltmc/loader/impl/lib/sat4j/specs/RandomAccessModel
++org/quiltmc/loader/impl/fabric/util/version/VersionPredicateParser$SingleVersionPredicate
++org/quiltmc/loader/impl/game/minecraft/Log4jLogHandler$1
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/toml/TableParser
++org/quiltmc/loader/impl/filesystem/QuiltZipFileSystem$ByteChannel2Stream
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/SearchParams
++org/quiltmc/loader/impl/util/LimitedInputStream
++org/quiltmc/loader/impl/fabric/metadata/ParseWarning
++org/quiltmc/loader/api/gui/QuiltDisplayedError
++org/quiltmc/loader/impl/solver/RuleComputeResult$1
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$FieldKey
++org/quiltmc/loader/api/entrypoint/GameEntrypoint
++org/quiltmc/loader/impl/solver/Sat4jWrapper$Sat4jSolver
++org/quiltmc/loader/impl/util/GlobalPaths
++org/quiltmc/loader/impl/discovery/ModSolvingException
++org/quiltmc/loader/api/gui/QuiltBasicWindow
++org/quiltmc/loader/impl/gui/MessagesTab
++org/quiltmc/loader/impl/util/ExposedByteArrayOutputStream
++org/quiltmc/loader/impl/util/CountingOutputStream
++net/fabricmc/loader/entrypoint/minecraft/hooks/EntrypointUtils
++org/quiltmc/loader/impl/lib/sat4j/minisat/constraints/card/MinWatchCard
++org/quiltmc/loader/impl/game/minecraft/McVersionLookup$MethodConstantRetVisitor$1
++org/quiltmc/loader/impl/lib/sat4j/core/VecInt$1$1
++org/quiltmc/loader/impl/gui/PluginIconImpl$UploadedIcon
++org/quiltmc/loader/impl/gui/QuiltGuiSyncBase
++org/quiltmc/loader/impl/fabric/util/version/VersionPredicateParser
++org/quiltmc/loader/impl/solver/Sat4jWrapper$OptimizationStage
++org/quiltmc/loader/impl/lib/parsers/json/JsonToken
++org/quiltmc/loader/api/plugin/QuiltPluginContext
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/CharacterInput
++org/quiltmc/loader/impl/util/FileSystemUtil$FileSystemDelegate
++org/quiltmc/loader/impl/language/LanguageAdapter
++org/quiltmc/loader/impl/gui/PluginIconImpl$BuiltinIcon
++org/quiltmc/loader/impl/plugin/quilt/QuiltRuleDep
++org/quiltmc/loader/impl/game/minecraft/McVersionLookup$FieldStringConstantVisitor
++org/quiltmc/loader/impl/launch/knot/KnotClassDelegate$CodeSourceImpl
++org/quiltmc/loader/impl/transformer/LambdaStripCalculator$LambdaMethodVisitor
++org/quiltmc/loader/api/gui/QuiltWarningLevel
++org/quiltmc/loader/api/ModDependency$All
++org/quiltmc/loader/impl/transformer/InternalsHiderTransform$ModInternalValue
++org/quiltmc/loader/impl/util/log/LogLevel
++org/quiltmc/loader/impl/lib/sat4j/specs/IVec
++org/quiltmc/loader/impl/plugin/PotentialModSet
++org/quiltmc/loader/impl/lib/sat4j/core/Vec
++org/quiltmc/loader/api/plugin/solver/ModSolveResult
++org/quiltmc/loader/impl/metadata/qmj/SemanticVersionImpl
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/utils/UnmodifiableConfigWrapper
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/io/NewlineStyle
++org/quiltmc/loader/impl/lib/sat4j/specs/SearchListener
++org/quiltmc/loader/impl/transformer/RuntimeModRemapper$RemapInfo
++org/quiltmc/loader/impl/lib/sat4j/specs/IConstr
++org/quiltmc/loader/impl/game/minecraft/McVersionLookup$MethodStringConstantContainsVisitor
++org/quiltmc/loader/impl/plugin/quilt/BuiltinModOption
++org/quiltmc/loader/impl/launch/knot/KnotClient
++org/quiltmc/loader/impl/lib/electronwill/nightconfig/core/InMemoryCommentedFormat
++org/quiltmc/loader/impl/transformer/TransformCacheManager
++org/quiltmc/loader/impl/lib/parsers/json/JsonFormat
++org/quiltmc/loader/impl/util/SimpleClassPath$1
++org/quiltmc/loader/impl/game/LoaderLibrary
++org/quiltmc/loader/impl/lib/sat4j/core/Vec$1
++org/quiltmc/loader/impl/lib/sat4j/minisat/core/Propagatable
++org/quiltmc/loader/impl/util/SimpleClassPath
++org/quiltmc/loader/impl/plugin/BasePluginContext$ModRuleContext
++org/quiltmc/loader/impl/lib/sat4j/pb/constraints/pb/WatchPb
++org/quiltmc/loader/impl/transformer/PackageStrippingData
++org/quiltmc/loader/impl/lib/sat4j/specs/TimeoutException
++org/quiltmc/loader/impl/metadata/qmj/ProvidedModMetadata
++org/quiltmc/loader/impl/lib/sat4j/specs/ContradictionException
++org/quiltmc/loader/impl/fabric/metadata/BuiltinModMetadata$1
++org/quiltmc/loader/impl/filesystem/QuiltMemoryFileSystem$OpenState
++org/quiltmc/loader/impl/gui/ButtonContainerImpl
++org/quiltmc/loader/impl/gui/PluginIconImpl$LegacyUploadedIcon
+-net/fabricmc/loader/impl/discovery/ModSolver$OptionalDepVar
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/annotation/MixinAnnotationVisitor$2
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/CommonInjectionAnnotationVisitor$CommonInjectionSecondPassAnnotationVisitor$1
+-net/fabricmc/loader/impl/lib/tinyremapper/AsmRemapper
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/annotation/MixinAnnotationVisitor$1
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTree
+-net/fabricmc/loader/impl/game/minecraft/McVersionLookup$MethodConstantRetVisitor$1
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/Learner
+-net/fabricmc/loader/impl/lib/sat4j/pb/tools/DependencyHelper$Negation
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/CommonInjectionAnnotationVisitor$CommonInjectionSecondPassAnnotationVisitor$4
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/CommonInjectionAnnotationVisitor$CommonInjectionSecondPassAnnotationVisitor$3
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/CommonInjectionAnnotationVisitor$CommonInjectionSecondPassAnnotationVisitor$2
+-net/fabricmc/loader/impl/lib/accesswidener/AccessWidenerRemapper
+-net/fabricmc/loader/impl/lib/mappingio/tree/MemoryMappingTree$FieldEntry
+-net/fabricmc/loader/impl/lib/mappingio/tree/VisitOrder
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/MinCardConstructor
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/RedirectAnnotationVisitor
+-net/fabricmc/loader/impl/launch/knot/KnotCompatibilityClassLoader
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/ModifyConstantAnnotationVisitor
+-net/fabricmc/loader/impl/lib/sat4j/minisat/orders/VarOrderHeap
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/ModifyArgsAnnotationVisitor
+-net/fabricmc/loader/impl/metadata/ContactInfoBackedPerson
+-net/fabricmc/loader/impl/lib/tinyremapper/OutputConsumerPath$1
+-net/fabricmc/loader/impl/ObjectShareImpl
+-net/fabricmc/loader/impl/metadata/DependencyOverrides
+-net/fabricmc/loader/impl/metadata/CustomValueImpl$1
+-net/fabricmc/loader/impl/lib/mappingio/tree/MemoryMappingTree
+-net/fabricmc/loader/impl/discovery/ClasspathModCandidateFinder
+-net/fabricmc/loader/impl/metadata/V0ModMetadata$Mixins
+-net/fabricmc/loader/impl/lib/mappingio/format/ColumnFileReader
+-net/fabricmc/loader/impl/util/Localization
+-net/fabricmc/loader/impl/util/log/BuiltinLogHandler
+-net/fabricmc/loader/impl/lib/sat4j/specs/ISolverService
+-net/fabricmc/loader/impl/discovery/ModSolver$AddModVar
+-net/fabricmc/loader/impl/launch/FabricMixinBootstrap$MixinConfigDecorator$LoaderMixinVersionEntry
+-net/fabricmc/loader/impl/util/UrlConversionException
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/util/NamedMappable
+-net/fabricmc/loader/impl/util/SimpleClassPath
+-net/fabricmc/loader/impl/lib/sat4j/minisat/orders/PhaseInLastLearnedClauseSelectionStrategy
+-net/fabricmc/loader/impl/game/minecraft/patch/EntrypointPatchFML125$1
+-net/fabricmc/loader/impl/lib/sat4j/tools/xplain/Xplain
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/HardTargetMixinMethodVisitor
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/CommonInjectionAnnotationVisitor$InjectMethodMappable
+-net/fabricmc/loader/impl/util/FileSystemUtil
+-net/fabricmc/loader/impl/lib/tinyremapper/OutputConsumerPath
+-net/fabricmc/loader/impl/discovery/ModSolver$2
+-net/fabricmc/loader/impl/discovery/ModSolver$1
+-net/fabricmc/loader/impl/metadata/CustomValueImpl$NumberImpl
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/GlucoseLCDS
+-net/fabricmc/loader/impl/lib/tinyremapper/OutputConsumerPath$ResourceRemapper
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/AutoDivisionStrategy$2
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/AutoDivisionStrategy$1
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/DescAnnotationVisitor$1
+-net/fabricmc/loader/impl/discovery/ModSolver$RemoveModVar
+-net/fabricmc/loader/impl/lib/sat4j/pb/tools/DependencyHelper$1
+-net/fabricmc/loader/impl/lib/sat4j/pb/tools/DependencyHelper$2
+-net/fabricmc/loader/impl/metadata/BuiltinModMetadata
+-net/fabricmc/loader/impl/util/version/VersionIntervalImpl
+-net/fabricmc/loader/impl/lib/sat4j/minisat/constraints/cnf/HTClause
+-net/fabricmc/loader/impl/lib/sat4j/minisat/orders/RSATPhaseSelectionStrategy
+-net/fabricmc/loader/impl/util/SystemProperties
+-net/fabricmc/loader/impl/lib/sat4j/minisat/orders/ActivityBasedVariableComparator
+-net/fabricmc/loader/impl/lib/accesswidener/AccessWidener$Access
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTreeView$MethodArgMappingView
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/ILits
+-net/fabricmc/loader/impl/lib/sat4j/minisat/restarts/Glucose21Restarts
+-net/fabricmc/loader/impl/discovery/ArgumentModCandidateFinder$1
+-net/fabricmc/loader/impl/launch/knot/KnotClassDelegate$ClassLoaderAccess
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTree$MethodVarMapping
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/LearnedConstraintsDeletionStrategy
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/util/IdentityString
+-net/fabricmc/loader/impl/discovery/ModSolver$InactiveReason
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTreeView$MethodVarMappingView
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/AbstractPBDataStructureFactory
+-net/fabricmc/loader/impl/metadata/BuiltinModMetadata$Builder
+-net/fabricmc/loader/impl/lib/tinyremapper/Propagator
+-net/fabricmc/loader/impl/lib/tinyremapper/api/TrRemapper
+-net/fabricmc/loader/impl/discovery/ModCandidateFinder$ModCandidateConsumer
+-net/fabricmc/loader/impl/lib/gson/MalformedJsonException
+-net/fabricmc/loader/impl/game/minecraft/McVersionLookup$FieldTypeCaptureVisitor
+-net/fabricmc/loader/impl/lib/sat4j/tools/GateTranslator
+-net/fabricmc/loader/impl/util/log/BuiltinLogHandler$ShutdownHook
+-net/fabricmc/loader/impl/lib/sat4j/specs/MandatoryLiteralListener
+-net/fabricmc/loader/impl/lib/tinyremapper/IMappingProvider
+-net/fabricmc/loader/impl/lib/tinyremapper/api/TrField
+-net/fabricmc/loader/impl/lib/sat4j/specs/ILogAble$1
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/annotation/OverwriteAnnotationVisitor$OverwriteMappable
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/VoidTracing
+-net/fabricmc/loader/impl/lib/sat4j/minisat/constraints/cnf/LearntWLClause
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/CommonInjectionAnnotationVisitor
+-net/fabricmc/loader/impl/util/SimpleClassPath$1
+-net/fabricmc/loader/impl/lib/tinyremapper/TinyRemapper$MrjState
+-net/fabricmc/loader/impl/lib/mappingio/MappingVisitor
+-net/fabricmc/loader/impl/game/patch/GamePatch
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/SoftTargetMixinMethodVisitor
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/RestartStrategy
+-net/fabricmc/loader/impl/discovery/ModResolutionException
+-net/fabricmc/loader/impl/lib/mappingio/tree/MemoryMappingTree$MemberEntry
+-net/fabricmc/loader/impl/lib/tinyremapper/TinyRemapper$LinkedMethodPropagation
+-net/fabricmc/loader/impl/lib/accesswidener/AccessWidener$AccessOperator
+-net/fabricmc/loader/impl/gui/FabricMainWindow$CustomTreeNode$1
+-net/fabricmc/loader/impl/transformer/FabricTransformer
+-net/fabricmc/loader/impl/game/minecraft/McVersionLookup
+-net/fabricmc/loader/impl/util/LoaderUtil
+-net/fabricmc/loader/impl/discovery/DomainObject$Mod
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/ActivityComparator
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/MixinExtension$AnalyzeVisitorProvider
+-net/fabricmc/loader/impl/metadata/CustomValueImpl$BooleanImpl
+-net/fabricmc/loader/impl/lib/sat4j/pb/ObjectiveFunction
+-net/fabricmc/loader/impl/launch/knot/KnotClassDelegate$Metadata
+-net/fabricmc/loader/impl/gui/FabricMainWindow$CustomTreeNode
+-net/fabricmc/loader/impl/lib/sat4j/specs/IteratorInt
+-net/fabricmc/loader/impl/lib/tinyremapper/TinyRemapper$Direction
+-net/fabricmc/loader/impl/util/log/ConsoleLogHandler
+-net/fabricmc/loader/impl/entrypoint/EntrypointStorage$OldEntry
+-net/fabricmc/loader/impl/metadata/V1ModMetadata$MapEntry
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/common/data/CommonData
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/SolverStats
+-net/fabricmc/loader/impl/lib/sat4j/minisat/constraints/cnf/Clauses
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/InvokerAnnotationVisitor$InvokerSecondPassAnnotationVisitor
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/AtAnnotationVisitor$AtMethodMappable
+-net/fabricmc/loader/impl/game/minecraft/McVersionLookup$MethodConstantRetVisitor
+-net/fabricmc/loader/impl/lib/accesswidener/AccessWidener$ClassAccess
+-net/fabricmc/loader/impl/transformer/ClassStripper
+-net/fabricmc/loader/impl/lib/mappingio/tree/MemoryMappingTree$MethodArgEntry
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/common/data/Pair
+-net/fabricmc/loader/impl/lib/sat4j/pb/OptToPBSATAdapter
+-net/fabricmc/loader/impl/lib/mappingio/adapter/ForwardingMappingVisitor
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/Undoable
+-net/fabricmc/loader/impl/discovery/ModLoadCondition
+-net/fabricmc/loader/impl/game/minecraft/MinecraftGameProvider
+-net/fabricmc/loader/impl/discovery/ModCandidateFinder
+-net/fabricmc/loader/impl/game/minecraft/McVersion$Builder
+-net/fabricmc/loader/impl/game/minecraft/Slf4jLogHandler$1
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/ISimplifier
+-net/fabricmc/loader/impl/lib/mappingio/tree/MemoryMappingTree$GlobalMemberKey
+-net/fabricmc/loader/impl/game/minecraft/McVersionLookup$MethodConstantVisitor$1
+-net/fabricmc/loader/impl/metadata/BuiltinModMetadata$1
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTree$ElementMapping
+-net/fabricmc/loader/impl/lib/accesswidener/EntryTriple
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/ConflictTimerContainer
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/FirstPassAnnotationVisitor
+-net/fabricmc/loader/impl/gui/FabricMainWindow
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/MemoryBasedConflictTimer
+-net/fabricmc/loader/impl/discovery/ModPrioSorter$1
+-net/fabricmc/loader/impl/game/GameProvider$BuiltinMod
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTreeView$ElementMappingView
+-net/fabricmc/loader/impl/discovery/ModDiscoverer$NestedModInitData
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/WatcherBasedPrimeImplicantStrategy
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/Pseudos
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/ModifyReturnValueAnnotationVisitor
+-net/fabricmc/loader/impl/launch/knot/MixinServiceKnot
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/PrimeImplicantStrategy
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/util/IConvertibleString
+-net/fabricmc/loader/impl/lib/sat4j/minisat/constraints/cnf/UnitClauses
+-net/fabricmc/loader/impl/lib/tinyremapper/AsmClassRemapper$AsmFieldRemapper
+-net/fabricmc/loader/impl/lib/sat4j/minisat/constraints/card/AtLeast
+-net/fabricmc/loader/impl/lib/accesswidener/AccessWidener$FieldAccess
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/AtAnnotationVisitor$AtConstructorMappable
+-net/fabricmc/loader/impl/util/Arguments
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/MaxWatchPbLong
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTreeView
+-net/fabricmc/loader/impl/lib/sat4j/specs/Constr$1
+-net/fabricmc/loader/impl/metadata/ModMetadataParser
+-net/fabricmc/loader/impl/metadata/V0ModMetadata
+-net/fabricmc/loader/impl/metadata/CustomValueImpl$NullImpl
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/common/data/MxMember
+-net/fabricmc/loader/impl/lib/tinyremapper/IMappingProvider$MappingAcceptor
+-net/fabricmc/loader/impl/lib/accesswidener/AccessWidenerReader$AccessType
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/InvokerAnnotationVisitor
+-net/fabricmc/loader/impl/lib/sat4j/specs/IConstr
+-net/fabricmc/loader/impl/discovery/Explanation$ErrorKind
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/util/CamelPrefixString
+-net/fabricmc/loader/impl/metadata/V1ModMetadata$MixinEntry
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/IPBConstructor
+-net/fabricmc/loader/impl/metadata/ParseMetadataException$MissingField
+-net/fabricmc/loader/impl/lib/sat4j/minisat/constraints/cnf/OriginalHTClause
+-net/fabricmc/loader/impl/lib/sat4j/pb/tools/ImplicationRHS
+-net/fabricmc/loader/impl/lib/tinyremapper/AsmClassRemapper$AsmMethodRemapper
+-net/fabricmc/loader/impl/lib/sat4j/minisat/constraints/cnf/OriginalWLClause
+-net/fabricmc/loader/impl/lib/sat4j/core/EmptyVecInt$1
+-net/fabricmc/loader/impl/lib/sat4j/specs/UnitClauseProvider$1
+-net/fabricmc/loader/impl/lib/mappingio/format/tiny/Tiny2FileReader
+-net/fabricmc/loader/impl/game/minecraft/McVersionLookup$MethodStringConstantContainsVisitor
+-net/fabricmc/loader/impl/lib/sat4j/pb/tools/ImplicationNamer
+-net/fabricmc/loader/impl/lib/sat4j/specs/Constr
+-net/fabricmc/loader/impl/lib/mappingio/format/tiny/Tiny2Util
+-net/fabricmc/loader/impl/metadata/ModDependencyImpl
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/AccessorAnnotationVisitor
+-net/fabricmc/loader/impl/lib/mappingio/MappingFlag
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/AbstractPBDataStructureFactory$INormalizer
+-net/fabricmc/loader/impl/lib/sat4j/pb/core/PBSolverResolution
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/IDataStructurePB$1
+-net/fabricmc/loader/impl/launch/knot/MixinLogger
+-net/fabricmc/loader/impl/lib/sat4j/specs/UnitClauseConsumer$1
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/WatchPbLong
+-net/fabricmc/loader/impl/lib/accesswidener/AccessWidenerClassVisitor$AccessWidenerMethodVisitor
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/DataStructureFactory
+-net/fabricmc/loader/impl/lib/sat4j/tools/xplain/DeletionStrategy
+-net/fabricmc/loader/impl/lib/sat4j/specs/SearchListenerAdapter
+-net/fabricmc/loader/impl/util/SimpleClassPath$CpEntry
+-net/fabricmc/loader/impl/metadata/ModOriginImpl$1
+-net/fabricmc/loader/impl/launch/knot/KnotClassDelegate$1
+-net/fabricmc/loader/impl/transformer/EnvironmentStrippingData$EnvironmentInterfaceAnnotationVisitor
+-net/fabricmc/loader/impl/metadata/ContactInformationImpl
+-net/fabricmc/loader/impl/discovery/ArgumentModCandidateFinder
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/SizeComparator
+-net/fabricmc/loader/impl/launch/knot/KnotClassDelegate
+-net/fabricmc/loader/impl/lib/mappingio/tree/HierarchyInfoProvider
+-net/fabricmc/loader/impl/transformer/PackageAccessFixer
+-net/fabricmc/loader/impl/lib/accesswidener/AccessWidenerClassVisitor
+-net/fabricmc/loader/impl/metadata/V1ModMetadata$JarEntry
+-net/fabricmc/loader/impl/metadata/ParseWarning
+-net/fabricmc/loader/impl/lib/accesswidener/AccessWidenerReader$Header
+-net/fabricmc/loader/impl/game/minecraft/launchwrapper/FabricClientTweaker
+-net/fabricmc/loader/impl/launch/knot/KnotClassLoaderInterface
+-net/fabricmc/loader/impl/launch/knot/MixinServiceKnotBootstrap
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/data/SoftInterface
+-net/fabricmc/loader/impl/lib/sat4j/specs/Propagatable
+-net/fabricmc/loader/impl/metadata/LoaderModMetadata
+-net/fabricmc/loader/impl/lib/sat4j/specs/IOptimizationProblem
+-net/fabricmc/loader/impl/lib/sat4j/pb/core/IPBCDCLSolver
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/Glucose2LCDS
+-net/fabricmc/loader/impl/lib/tinyremapper/TinyRemapper$StateProcessor
+-net/fabricmc/loader/impl/discovery/RuntimeModRemapper
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/InjectAnnotationVisitor
+-net/fabricmc/loader/impl/game/minecraft/McVersionLookup$FieldStringConstantVisitor
+-net/fabricmc/loader/impl/metadata/V1ModMetadata
+-net/fabricmc/loader/impl/lib/sat4j/core/ReadOnlyVecInt
+-net/fabricmc/loader/impl/game/minecraft/applet/AppletLauncher
+-net/fabricmc/loader/impl/lib/sat4j/pb/core/PBSolver
+-net/fabricmc/loader/impl/game/minecraft/applet/AppletFrame
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/AgeLCDS
+-net/fabricmc/loader/impl/game/minecraft/applet/AppletMain
+-net/fabricmc/loader/impl/lib/sat4j/tools/AbstractClauseSelectorSolver$1
+-net/fabricmc/loader/impl/lib/tinyremapper/MetaInfRemover
+-net/fabricmc/loader/impl/lib/sat4j/tools/AbstractClauseSelectorSolver$2
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/AtLeastPB
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTree$FieldMapping
+-net/fabricmc/loader/impl/game/minecraft/launchwrapper/FabricServerTweaker
+-net/fabricmc/loader/impl/util/mappings/MixinRemapper
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/Counter
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/annotation/ImplementsAnnotationVisitor$SoftImplementsMappable
+-net/fabricmc/loader/impl/lib/accesswidener/AccessWidener$1
+-net/fabricmc/loader/impl/metadata/NestedJarEntry
+-net/fabricmc/loader/impl/lib/sat4j/minisat/constraints/cnf/LearntHTClause
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/util/PrefixString
+-net/fabricmc/loader/impl/game/LibClassifier$LibraryType
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/MixinExtension$PreApplyVisitorProvider
+-net/fabricmc/loader/impl/lib/tinyremapper/OutputConsumerPath$Builder
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/AccessorAnnotationVisitor$AccessorSecondPassAnnotationVisitor
+-net/fabricmc/loader/impl/game/minecraft/McVersionLookup$FieldStringConstantVisitor$1
+-net/fabricmc/loader/impl/discovery/ModCandidate$1
+-net/fabricmc/loader/impl/metadata/MetadataVerifier
+-net/fabricmc/loader/impl/metadata/ParseMetadataException
+-net/fabricmc/loader/impl/metadata/V0ModMetadataParser$1
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/common/StringUtility
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/LearningStrategy
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/ModifyExpressionValueAnnotationVisitor
+-net/fabricmc/loader/impl/discovery/BuiltinMetadataWrapper
+-net/fabricmc/loader/impl/metadata/V0ModMetadata$1
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/ActivityLCDS
+-net/fabricmc/loader/impl/lib/tinyremapper/TinyRemapper$Propagation
+-net/fabricmc/loader/impl/lib/sat4j/specs/AssignmentOrigin
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/Solver$4
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/Solver$3
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/Solver$6
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/Solver$8
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/Solver$7
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTreeView$1
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/CircularBuffer
+-net/fabricmc/loader/impl/lib/gson/JsonToken
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/MixinExtension$AnnotationTarget
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/common/data/MxClass
+-net/fabricmc/loader/impl/util/UrlUtil
+-net/fabricmc/loader/impl/launch/FabricLauncherBase$1
+-net/fabricmc/loader/impl/entrypoint/EntrypointStorage$1
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/HardTargetMixinFieldVisitor
+-net/fabricmc/loader/impl/lib/accesswidener/AccessWidener$MethodAccess
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/MixinAnnotationVisitor$MixinSecondPassAnnotationVisitor$1
+-net/fabricmc/loader/impl/discovery/ResultAnalyzer$2
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/MixinAnnotationVisitor$MixinSecondPassAnnotationVisitor$2
+-net/fabricmc/loader/impl/lib/sat4j/specs/UnitClauseConsumer
+-net/fabricmc/loader/impl/lib/tinyremapper/api/TrMember
+-net/fabricmc/loader/impl/lib/mappingio/format/MappingFormat
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTreeView$MethodMappingView
+-net/fabricmc/loader/impl/lib/tinyremapper/TinyRemapper
+-net/fabricmc/loader/impl/lib/sat4j/minisat/constraints/cnf/UnitClause
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/ModifyArgAnnotationVisitor
+-net/fabricmc/loader/impl/game/minecraft/patch/TinyFDPatch
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/CompetResolutionPBLongMixedWLClauseCardConstrDataStructure
+-net/fabricmc/loader/impl/lib/tinyremapper/TinyRemapper$AnalyzeVisitorProvider
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTreeView$ClassMappingView
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTree$MethodMapping
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/annotation/ShadowAnnotationVisitor
+-net/fabricmc/loader/impl/lib/sat4j/minisat/learning/AbstractLearning
+-net/fabricmc/loader/impl/discovery/ModSolver$DisableDepVar
+-net/fabricmc/loader/impl/lib/accesswidener/AccessWidenerReader
+-net/fabricmc/loader/impl/lib/tinyremapper/AsmClassRemapper$AsmAnnotationRemapper$AsmArrayAttributeAnnotationRemapper
+-net/fabricmc/loader/impl/discovery/ModDiscoverer$ModScanTask$2
+-net/fabricmc/loader/impl/discovery/ModDiscoverer$ModScanTask$1
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/ConflictTimerAdapter
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTree$MethodArgMapping
+-net/fabricmc/loader/impl/lib/sat4j/minisat/constraints/cnf/Lits
+-net/fabricmc/loader/impl/util/ExceptionUtil
+-net/fabricmc/loader/impl/lib/mappingio/tree/MemoryMappingTree$MetadataEntryImpl
+-net/fabricmc/loader/impl/gui/FabricMainWindow$IconInfo
+-net/fabricmc/loader/impl/metadata/CustomValueImpl$StringImpl
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/DescAnnotationVisitor
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/UnitClausesPB
+-net/fabricmc/loader/impl/lib/tinyremapper/AsmClassRemapper
+-net/fabricmc/loader/impl/lib/sat4j/tools/SolutionFoundListener
+-net/fabricmc/loader/impl/transformer/EnvironmentStrippingData$EnvironmentAnnotationVisitor
+-net/fabricmc/loader/impl/launch/knot/KnotClient
+-net/fabricmc/loader/impl/util/mappings/TinyRemapperMappingsHelper
+-net/fabricmc/loader/impl/discovery/DirectoryModCandidateFinder$1
+-net/fabricmc/loader/impl/discovery/ModSolver$Result
+-net/fabricmc/loader/impl/lib/mappingio/tree/MemoryMappingTree$1
+-net/fabricmc/loader/impl/lib/tinyremapper/AsmClassRemapper$AsmAnnotationRemapper
+-net/fabricmc/loader/impl/metadata/SimplePerson
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/WatchPbLong$1
+-net/fabricmc/loader/impl/util/log/BuiltinLogHandler$ReplayEntry
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/AtAnnotationVisitor$AtSecondPassAnnotationVisitor$1
+-net/fabricmc/loader/impl/discovery/ModDiscoverer$ZipEntrySource
+-net/fabricmc/loader/impl/lib/tinyremapper/api/TrMember$MemberType
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/MixinAnnotationVisitor$MixinSecondPassAnnotationVisitor
+-net/fabricmc/loader/impl/lib/tinyremapper/VisitTrackingClassRemapper
+-net/fabricmc/loader/impl/discovery/RuntimeModRemapper$1
+-net/fabricmc/loader/impl/lib/sat4j/tools/SolverDecorator
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/IDataStructurePB
+-net/fabricmc/loader/impl/discovery/ModSolver$NegatedDomainObject
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/WatchPb
+-net/fabricmc/loader/impl/gui/FabricMainWindow$CustomTreeCellRenderer
+-net/fabricmc/loader/impl/lib/sat4j/pb/tools/INegator
+-net/fabricmc/loader/impl/lib/tinyremapper/InputTag
+-net/fabricmc/loader/impl/metadata/V1ModMetadataParser$1
+-net/fabricmc/loader/impl/launch/knot/KnotServer
+-net/fabricmc/loader/impl/lib/mappingio/tree/VisitableMappingTree
+-net/fabricmc/loader/impl/lib/tinyremapper/PackageAccessChecker
+-net/fabricmc/loader/impl/lib/sat4j/pb/tools/WeightedObject
+-net/fabricmc/loader/impl/launch/knot/FabricGlobalPropertyService
+-net/fabricmc/loader/impl/lib/sat4j/core/EmptyVecInt
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/AtAnnotationVisitor
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/Solver
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTree$MetadataEntry
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/Solver$2
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/Solver$1
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/OriginalBinaryClausePB
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/MixinExtension
+-net/fabricmc/loader/impl/discovery/ModDiscoverer$ModScanTask
+-net/fabricmc/loader/impl/game/patch/GameTransformer
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/AtAnnotationVisitor$AtSecondPassAnnotationVisitor
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/AbstractPBDataStructureFactory$2
+-net/fabricmc/loader/impl/metadata/V1ModMetadataParser
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/AbstractPBDataStructureFactory$1
+-net/fabricmc/loader/impl/metadata/CustomValueImpl$ObjectImpl
+-net/fabricmc/loader/impl/transformer/EnvironmentStrippingData$1$1
+-net/fabricmc/loader/impl/game/minecraft/McVersionLookup$MethodStringConstantContainsVisitor$1
+-net/fabricmc/loader/impl/lib/sat4j/core/LiteralsUtils
+-net/fabricmc/loader/impl/lib/sat4j/minisat/constraints/AbstractDataStructureFactory
+-net/fabricmc/loader/impl/metadata/CustomValueImpl$ArrayImpl
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/annotation/MixinAnnotationVisitor
+-net/fabricmc/loader/impl/lib/sat4j/pb/IPBSolverService
+-net/fabricmc/loader/impl/lib/tinyremapper/IMappingProvider$Member
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/AbstractPBClauseCardConstrDataStructure
+-net/fabricmc/loader/impl/game/minecraft/launchwrapper/FabricClassTransformer
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/Heap
+-net/fabricmc/loader/impl/lib/mappingio/MappingReader
+-net/fabricmc/loader/impl/game/minecraft/BundlerProcessor$1
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/ICDCL
+-net/fabricmc/loader/impl/lib/gson/JsonReader
+-net/fabricmc/loader/impl/game/GameProviderHelper$FindResult
+-net/fabricmc/loader/impl/game/minecraft/McLibrary
+-net/fabricmc/loader/impl/lib/mappingio/tree/MemoryMappingTree$MethodVarEntry
+-net/fabricmc/loader/impl/launch/knot/MixinContainerHandleMod
+-net/fabricmc/loader/impl/launch/knot/MixinStringPropertyKey
+-net/fabricmc/loader/impl/lib/sat4j/specs/ILogAble
+-net/fabricmc/loader/impl/lib/sat4j/specs/RandomAccessModel
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/InternalMapPBStructure
+-net/fabricmc/loader/impl/game/minecraft/patch/EntrypointPatch
+-net/fabricmc/loader/impl/lib/sat4j/tools/FullClauseSelectorSolver
+-net/fabricmc/loader/impl/lib/accesswidener/AccessWidenerVisitor
+-net/fabricmc/loader/impl/lib/tinyremapper/MetaInfFixer
+-net/fabricmc/loader/impl/lib/sat4j/pb/ObjectiveFunctionComparator
+-net/fabricmc/loader/impl/lib/sat4j/pb/SolverFactory
+-net/fabricmc/loader/launch/FabricClientTweaker
+-net/fabricmc/loader/impl/metadata/BuiltinModMetadata$Builder$1
+-net/fabricmc/loader/impl/util/mappings/MixinIntermediaryDevRemapper
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/VarActivityListener
+-net/fabricmc/loader/impl/lib/mappingio/tree/MemoryMappingTree$ClassEntry
+-net/fabricmc/loader/impl/game/minecraft/Slf4jLogHandler
+-net/fabricmc/loader/impl/lib/sat4j/minisat/constraints/cnf/LearntBinaryClause
+-net/fabricmc/loader/impl/lib/sat4j/minisat/orders/VariableComparator
+-net/fabricmc/loader/impl/lib/sat4j/core/Vec
+-net/fabricmc/loader/impl/metadata/DependencyOverrides$1
+-net/fabricmc/loader/impl/discovery/ModPrioSorter
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/CounterBasedPrimeImplicantStrategy
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/common/MapUtility
+-net/fabricmc/loader/impl/lib/sat4j/pb/orders/IOrderObjective
+-net/fabricmc/loader/impl/util/log/Log
+-net/fabricmc/loader/impl/discovery/ModDiscoverer
+-net/fabricmc/loader/impl/entrypoint/EntrypointStorage
+-net/fabricmc/loader/impl/game/minecraft/MinecraftGameProvider$1
+-net/fabricmc/loader/impl/lib/sat4j/minisat/constraints/cnf/BinaryClause
+-net/fabricmc/loader/impl/game/LibClassifier
+-net/fabricmc/loader/impl/game/GameProvider
+-net/fabricmc/loader/impl/lib/tinyremapper/FileSystemReference
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/IPhaseSelectionStrategy
+-net/fabricmc/loader/launch/FabricServerTweaker
+-net/fabricmc/loader/impl/lib/tinyremapper/TinyRemapper$ApplyVisitorProvider
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/data/SoftInterface$Remap
+-net/fabricmc/loader/impl/metadata/V1ModMetadata$Single
+-net/fabricmc/loader/impl/lib/sat4j/tools/SolutionFoundListener$1
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/ActivityListener
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTreeView$MemberMappingView
+-net/fabricmc/loader/impl/discovery/ModDiscoverer$RewindableInputStream
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/MaxLongWatchPBConstructor
+-net/fabricmc/loader/impl/lib/sat4j/specs/IVec
+-net/fabricmc/loader/impl/game/minecraft/patch/ModClassLoader_125_FML
+-net/fabricmc/loader/impl/util/Localization$1
+-net/fabricmc/loader/impl/lib/sat4j/specs/IVecInt
+-net/fabricmc/loader/impl/lib/sat4j/core/Vec$1
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/annotation/AccessorAnnotationVisitor
+-net/fabricmc/loader/impl/game/minecraft/launchwrapper/FabricTweaker
+-net/fabricmc/loader/impl/lib/sat4j/specs/IProblem
+-net/fabricmc/loader/impl/lib/sat4j/core/ASolverFactory
+-net/fabricmc/loader/impl/lib/tinyremapper/api/TrClass
+-net/fabricmc/loader/impl/util/log/LogLevel
+-net/fabricmc/loader/impl/lib/sat4j/pb/tools/DependencyHelper
+-net/fabricmc/loader/impl/launch/FabricMixinBootstrap
+-net/fabricmc/loader/impl/lib/sat4j/specs/UnitPropagationListener
+-net/fabricmc/loader/impl/lib/tinyremapper/BridgeHandler
+-net/fabricmc/loader/impl/discovery/ResultAnalyzer
+-net/fabricmc/loader/impl/metadata/EntrypointMetadata
+-net/fabricmc/loader/impl/lib/tinyremapper/VisitTrackingClassRemapper$VisitKind
+-net/fabricmc/loader/impl/lib/sat4j/pb/tools/XplainPB
+-net/fabricmc/loader/impl/util/ExceptionUtil$WrappedException
+-net/fabricmc/loader/impl/game/LoaderLibrary
+-net/fabricmc/loader/impl/metadata/DependencyOverrides$Entry
+-net/fabricmc/loader/impl/lib/tinyremapper/TinyRemapper$3
+-net/fabricmc/loader/impl/lib/tinyremapper/TinyRemapper$2
+-net/fabricmc/loader/impl/lib/tinyremapper/TinyRemapper$1
+-net/fabricmc/loader/impl/lib/sat4j/tools/xplain/MinimizationStrategy
+-net/fabricmc/loader/impl/launch/MappingConfiguration$1
+-net/fabricmc/loader/impl/game/minecraft/McVersionLookup$MethodConstantVisitor
+-net/fabricmc/loader/impl/lib/tinyremapper/TinyRemapper$5
+-net/fabricmc/loader/impl/lib/tinyremapper/TinyRemapper$4
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/LBDConflictTimer
+-net/fabricmc/loader/impl/launch/knot/DummyClassLoader$1
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/SizeLCDS
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/ModifyVariableAnnotationVisitor
+-net/fabricmc/loader/impl/lib/sat4j/minisat/constraints/cnf/OriginalBinaryClause
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/MixinExtension$1
+-net/fabricmc/loader/impl/metadata/DependencyOverrides$Operation
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/annotation/InvokerAnnotationVisitor$InvokerMappable
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/common/Logger$Level
+-net/fabricmc/loader/impl/metadata/V0ModMetadataParser
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTree$MemberMapping
+-net/fabricmc/loader/impl/lib/sat4j/pb/orders/VarOrderHeapObjective
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/common/Logger
+-net/fabricmc/loader/impl/lib/sat4j/minisat/constraints/cnf/WLClause
+-net/fabricmc/loader/impl/discovery/Explanation
+-net/fabricmc/loader/impl/game/minecraft/patch/BrandingPatch
+-net/fabricmc/loader/impl/lib/sat4j/core/ReadOnlyVec
+-net/fabricmc/loader/impl/lib/sat4j/pb/core/PBDataStructureFactory
+-net/fabricmc/loader/impl/discovery/RuntimeModRemapper$RemapInfo
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/AutoDivisionStrategy
+-net/fabricmc/loader/impl/lib/sat4j/specs/UnitClauseProvider
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/annotation/ImplementsAnnotationVisitor
+-net/fabricmc/loader/impl/lib/sat4j/specs/ISolver
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/annotation/InvokerAnnotationVisitor
+-net/fabricmc/loader/impl/game/GameProviderHelper
+-net/fabricmc/loader/impl/game/minecraft/McVersion$1
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/MapPb
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/ModifyReceiverAnnotationVisitor
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/SearchParams
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/IOrder
+-net/fabricmc/loader/impl/gui/FabricMainWindow$IconSet
+-net/fabricmc/loader/impl/lib/accesswidener/AccessWidenerFormatException
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/annotation/ShadowAnnotationVisitor$ShadowPrefixMappable
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/IWatchPb
+-net/fabricmc/loader/impl/discovery/ModCandidate
+-net/fabricmc/loader/impl/lib/sat4j/tools/AbstractClauseSelectorSolver
+-net/fabricmc/loader/impl/entrypoint/EntrypointStorage$Entry
+-net/fabricmc/loader/impl/lib/mappingio/tree/MemoryMappingTree$Entry
+-net/fabricmc/loader/impl/lib/sat4j/tools/AbstractClauseSelectorSolver$SelectorState
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/annotation/OverwriteAnnotationVisitor
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/QuadraticPrimeImplicantStrategy
+-net/fabricmc/loader/impl/game/minecraft/McVersionLookup$Analyzer
+-net/fabricmc/loader/impl/LazyMappingResolver
+-net/fabricmc/loader/impl/lib/accesswidener/AccessWidenerWriter
+-net/fabricmc/loader/impl/util/log/LogHandler
+-net/fabricmc/loader/impl/discovery/DirectoryModCandidateFinder
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/UnitBinaryWLClauseConstructor
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTreeView$FieldMappingView
+-net/fabricmc/loader/impl/lib/sat4j/minisat/constraints/card/MinWatchCard
+-net/fabricmc/loader/impl/metadata/V1ModMetadata$EntrypointMetadataImpl
+-net/fabricmc/loader/impl/lib/tinyremapper/MemberInstance
+-net/fabricmc/loader/impl/lib/sat4j/specs/SearchListener
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/IClauseConstructor
+-net/fabricmc/loader/impl/entrypoint/EntrypointStorage$NewEntry
+-net/fabricmc/loader/impl/launch/knot/KnotClassLoader$1
+-net/fabricmc/loader/impl/discovery/ModSolver$Fix
+-net/fabricmc/loader/impl/lib/tinyremapper/NonClassCopyMode
+-net/fabricmc/loader/impl/lib/tinyremapper/api/TrMethod
+-net/fabricmc/loader/impl/lib/sat4j/core/VecInt
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/ConflictTimer
+-net/fabricmc/loader/impl/game/minecraft/McVersion
+-net/fabricmc/loader/impl/lib/sat4j/minisat/core/Pair
+-net/fabricmc/loader/impl/lib/sat4j/pb/PBSolverDecorator
+-net/fabricmc/loader/impl/game/minecraft/Hooks
+-net/fabricmc/loader/impl/lib/sat4j/specs/Lbool
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/util/HardTargetMappable
+-net/fabricmc/loader/impl/util/mappings/FilteringMappingVisitor
+-net/fabricmc/loader/impl/lib/sat4j/minisat/orders/AbstractPhaserecordingSelectionStrategy
+-net/fabricmc/loader/impl/transformer/EnvironmentStrippingData
+-net/fabricmc/loader/impl/launch/knot/KnotClassLoader$DynamicURLClassLoader
+-net/fabricmc/loader/impl/util/ManifestUtil
+-net/fabricmc/loader/impl/lib/tinyremapper/TinyRemapper$Extension
+-net/fabricmc/loader/impl/launch/knot/KnotClassLoader
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/annotation/AccessorAnnotationVisitor$AccessorMappable
+-net/fabricmc/loader/impl/lib/tinyremapper/AsmClassRemapper$AsmRecordComponentRemapper
+-net/fabricmc/loader/impl/lib/accesswidener/AccessWidener
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/annotation/ImplementsAnnotationVisitor$InterfaceAnnotationVisitor
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/PBContainer
+-net/fabricmc/loader/impl/lib/sat4j/specs/TimeoutException
+-net/fabricmc/loader/impl/FormattedException
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/MixinAnnotationVisitor
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/WrapWithConditionAnnotationVisitor
+-net/fabricmc/loader/impl/lib/tinyremapper/api/TrEnvironment
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/ICardConstructor
+-net/fabricmc/loader/impl/metadata/VersionOverrides
+-net/fabricmc/loader/impl/lib/sat4j/specs/ContradictionException
+-net/fabricmc/loader/impl/metadata/CustomValueImpl
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTree$ClassMapping
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/util/ConvertibleMappable
+-net/fabricmc/loader/impl/lib/mappingio/tree/MemoryMappingTree$MethodEntry
+-net/fabricmc/loader/impl/lib/sat4j/pb/core/PBSolver$1
+-net/fabricmc/loader/impl/gui/FabricMainWindow$1
+-net/fabricmc/loader/impl/launch/FabricMixinBootstrap$MixinConfigDecorator
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/CommonInjectionAnnotationVisitor$CommonInjectionSecondPassAnnotationVisitor
+-net/fabricmc/loader/impl/launch/knot/DummyClassLoader
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/HardTargetMixinClassVisitor
+-net/fabricmc/loader/impl/transformer/EnvironmentStrippingData$1
+-net/fabricmc/loader/impl/transformer/EnvironmentStrippingData$2
+-net/fabricmc/loader/impl/transformer/EnvironmentStrippingData$3
+-net/fabricmc/loader/impl/game/minecraft/BundlerClassPathCapture
+-net/fabricmc/loader/impl/game/minecraft/BundlerProcessor
+-net/fabricmc/loader/impl/lib/sat4j/pb/core/PBSolverStats
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/PBConstr
+-net/fabricmc/loader/impl/metadata/AbstractModMetadata
+-net/fabricmc/loader/impl/util/log/LogCategory
+-net/fabricmc/loader/impl/lib/sat4j/pb/core/PBSolver$1$1
+-net/fabricmc/loader/impl/lib/mappingio/MappingWriter
+-net/fabricmc/loader/impl/lib/mappingio/tree/MemoryMappingTree$MemberKey
+-net/fabricmc/loader/impl/game/minecraft/applet/AppletForcedShutdownListener
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/SoftTargetMixinClassVisitor
+-net/fabricmc/loader/impl/lib/mappingio/format/tiny/Tiny1FileReader
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/common/ResolveUtility
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/OriginalHTClausePB
+-net/fabricmc/loader/impl/discovery/ModResolver
+-net/fabricmc/loader/impl/lib/sat4j/pb/IPBSolver
+-net/fabricmc/loader/impl/discovery/DomainObject
+-net/fabricmc/loader/impl/lib/sat4j/pb/PseudoOptDecorator
+-net/fabricmc/loader/impl/lib/tinyremapper/TinyRemapper$1$1
+-net/fabricmc/loader/impl/game/minecraft/Log4jLogHandler
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/SliceAnnotationVisitor
+-net/fabricmc/loader/impl/lib/sat4j/pb/constraints/pb/MaxWatchPb
+-net/fabricmc/loader/impl/lib/mappingio/MappedElementKind
+-net/fabricmc/loader/impl/game/minecraft/patch/EntrypointPatchFML125
+-net/fabricmc/loader/impl/lib/sat4j/minisat/restarts/ArminRestarts
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/data/MemberInfo
+-net/fabricmc/loader/impl/lib/sat4j/pb/tools/ImplicationAnd
+-net/fabricmc/loader/impl/lib/tinyremapper/TinyRemapper$Builder
+-net/fabricmc/loader/impl/launch/server/FabricServerLauncher
+-net/fabricmc/loader/impl/metadata/V1ModMetadata$IconEntry
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/annotation/ImplementsAnnotationVisitor$1
+-net/fabricmc/loader/impl/lib/sat4j/core/VecInt$1
+-net/fabricmc/loader/impl/lib/tinyremapper/ClassInstance
+-net/fabricmc/loader/impl/lib/sat4j/minisat/learning/MiniSATLearning
+-net/fabricmc/loader/impl/game/minecraft/McVersionLookup$InsnFwdMethodVisitor
+-net/fabricmc/loader/impl/discovery/ModSolver
+-net/fabricmc/loader/impl/lib/mappingio/tree/MappingTreeView$MetadataEntryView
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/WrapOperationAnnotationVisitor
+-net/fabricmc/loader/impl/game/minecraft/Log4jLogHandler$1
+-net/fabricmc/loader/impl/util/FileSystemUtil$FileSystemDelegate
+-net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/WrapWithConditionV2AnnotationVisitor
+ net/fabricmc/loader/impl/metadata/ModOriginImpl
+-    toString()Ljava/lang/String;
+-    <init>(Ljava/lang/String;Ljava/lang/String;)V
+-    <init>()V
+-    <init>(Ljava/util/List;)V
++    <init>(Lorg/quiltmc/loader/api/ModContainer;)V
+-    Ljava/lang/String; parentSubLocation
+-    Lnet/fabricmc/loader/api/metadata/ModOrigin$Kind; kind
+-    Ljava/lang/String; parentModId
+-    Ljava/util/List; paths
++    Ljava/util/List; originPaths
+ net/fabricmc/loader/api/EntrypointException
++    <init>(Lorg/quiltmc/loader/api/QuiltLoader;Lorg/quiltmc/loader/api/entrypoint/EntrypointException;)V
+ net/fabricmc/loader/impl/launch/FabricLauncherBase
+-    handleFormattedException(Lnet/fabricmc/loader/impl/FormattedException;)V
+-    setLauncher(Lnet/fabricmc/loader/impl/launch/FabricLauncher;)V
+-    finishMixinBootstrapping()V
+-    <clinit>()V
+-    setProperties(Ljava/util/Map;)V
+-    setupUncaughtExceptionHandler()V
++    setAllowedPrefixes(Ljava/nio/file/Path;[Ljava/lang/String;)V
++    isClassLoaded(Ljava/lang/String;)Z
++    isDevelopment()Z
++    getClassByteArray(Ljava/lang/String;Z)[B
++    getResourceAsStream(Ljava/lang/String;)Ljava/io/InputStream;
++    getTargetClassLoader()Ljava/lang/ClassLoader;
++    getEntrypoint()Ljava/lang/String;
++    getEnvironmentType()Lnet/fabricmc/api/EnvType;
++    getClassPath()Ljava/util/List;
++    addToClassPath(Ljava/nio/file/Path;[Ljava/lang/String;)V
++    getTargetNamespace()Ljava/lang/String;
++    loadIntoTarget(Ljava/lang/String;)Ljava/lang/Class;
++    getManifest(Ljava/nio/file/Path;)Ljava/util/jar/Manifest;
+-    Ljava/util/Map; properties
+-    Lnet/fabricmc/loader/impl/launch/FabricLauncher; launcher
+-    Z mixinReady
++    Lorg/quiltmc/loader/impl/launch/common/QuiltLauncher; delegate
+ net/fabricmc/loader/impl/gui/FabricStatusTree$1
++    <clinit>()V
++    [I $SwitchMap$net$fabricmc$loader$impl$gui$FabricStatusTree$FabricTreeWarningLevel
+ net/fabricmc/loader/api/LanguageAdapter
++    create(Lorg/quiltmc/loader/api/ModContainer;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+ net/fabricmc/loader/FabricLoader
+-    getModsDirectory0()Ljava/nio/file/Path;
++    prepareModInit(Ljava/io/File;Ljava/lang/Object;)V
+ net/fabricmc/loader/util/version/SemanticVersionPredicateParser
+-    lambda$create$0(Lnet/fabricmc/loader/api/metadata/version/VersionPredicate;Lnet/fabricmc/loader/util/version/SemanticVersionImpl;)Z
+ net/fabricmc/loader/impl/ModContainerImpl
+-    obtainRootPath(Ljava/nio/file/Path;)Ljava/nio/file/Path;
+-    getInfo()Lnet/fabricmc/loader/impl/metadata/LoaderModMetadata;
+-    checkFsOpen(Ljava/util/List;)Z
+-    getMetadata()Lnet/fabricmc/loader/impl/metadata/LoaderModMetadata;
+-    getCodeSourcePaths()Ljava/util/List;
+-    toString()Ljava/lang/String;
+-    <clinit>()V
+-    obtainRootPaths()Ljava/util/List;
+-    <init>(Lnet/fabricmc/loader/impl/discovery/ModCandidate;)V
++    getQuiltModContainer()Lorg/quiltmc/loader/api/ModContainer;
++    getOriginUrl()Ljava/net/URL;
++    <init>(Lorg/quiltmc/loader/api/ModContainer;)V
+-    Lnet/fabricmc/loader/api/metadata/ModOrigin; origin
+-    Lnet/fabricmc/loader/impl/metadata/LoaderModMetadata; info
+-    Ljava/util/Collection; childModIds
+-    Z warnedClose
+-    Ljava/lang/String; parentModId
+-    Ljava/util/List; codeSourcePaths
+-    Ljava/util/List; roots
++    Lorg/quiltmc/loader/api/ModContainer; quilt
+ net/fabricmc/loader/api/metadata/ModDependency$Kind
+-    $values()[Lnet/fabricmc/loader/api/metadata/ModDependency$Kind;
+ net/fabricmc/loader/launch/common/FabricLauncher
++    getMappingConfiguration()Lnet/fabricmc/loader/launch/common/MappingConfiguration;
+ net/fabricmc/loader/impl/launch/FabricLauncher
+-    setValidParentClassPath(Ljava/util/Collection;)V
+ net/fabricmc/loader/impl/entrypoint/EntrypointContainerImpl
+-    <init>(Lnet/fabricmc/loader/impl/entrypoint/EntrypointStorage$Entry;Ljava/lang/Object;)V
+-    <clinit>()V
+-    <init>(Ljava/lang/String;Ljava/lang/Class;Lnet/fabricmc/loader/impl/entrypoint/EntrypointStorage$Entry;)V
++    <init>(Lorg/quiltmc/loader/api/entrypoint/EntrypointContainer;)V
+-    Z $assertionsDisabled
+-    Ljava/lang/String; key
+-    Ljava/lang/Object; instance
+-    Lnet/fabricmc/loader/impl/entrypoint/EntrypointStorage$Entry; entry
+-    Ljava/lang/Class; type
++    Lorg/quiltmc/loader/api/entrypoint/EntrypointContainer; quilt
+ net/fabricmc/loader/impl/MappingResolverImpl
+-    replaceSlashesWithDots(Ljava/lang/String;)Ljava/lang/String;
+-    replaceDotsWithSlashes(Ljava/lang/String;)Ljava/lang/String;
+-    <init>(Lnet/fabricmc/loader/impl/lib/mappingio/tree/MappingTree;Ljava/lang/String;)V
++    <init>(Lorg/quiltmc/loader/api/MappingResolver;)V
+-    I targetNamespaceId
+-    Ljava/lang/String; targetNamespace
+-    Lnet/fabricmc/loader/impl/lib/mappingio/tree/MappingTree; mappings
++    Lorg/quiltmc/loader/api/MappingResolver; quilt
+ net/fabricmc/loader/api/metadata/ModEnvironment
+-    $values()[Lnet/fabricmc/loader/api/metadata/ModEnvironment;
+ net/fabricmc/loader/impl/launch/knot/Knot
+-    setAllowedPrefixes(Ljava/nio/file/Path;[Ljava/lang/String;)V
+-    init([Ljava/lang/String;)Ljava/lang/ClassLoader;
+-    isClassLoaded(Ljava/lang/String;)Z
+-    isDevelopment()Z
+-    getClassByteArray(Ljava/lang/String;Z)[B
+-    findEmbedddedGameProvider()Lnet/fabricmc/loader/impl/game/GameProvider;
+-    getResourceAsStream(Ljava/lang/String;)Ljava/io/InputStream;
+-    getTargetClassLoader()Ljava/lang/ClassLoader;
+-    getEntrypoint()Ljava/lang/String;
+-    getClassPath()Ljava/util/List;
+-    getEnvironmentType()Lnet/fabricmc/api/EnvType;
+-    launch([Ljava/lang/String;Lnet/fabricmc/api/EnvType;)V
+-    addToClassPath(Ljava/nio/file/Path;[Ljava/lang/String;)V
+-    getTargetNamespace()Ljava/lang/String;
+-    <clinit>()V
+-    loadIntoTarget(Ljava/lang/String;)Ljava/lang/Class;
+-    main([Ljava/lang/String;)V
+-    <init>(Lnet/fabricmc/api/EnvType;)V
+-    createGameProvider([Ljava/lang/String;)Lnet/fabricmc/loader/impl/game/GameProvider;
+-    setValidParentClassPath(Ljava/util/Collection;)V
+-    getManifest(Ljava/nio/file/Path;)Ljava/util/jar/Manifest;
++    <init>()V
+-    Ljava/util/List; classPath
+-    Lnet/fabricmc/loader/impl/game/GameProvider; provider
+-    Lnet/fabricmc/api/EnvType; envType
+-    Ljava/util/Map; properties
+-    Z IS_DEVELOPMENT
+-    Z unlocked
+-    Lnet/fabricmc/loader/impl/launch/knot/KnotClassLoaderInterface; classLoader
+ net/fabricmc/loader/impl/gui/FabricStatusTree
++    toQuiltWindow()Lorg/quiltmc/loader/api/gui/QuiltBasicWindow;
+ net/fabricmc/loader/api/metadata/ModOrigin$Kind
+-    $values()[Lnet/fabricmc/loader/api/metadata/ModOrigin$Kind;
+ net/fabricmc/loader/impl/gui/FabricStatusTree$FabricBasicButtonType
+-    $values()[Lnet/fabricmc/loader/impl/gui/FabricStatusTree$FabricBasicButtonType;
+ net/fabricmc/loader/impl/gui/FabricGuiEntry
+-    lambda$displayError$0(Ljava/lang/String;Ljava/lang/Throwable;Lnet/fabricmc/loader/impl/gui/FabricStatusTree;)V
+-    main([Ljava/lang/String;)V
+-    openForked(Lnet/fabricmc/loader/impl/gui/FabricStatusTree;)V
+ net/fabricmc/loader/launch/common/FabricLauncherBase
++    getMappingConfiguration()Lnet/fabricmc/loader/launch/common/MappingConfiguration;
+-    Lnet/fabricmc/loader/impl/launch/FabricLauncher; parent
++    Lorg/quiltmc/loader/impl/launch/common/QuiltLauncher; parent
+ net/fabricmc/loader/impl/gui/FabricStatusTree$FabricStatusButton
++    toQuilt(Lorg/quiltmc/loader/api/gui/QuiltBasicWindow;)V
+ net/fabricmc/loader/util/version/SemanticVersionImpl
++    getParent()Lnet/fabricmc/loader/api/SemanticVersion;
++    parseQuilt(Ljava/lang/String;)Lorg/quiltmc/loader/api/Version$Semantic;
++    <init>(Lorg/quiltmc/loader/api/Version$Semantic;)V
+ net/fabricmc/loader/impl/FabricLoaderImpl
+-    load()V
+-    getModsInternal()Ljava/util/List;
+-    prepareModInit(Ljava/nio/file/Path;Ljava/lang/Object;)V
+-    dumpModList(Ljava/util/List;)V
+-    setup()V
+-    getModsDirectory0()Ljava/nio/file/Path;
+-    addMod(Lnet/fabricmc/loader/impl/discovery/ModCandidate;)V
+-    dumpModList0(Lnet/fabricmc/loader/impl/discovery/ModCandidate;Ljava/lang/StringBuilder;I[Z)V
+-    finishModLoading()V
+-    getAccessWidener()Lnet/fabricmc/loader/impl/lib/accesswidener/AccessWidener;
+-    getModCandidate(Ljava/lang/String;)Lnet/fabricmc/loader/impl/discovery/ModCandidate;
+-    setupMods()V
+-    freeze()V
+-    setGameProvider(Lnet/fabricmc/loader/impl/game/GameProvider;)V
+-    setupLanguageAdapters()V
+-    setGameInstance(Ljava/lang/Object;)V
+-    lambda$invokeEntrypoints$2(Ljava/lang/String;Lnet/fabricmc/loader/api/entrypoint/EntrypointContainer;Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+-    getGameProvider()Lnet/fabricmc/loader/impl/game/GameProvider;
+-    tryGetGameProvider()Lnet/fabricmc/loader/impl/game/GameProvider;
+-    lambda$getMappingResolver$3(Ljava/lang/String;)Lnet/fabricmc/loader/api/MappingResolver;
+-    loadAccessWideners()V
+-    setGameDir(Ljava/nio/file/Path;)V
+-    hasEntrypoints(Ljava/lang/String;)Z
+-    lambda$dumpModList0$1(Lnet/fabricmc/loader/impl/discovery/ModCandidate;)Ljava/lang/String;
+-    lambda$dumpModList$0(Lnet/fabricmc/loader/impl/discovery/ModCandidate;)Z
++    quilt_getModContainer(Ljava/lang/Class;)Ljava/util/Optional;
+-    Lnet/fabricmc/loader/impl/lib/accesswidener/AccessWidener; accessWidener
+-    I ASM_VERSION
+-    Ljava/lang/String; MOD_ID
+-    Ljava/lang/Object; gameInstance
+-    Lnet/fabricmc/loader/impl/entrypoint/EntrypointStorage; entrypointStorage
+-    Ljava/lang/String; PROCESSED_MODS_DIR_NAME
+-    Ljava/util/List; mods
+-    Ljava/lang/String; TMP_DIR_NAME
+-    Ljava/lang/String; VERSION
+-    Lnet/fabricmc/loader/impl/game/GameProvider; provider
+-    Ljava/lang/String; REMAPPED_JARS_DIR_NAME
+-    Ljava/lang/String; CACHE_DIR_NAME
+-    Ljava/nio/file/Path; gameDir
+-    Ljava/nio/file/Path; configDir
+-    Lnet/fabricmc/loader/api/ObjectShare; objectShare
+-    Ljava/util/Map; modMap
+-    Z frozen
+-    Ljava/util/Map; adapterMap
+-    Lnet/fabricmc/loader/api/MappingResolver; mappingResolver
+-    Ljava/util/List; modCandidates
+ net/fabricmc/loader/impl/gui/FabricStatusTree$FabricStatusNode
++    toQuilt(Lorg/quiltmc/loader/api/gui/QuiltTreeNode;)Lorg/quiltmc/loader/api/gui/QuiltTreeNode;
+ net/fabricmc/loader/api/metadata/CustomValue$CvType
+-    $values()[Lnet/fabricmc/loader/api/metadata/CustomValue$CvType;
+ net/fabricmc/loader/api/metadata/version/VersionComparisonOperator
+-    $values()[Lnet/fabricmc/loader/api/metadata/version/VersionComparisonOperator;
+ net/fabricmc/loader/impl/launch/MappingConfiguration
+-    getMappings()Lnet/fabricmc/loader/impl/lib/mappingio/tree/MappingTree;
+-    initializeMetadata()V
+-    readMappingFormat(Ljava/io/BufferedReader;)Lnet/fabricmc/loader/impl/lib/mappingio/format/MappingFormat;
+-    initializeMappings()V
+-    openMappings()Ljava/net/URLConnection;
+-    <init>()V
+-    getNamespaces()Ljava/util/List;
++    <init>(Lorg/quiltmc/loader/impl/launch/common/MappingConfiguration;)V
++    getMappings()Lnet/fabricmc/mapping/tree/TinyTree;
+-    Z initializedMetadata
+-    Z initializedMappings
+-    Ljava/lang/String; gameVersion
+-    Ljava/lang/String; gameId
+-    Ljava/util/List; namespaces
+-    Lnet/fabricmc/loader/impl/lib/mappingio/tree/MemoryMappingTree; mappings
++    Lorg/quiltmc/loader/impl/launch/common/MappingConfiguration; delegate
+ net/fabricmc/api/EnvType
+-    $values()[Lnet/fabricmc/api/EnvType;
+ net/fabricmc/loader/ModContainer
+-    getCodeSourcePaths()Ljava/util/List;
+ net/fabricmc/loader/api/FabricLoader
++    quilt_getModContainer(Ljava/lang/Class;)Ljava/util/Optional;
+ net/fabricmc/loader/impl/gui/FabricStatusTree$FabricTreeWarningLevel
+-    $values()[Lnet/fabricmc/loader/impl/gui/FabricStatusTree$FabricTreeWarningLevel;
+ net/fabricmc/loader/language/LanguageAdapter$MissingSuperclassBehavior
+-    $values()[Lnet/fabricmc/loader/language/LanguageAdapter$MissingSuperclassBehavior;

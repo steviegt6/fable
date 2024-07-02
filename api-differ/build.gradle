@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group = 'dev.tomat'
+version = 'unspecified+local'
+
+dependencies {
+	implementation "org.ow2.asm:asm:${project.asm}"
+	implementation "org.ow2.asm:asm-commons:${project.asm}"
+}
+
+jar {
+	manifest {
+		attributes(
+			'Main-Class': 'dev.tomat.api.differ.ApiDiffer'
+		)
+	}
+}

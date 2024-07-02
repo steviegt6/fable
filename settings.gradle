@@ -98,3 +98,5 @@ include ":packages:minecraft-bta"
 include ":tests:minecraft-test"
 include ":tests:minecraft-test-b1.7.3"
 include ":tests:minecraft-test-bta"
+include 'api-differ'
+
