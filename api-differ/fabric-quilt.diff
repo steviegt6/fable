@@ -1,5 +1,6 @@
 --- api-differ/fabric-loader-0.15.9.jar
 +++ api-differ/quilt-loader-0.26.1-beta.1.jar
+@@ added classes @@
 +org/quiltmc/loader/impl/filesystem/QuiltUnifiedEntry$QuiltUnifiedMountedFile
 +org/quiltmc/loader/impl/game/minecraft/patch/TinyFDPatch
 +org/quiltmc/loader/impl/filesystem/QuiltZipFileSystem$InMemorySource$1
@@ -932,6 +933,7 @@
 +org/quiltmc/loader/impl/filesystem/QuiltMemoryFileSystem$OpenState
 +org/quiltmc/loader/impl/gui/ButtonContainerImpl
 +org/quiltmc/loader/impl/gui/PluginIconImpl$LegacyUploadedIcon
+@@ removed classes @@
 -net/fabricmc/loader/impl/discovery/ModSolver$OptionalDepVar
 -net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/hard/annotation/MixinAnnotationVisitor$2
 -net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/CommonInjectionAnnotationVisitor$CommonInjectionSecondPassAnnotationVisitor$1
@@ -1519,6 +1521,7 @@
 -net/fabricmc/loader/impl/game/minecraft/Log4jLogHandler$1
 -net/fabricmc/loader/impl/util/FileSystemUtil$FileSystemDelegate
 -net/fabricmc/loader/impl/lib/tinyremapper/extension/mixin/soft/annotation/injection/WrapWithConditionV2AnnotationVisitor
+@@ modified classes @@
  net/fabricmc/loader/impl/metadata/ModOriginImpl
 -    toString()Ljava/lang/String;
 -    <init>(Ljava/lang/String;Ljava/lang/String;)V

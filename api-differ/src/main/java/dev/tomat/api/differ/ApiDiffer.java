@@ -58,13 +58,19 @@ public class ApiDiffer {
 				}
 			}
 
+			writer.println("@@ added classes @@");
+
 			for (String className : addedClasses) {
 				writer.println("+" + className);
 			}
 
+			writer.println("@@ removed classes @@");
+
 			for (String className : removedClasses) {
 				writer.println("-" + className);
 			}
+
+			writer.println("@@ modified classes @@");
 
 			for (String className : modifiedClasses) {
 				List<String> diffs = compareClasses(oldClasses.get(className), newClasses.get(className));
